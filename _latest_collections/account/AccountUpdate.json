@@ -1,0 +1,350 @@
+{
+  "item": [
+    {
+      "name": "Account - Update - Account",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"zipcode\":\"95126\",\"instagram\":\"fortunevieyra_\",\"username\":\"fortunevieyra\",\"firstName\":\"fortune\",\"lastName\":\"vieyra\",\"birthday\":\"02/02/1988\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/update/account",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "update",
+            "account",
+            ""
+          ]
+        },
+        "description": "This endpoint is named \"Account - Update - Account\". It is used to update an existing account on the system. The HTTP request method used is PUT and the endpoint URL is 'http://localhost:3000/api/account/update/account'.\n\n- Authentication:\n  The endpoint requires bearer token authentication. The token should be replaced with valid \"BearerToken\".\n\n- HTTP Headers:\n  In the headers, you need to include a key named \"Client-UUID\", replacing \"ClientUUID\" with the actual UUID related to the client application.\n\n- Request Body:\n  The request body should be of JSON format and contains the following fields:\n\n    * \"zipcode\": The postal code associated with the user's address, replace \"95126\" with the actual value.\n    * \"instagram\": The user's Instagram handle, replace \"fortunevieyra_\" with the user's actual Instagram handle.\n    * \"username\": A unique username for the user. You should replace \"fortunevieyra\" with the user's actual username.\n    * \"firstName\": The first name of the user. Replace \"fortune\" with the user's actual first name.\n    * \"lastName\": The last name of the user. Replace \"vieyra\" with the user's actual last name.\n    * \"birthday\": The date of birth of the user in the format \"MM/DD/YYYY\", replace \"02/02/1988\" with user's actual birthday.\n    * \"sessionId\": The ID of the session. Replace \"sessionId\" with the correct session ID.\n    * \"accountId\": Unique identifier for the user's account. Replace \"accountId\" with the actual account ID of the user.\n\nPlease note, all values need to be sent as strings. So, always encapsulate them in quotes.\n\nIn the \"options\" field of the request body, the \"raw\" language is set to JSON, indicating that the data should be sent in the JSON format."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Update - Display",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"displayPreference\":\"dark\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/update/display",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "update",
+            "display",
+            ""
+          ]
+        },
+        "description": "This endpoint, named \"Account - Update - Display\", is designed to update a user's account display settings in your system.\n\nStarting with the \"auth\" key, it uses the authentication method \"bearer\". This requires a token, which is labelled under the \"key\" as \"token\". The value for this is \"BearerToken\". This authentication method verifies that the requests being sent to your API are from a trusted source.\n\nThe \"request\" key defines the HTTP method to be a \"PUT\", signifying this endpoint is used to update existing resources or create them if they don't exist.\n\nThe \"url\" key specifies the URL of the API endpoint, to which requests need to be sent. The link is \"http://localhost:3000/api/account/update/display\".\n\nThe \"headers\" key contains a \"Client-UUID\" which serves as an identifier for the client making the API request. Its value is \"ClientUUID\".\n\nThe \"body\" key is where you specify the details to be sent to the server. The \"mode\" is \"raw\", meaning that the data is sent in a raw, unprocessed format.\n\nThe \"body\" also contains the \"raw\" key, which carries a JSON string. It includes parameters:\n- \"displayPreference\": This specifies the desired display setting; in this example, it is set to \"dark\".\n- \"sessionId\": This is a unique identifier for the user's current session; in this example, it is labeled as \"sessionId\".\n- \"accountId\": This is a unique identifier for the user's account; in this example, it is labeled as \"accountId\".\n\nThese are provided as raw JSON input when making the PUT request. When using this endpoint to update an account's display settings, replace these things with actual values."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Update - Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"newEmail\":\"fortunevieyra@icloud.com\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/update/email",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "update",
+            "email",
+            ""
+          ]
+        },
+        "description": "This endpoint is named \"Account - Update - Email\". This specifies its purpose: It's a component in an API that facilitates email updates in an account. \n\n- The `request` field contains the defining features of the endpoint's request parameters. \n\n- The `auth` form of this endpoint is \"bearer\". This signifies that it uses bearer tokens for authorization. The token's details are stored in a subfield where \"key\" is \"token\", the \"value\" is \"BearerToken\" and the token type is set to \"string\".\n\n- The `method` details the type of HTTP request that should be made. In this case, it's a `PUT` request indicating that it's used to update current resource.\n\n- The `url` field provides the exact location at which the request should be pointed. Here, it's targeted at the \"http://localhost:3000/api/account/update/email\" endpoint. \n\n- Inside the `headers` is a single object that indicates \"Client-UUID\" as a \"key\" with a \"value\" of \"ClientUUID\". The type of this header is \"default\". This header might be used to specify the unique identifier of the client making the request.\n\n- The `body` of the request includes three parameters packed into a raw JSON payload. The `mode` is set to \"raw\" indicating the form in which the body data is sent.\n\n  - The `newEmail` field is likely expected to receive the updated email address. For example, \"fortunevieyra@icloud.com\" has been used in the placeholder.\n\n  - `sessionId` is likely a unique identifier for the session during which the request is made. \n\n  - The `accountId` is probably the unique identifier of the account for which the email is to be updated. \n\nEach of these fields and their particular values work together to form the complete functionality of this endpoint. Be sure to replace placeholders with actual data before use."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Update - Language",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"languagePreference\":\"es\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/update/language",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "update",
+            "language",
+            ""
+          ]
+        },
+        "description": "**Endpoint Name:** Account - Update - Language\n\nThis endpoint is used to update the language preference of an account. Below is a comprehensive analysis of the data fields involved:\n\n**Request Authentication:**\n\n* `auth`: Describes the authentication method. Specifically, the type is bearer type authentication. \n\n* `bearer` Array: This holds the access token information. \n    * `key`: Refers to the identifier of the token. By default, it is \"token\".\n    * `value`: This is the actual token value used for authorization. Placeholder here is \"BearerToken\".\n    * `type`: This is the data type of the token, and the default is set as \"string\".\n\n**Request Method:**\n\n* `method`: The HTTP method used for the API call. This endpoint uses the \"PUT\" method, implying that it is intended for updating an existing resource.\n\n**Request URL:**\n\n* `url`: The URL of the API endpoint. For this request, it is \"http://localhost:3000/api/account/update/language\".\n\n**Request Headers:**\n\n* `headers`: This includes extra information sent with the request. Here, a \"Client-UUID\" is sent, which uniquely identifies every client.\n\n**Request Body:**\n\n* `body`: This is the main content of the request. In this case, it's in raw JSON format.\n    * `mode`: Specifies that the request body is raw.\n    * `raw`: This includes the essential details viz., language preference ('languagePreference'), a unique session identifier ('sessionId'), and the account identifier ('accountId') of the account for which the language preference needs to be updated. The language preference here is set to Spanish ('es'). \n\nThis endpoint, thus, takes an Authorization token, client UUID, session ID, account ID, and the preferred language to update the language preference of the specific account."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Update - Phone",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"newPhone\":\"4084599441\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/update/phone",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "update",
+            "phone",
+            ""
+          ]
+        },
+        "description": "1. \"name\": This represents the name of the endpoint. In this case, the name \"Account - Update - Phone\" is indicative of an endpoint that handles updates to a phone number in an account.\n\n2. \"request\": This object contains details about the request to be made to the API.\n\n3. \"auth\": This object describes the authorization method required to access the endpoint. It includes:\n   - \"type\": The type of authorization used, which here is \"bearer\", indicating the Bearer Token Authorization method.\n   - \"bearer\": This array contains an object with three keys:\n     - \"key\": The key which represents the name of the authorization token, here it's \"token\".\n     - \"value\": The value of the token which is \"BearerToken\".\n     - \"type\": Represents the data type of the token, which is \"string\".\n\n4. \"method\": This is the HTTP method used to call the endpoint. For this endpoint, the method is \"PUT\", indicating that we're executing an update operation.\n\n5. \"url\": The URL of the endpoint. In this case, it's \"http://localhost:3000/api/account/update/phone\".\n\n6. \"headers\": The headers to include in the HTTP request. Here, there's a single header with:\n   - \"key\": The key or name of the header field, here it's \"Client-UUID\".\n   - \"value\": The value of this header field, which is \"ClientUUID\".\n   - \"type\": The type of the header field, here it's \"default\".\n\n7. \"body\": The body of the request. This object has two fields:\n   - \"mode\": The type or format of the body data, which is \"raw\" in this case, meaning that the data is sent in a raw block of text.\n   - \"raw\": The actual content to send with the request. This field contains a JSON string with the new phone number (\"newPhone\"), the session ID (\"sessionId\"), and account ID (\"accountId\"). Please note that values shown here are placeholders, replace them with actual values while using the API."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Update - Type",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"accountType\":\"Business\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/update/type",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "update",
+            "type",
+            ""
+          ]
+        },
+        "description": "This endpoint represents an operation to update the 'type' of an account in a system. It is named \"Account - Update - Type\". The operation uses the 'PUT' method, implying it is for updating a resource on the server. \n\nHere's a breakdown of all the data:\n\n1. `name`: This is the identifier of the endpoint. In this context, it represents the name of the operation which is \"Account - Update - Type\". \n\n2. `request`: This contains all the details of the request that needs to be made to the server.\n\n3. `auth`: This holds the authentication method and credentials required to gain access to the endpoint. The type of authorization here is \"bearer\". It requires a \"token\" for authorization which is a \"BearerToken\" here.\n\n4. `method`: This specifies the HTTP method for the request. In this case, it's \"PUT\", which means it’s used to update an existing resource.\n\n5. `url`: This is the URL of the server where the request will be made. 'http://localhost:3000/api/account/update/type' is the URL in this case.\n\n6. `headers`: These are used to send additional information to the server. In this case, there is one key-value pair as header input. The 'key' is the 'Client-UUID', and its 'value' is the 'ClientUUID'.\n\n7. `body`: This holds the actual data that needs to be sent to the server. Body type is 'raw', implying the data is sent in plain text. An object is being sent here with the following fields:\n   - `accountType`: It signifies the type of the account. In this case, it's \"Business\".\n   - `sessionId`: This is a unique identifier for a session. It's current value is \"sessionId\".\n   - `accountId`: It stands for the unique identifier of the account. It's current value is \"accountId\"."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Update - Username",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\":\"fortunevieyra\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/update/username",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "update",
+            "username",
+            ""
+          ]
+        },
+        "description": "This endpoint is named \"Account - Update - Username\" and it is used to update the username of an account.\n\nIt uses the \"PUT\" method of request which means it's designed to update or replace existing data.\n\nThe URL for this endpoint is \"http://localhost:3000/api/account/update/username\". You can replace the \"localhost:3000\" part with the actual server address where your API is hosted. \n\nAuthorization of the request is managed using a \"bearer\" token which needs to be provided in the \"auth\" field. The key for this is \"token\" and the value should be the actual \"BearerToken\", which is a unique token assigned for each user.\n\nThere is a header field which expects a \"Client-UUID\", this is essentially the unique identifier for each client. The client is expected to send their UUID every time they make a request to this endpoint.\n\nThe request body is sent in \"raw\" mode. The payload contains the new \"username\" that needs to be updated. It also contains a \"sessionId\" which represents the session of the user. The \"accountId\" is the unique identifier of the account that you wish to update the username of.\n\nIn summary, to use this endpoint effectively, you need to include the bearer token, the client UUID, and an appropriate payload in the request. If all these details are accurate, the username of the specified account will be updated successfully."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Update - Password",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"password\":\"111111\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/update/password",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "update",
+            "password",
+            ""
+          ]
+        },
+        "description": "\"name\": This specifies the name of the endpoint. Here, it is \"Account - Update - Password\" implying this API endpoint is used for updating password in the account section.\n\n\"request\": This indicates the type of request to be made to the server, and contains all the required parameters needed to make the request.\n\n\"auth\": It signifies the authentication method to be used. The type here is \"bearer\", which is a HTTP authentication scheme that involves security tokens called bearer tokens.\n\n\"bearer\": It is an array of bearer authentication factors. Here, we have a key-value pair specifying the bearer token.\n\n\"key\": This is the parameter name. For bearer array, the key is 'token'.\n\n\"value\": This is the actual value of the parameter. For bearer array, the value is 'BearerToken', which should be replaced by your actual bearer token.\n\n\"type\": It describes the data type of the parameter. Here, it is 'string', which means the bearer token is a string.\n\n\"method\": This indicates the HTTP method to be used when making the request to the API. In this endpoint, it is 'PUT' which is typically used to update resources.\n\n\"url\": This is the API endpoint where the request will be sent. For this endpoint, the URL is http://localhost:3000/api/account/update/password.\n\n\"headers\": This is a list of all the HTTP headers to be included in the request. In this request, there is one header parameter.\n\n\"key\": For the header, the key is 'Client-UUID'.\n\n\"value\": For the header, the value should be your ClientUUID.\n\n\"type\": This value describes the type for the header field. Here, it is 'default'.\n\n\"body\": This is the data to be sent to the server. In this request, it contains JSON raw data and its options.\n\n\"mode\": This specifies how the body data is sent. Here 'raw' mode means the data is sent exactly as it is. \n\n\"raw\": This is the actual data to be sent in JSON format. It consists of 'password' (values should be your new password), 'sessionId' (values should be your session id), and 'accountId' (values should be your account id).\n\n\"options\": This field defines options for raw data. Here, it specifies that the language used is JSON."
+      },
+      "response": []
+    }
+  ]
+}

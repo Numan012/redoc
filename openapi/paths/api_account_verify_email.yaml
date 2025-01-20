@@ -1,0 +1,56 @@
+post:
+  tags:
+    - AccountVerify
+  summary: Account - Verify - Email Address
+  description: >-
+    This endpoint is named "Account - Verify - Email Address". It is designed to
+    verify an email address linked to an account. 
+
+
+    It uses the `POST` method, which allows it to send data to the server to
+    create a new entry in the database. The `POST` method is often used when
+    submitting filled forms.
+
+
+    The URL for this endpoint is
+    `"http://localhost:3000/api/account/verify/email"`. This endpoint lies
+    within your local server running on port 3000. Its path is
+    `/api/account/verify/email`, whereby it's within the 'api', 'account',
+    'verify', then finally, 'email' subdirectory.
+
+
+    Currently, it does not contain any custom `headers`. Headers are often used
+    to provide information about the request body and the response, such as its
+    MIME type, or to provide authentication information. If necessary, headers
+    could be added accordingly.
+
+
+    The `body` of the request is being sent in `raw` mode. Raw mode is used when
+    you want to send information without any encoding. This is useful when you
+    want to send JSON or XML data to the server.
+
+
+    The raw data being sent consists of two key-value pairs:
+
+
+    - `verificationToken`: The token used to verify the email. This would
+    typically be a unique string that the server generates and sends to the
+    email address for verification.
+
+    - `email`: The email address to be verified. This must match the email
+    address that the server has on record for the associated verification token.
+
+
+    In normal usage, both `verificationToken` and `email` would need to be
+    replaced with actual data.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: '"{\"verificationToken\":\"verificationToken\",\"email\":\"email\"}"'
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

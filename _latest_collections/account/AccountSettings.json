@@ -1,0 +1,887 @@
+{
+  "item": [
+    {
+      "name": "Account - Settings - Create",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"accountId\":\"accountId\",\"sessionId\":\"sessionId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/create",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "create"
+          ]
+        },
+        "description": "The given endpoint information has the following data:\n\n1. `name`: \"Account - Settings - Create\". This indicates the purpose or function of the endpoint. It is used to create settings for an account.\n\n2. `request`: A container for the various details of the API request.\n\n    a. `auth`: The authentication method used for the endpoint is a bearer token, defined as a JSON object. This object contains a `key` \"token\", indicating the reference name for the token. Its corresponding `value` is \"BearerToken\". Its `type` is \"string\", signifying the data format.\n\n    b. `method`: \"POST\". This represents the HTTP method to be used when making a request to the endpoint. Since it's a POST request, it means this endpoint is used to send data to the server to create a new resource.\n\n    c. `url`: \"http://localhost:3000/api/account/settings/create\". This is the URL of the server where the request will be made. It indicates where the API service is hosted.\n\n    d. `headers`: An array for storing header data. In this instance, it doesn't contain any active data as shown by `disabled` set to `true`, it's typically used to define the metadata of the HTTP request.\n\n    e. `body`: This is used to specify the data to be sent to the server. Its `mode` is \"raw\", meaning that data are sent in an unprocessed form. The `raw` property contains the actual data to be sent to the server as a JSON object. Here, it's sending \"accountId\" and \"sessionId\" as key-value pairs.\n\nPlease note that actual values for \"accountId\" and \"sessionId\" in the `body` and \"BearerToken\" in the `auth` must be replaced by the user with actual valid tokens to successfully use this endpoint.\n"
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Update - Video Broadcasting",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"sessionId\": \"sessionId\",\n    \"accountId\": \"accountId\",\n    \"settingKey\": \"videoBroadcasting\",\n    \"youtube\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"YouTube\",\n        \"providerId\": \"youtube-prov-567\",\n        \"rtmpUrl\": \"rtmp://youtube.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.youtube.com/channel/ytk-channel\",\n        \"server\": \"youtube-server\"\n    },\n    \"twitch\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Twitch\",\n        \"providerId\": \"twitch-prov-567\",\n        \"uniqueKey\": \"twitch123\",\n        \"rtmpUrl\": \"rtmp://twitch.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.twitch.tv/twitch-channel\",\n        \"server\": \"twitch-server\"\n    },\n    \"instagram\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Instagram\",\n        \"providerId\": \"instagram-prov-567\",\n        \"uniqueKey\": \"insta123\",\n        \"rtmpUrl\": \"rtmp://instagram.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.instagram.com/insta-channel\",\n        \"server\": \"instagram-server\"\n    },\n    \"tiktok\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"TikTok\",\n        \"providerId\": \"tiktok-prov-567\",\n        \"uniqueKey\": \"tiktok123\",\n        \"rtmpUrl\": \"rtmp://tiktok.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.tiktok.com/tiktok-channel\",\n        \"server\": \"tiktok-server\"\n    },\n    \"facebook\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Facebook\",\n        \"providerId\": \"facebook-prov-567\",\n        \"uniqueKey\": \"facebook123\",\n        \"rtmpUrl\": \"rtmp://facebook.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.facebook.com/facebook-channel\",\n        \"server\": \"facebook-server\"\n    },\n    \"vimeo\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Vimeo\",\n        \"providerId\": \"vimeo-prov-567\",\n        \"uniqueKey\": \"vimeo123\",\n        \"rtmpUrl\": \"rtmp://vimeo.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://vimeo.com/vimeo-channel\",\n        \"server\": \"vimeo-server\"\n    },\n    \"periscope\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Periscope\",\n        \"providerId\": \"periscope-prov-567\",\n        \"uniqueKey\": \"periscope123\",\n        \"rtmpUrl\": \"rtmp://periscope.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.pscp.tv/periscope-channel\",\n        \"server\": \"periscope-server\"\n    },\n    \"linkedin\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"LinkedIn\",\n        \"providerId\": \"linkedin-prov-567\",\n        \"uniqueKey\": \"linkedin123\",\n        \"rtmpUrl\": \"rtmp://linkedin.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.linkedin.com/linkedin-channel\",\n        \"server\": \"linkedin-server\"\n    },\n    \"brightcove\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Brightcove\",\n        \"providerId\": \"brightcove-prov-567\",\n        \"uniqueKey\": \"brightcove123\",\n        \"rtmpUrl\": \"rtmp://brightcove.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.brightcove.com/brightcove-channel\",\n        \"server\": \"brightcove-server\"\n    },\n    \"twitter\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Twitter\",\n        \"providerId\": \"twitter-prov-567\",\n        \"uniqueKey\": \"twitter123\",\n        \"rtmpUrl\": \"rtmp://twitter.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://twitter.com/twitter-channel\",\n        \"server\": \"twitter-server\"\n    },\n    \"dailymotion\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Dailymotion\",\n        \"providerId\": \"dailymotion-prov-567\",\n        \"uniqueKey\": \"dailymotion123\",\n        \"rtmpUrl\": \"rtmp://dailymotion.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.dailymotion.com/dailymotion-channel\",\n        \"server\": \"dailymotion-server\"\n    },\n    \"kick\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Kick\",\n        \"providerId\": \"kick-prov-567\",\n        \"uniqueKey\": \"kick123\",\n        \"rtmpUrl\": \"rtmp://kick.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.kick.com/kick-channel\",\n        \"server\": \"kick-server\"\n    },\n    \"rumble\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Rumble\",\n        \"providerId\": \"rumble-prov-567\",\n        \"uniqueKey\": \"rumble123\",\n        \"rtmpUrl\": \"rtmp://rumble.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.rumble.com/rumble-channel\",\n        \"server\": \"rumble-server\"\n    },\n    \"trovo\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Trovo\",\n        \"providerId\": \"trovo-prov-567\",\n        \"uniqueKey\": \"trovo123\",\n        \"rtmpUrl\": \"rtmp://trovo.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.trovo.com/trovo-channel\",\n        \"server\": \"trovo-server\"\n    },\n    \"restream\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Restream\",\n        \"providerId\": \"restream-prov-567\",\n        \"uniqueKey\": \"restream123\",\n        \"rtmpUrl\": \"rtmp://restream.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.restream.com/restream-channel\",\n        \"server\": \"restream-server\"\n    },\n    \"telegram\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Telegram\",\n        \"providerId\": \"telegram-prov-567\",\n        \"uniqueKey\": \"telegram123\",\n        \"rtmpUrl\": \"rtmp://telegram.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.telegram.com/telegram-channel\",\n        \"server\": \"telegram-server\"\n    },\n    \"amazon\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Amazon\",\n        \"providerId\": \"amazon-prov-567\",\n        \"uniqueKey\": \"amazon123\",\n        \"rtmpUrl\": \"rtmp://amazon.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.amazon.com/amazon-channel\",\n        \"server\": \"amazon-server\"\n    },\n    \"dlive\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"DLive\",\n        \"providerId\": \"dlive-prov-567\",\n        \"uniqueKey\": \"dlive123\",\n        \"rtmpUrl\": \"rtmp://dlive.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.dlive.com/dlive-channel\",\n        \"server\": \"dlive-server\"\n    },\n    \"mixcloud\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Mixcloud\",\n        \"providerId\": \"mixcloud-prov-567\",\n        \"uniqueKey\": \"mixcloud123\",\n        \"rtmpUrl\": \"rtmp://mixcloud.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.mixcloud.com/mixcloud-channel\",\n        \"server\": \"mixcloud-server\"\n    },\n    \"kakao\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Kakao\",\n        \"providerId\": \"kakao-prov-567\",\n        \"uniqueKey\": \"kakao123\",\n        \"rtmpUrl\": \"rtmp://kakao.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.kakao.com/kakao-channel\",\n        \"server\": \"kakao-server\"\n    },\n    \"naver\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Naver\",\n        \"providerId\": \"naver-prov-567\",\n        \"uniqueKey\": \"naver123\",\n        \"rtmpUrl\": \"rtmp://naver.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.naver.com/naver-channel\",\n        \"server\": \"naver-server\"\n    },\n    \"nimo\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Nimo\",\n        \"providerId\": \"nimo-prov-567\",\n        \"uniqueKey\": \"nimo123\",\n        \"rtmpUrl\": \"rtmp://nimo.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.nimo.com/nimo-channel\",\n        \"server\": \"nimo-server\"\n    },\n    \"nono\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Nono\",\n        \"providerId\": \"nono-prov-567\",\n        \"uniqueKey\": \"nono123\",\n        \"rtmpUrl\": \"rtmp://nono.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.nono.com/nono-channel\",\n        \"server\": \"nono-server\"\n    },\n    \"huya\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Huya\",\n        \"providerId\": \"huya-prov-567\",\n        \"uniqueKey\": \"huya123\",\n        \"rtmpUrl\": \"rtmp://huya.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.huya.com/huya-channel\",\n        \"server\": \"huya-server\"\n    },\n    \"zhanqui\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Zhanqui\",\n        \"providerId\": \"zhanqui-prov-567\",\n        \"uniqueKey\": \"zhanqui123\",\n        \"rtmpUrl\": \"rtmp://zhanqui.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.zhanqui.com/zhanqui-channel\",\n        \"server\": \"zhanqui-server\"\n    },\n    \"bilibili\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Bilibili\",\n        \"providerId\": \"bilibili-prov-567\",\n        \"uniqueKey\": \"bilibili123\",\n        \"rtmpUrl\": \"rtmp://bilibili.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.bilibili.com/bilibili-channel\",\n        \"server\": \"bilibili-server\"\n    },\n    \"afreeca\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Afreeca\",\n        \"providerId\": \"afreeca-prov-567\",\n        \"uniqueKey\": \"afreeca123\",\n        \"rtmpUrl\": \"rtmp://afreeca.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.afreeca.com/afreeca-channel\",\n        \"server\": \"afreeca-server\"\n    },\n    \"mlg\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"MLG\",\n        \"providerId\": \"mlg-prov-567\",\n        \"uniqueKey\": \"mlg123\",\n        \"rtmpUrl\": \"rtmp://mlg.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.mlg.com/mlg-channel\",\n        \"server\": \"mlg-server\"\n    },\n    \"douyu\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Douyu\",\n        \"providerId\": \"douyu-prov-567\",\n        \"uniqueKey\": \"douyu123\",\n        \"rtmpUrl\": \"rtmp://douyu.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.douyu.com/douyu-channel\",\n        \"server\": \"douyu-server\"\n    },\n    \"liveedu\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"LiveEdu\",\n        \"providerId\": \"liveedu-prov-567\",\n        \"uniqueKey\": \"liveedu123\",\n        \"rtmpUrl\": \"rtmp://liveedu.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.liveedu.com/liveedu-channel\",\n        \"server\": \"liveedu-server\"\n    },\n    \"vaughn\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Vaughn\",\n        \"providerId\": \"vaughn-prov-567\",\n        \"uniqueKey\": \"vaughn123\",\n        \"rtmpUrl\": \"rtmp://vaughn.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.vaughn.com/vaughn-channel\",\n        \"server\": \"vaughn-server\"\n    },\n    \"breakers\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Breakers\",\n        \"providerId\": \"breakers-prov-567\",\n        \"uniqueKey\": \"breakers123\",\n        \"rtmpUrl\": \"rtmp://breakers.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.breakers.com/breakers-channel\",\n        \"server\": \"breakers-server\"\n    },\n    \"picarto\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Picarto\",\n        \"providerId\": \"picarto-prov-567\",\n        \"uniqueKey\": \"picarto123\",\n        \"rtmpUrl\": \"rtmp://picarto.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.picarto.com/picarto-channel\",\n        \"server\": \"picarto-server\"\n    },\n    \"fc2\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"FC2\",\n        \"providerId\": \"fc2-prov-567\",\n        \"uniqueKey\": \"fc2-123\",\n        \"rtmpUrl\": \"rtmp://fc2.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.fc2.com/fc2-channel\",\n        \"server\": \"fc2-server\"\n    },\n    \"steam\": {\n        \"apiKey\": \"\",\n        \"apiSecret\": \"\",\n        \"apiClientId\": \"\",\n        \"authToken\": \"\",\n        \"providerName\": \"Steam\",\n        \"providerId\": \"steam-prov-567\",\n        \"uniqueKey\": \"steam123\",\n        \"rtmpUrl\": \"rtmp://steam.com/live\",\n        \"streamKey\": \"\",\n        \"authUsername\": \"\",\n        \"authPassword\": \"\",\n        \"channelUrl\": \"https://www.steam.com/steam-channel\",\n        \"server\": \"steam-server\"\n    }\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/update",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "update"
+          ]
+        },
+        "description": "The 'account settings update for video broadcasting' endpoint is a PUT request used to update account settings related to video broadcasting. Each field in the endpoint is explained as follows:\n\n- `name` : This indicates the name of the API endpoint for understanding purposes.\n\n- `request` : This is where the real details of a specific request are defined. \n\n- `auth` : Defines the type of authorization used for the API call. In this case, it is the Bearer token authorization.\n\n   - `type` : Type of authorization which is 'Bearer'.\n\n   - `bearer` :  This includes the bearer token to authorize the request. Key is \"token\", Type is \"string\" and value will be your bearer token.\n\n- `method`: Specifies the HTTP method. The value here is PUT which is used for updating existing resources.\n\n- `url`: This specifies the URL for backend server where request would be served.\n\n- `headers` : This is used to send additional information to the server. For this request, a default type 'Client-UUID' key is required with a value of \"ClientUUID\".\n\n- `body`: Contains the actual data that needs to be sent to the server. `mode` defines how the data in the body is, which is 'raw' for this request. `raw` contains the actual JSON payload.\n\nEach setting payload has the same format :\n\n- `sessionId`, `accountId` and `settingKey` (which is set to 'videoBroadcasting') are the general identifiers.\n- Then comes the settings for each broadcasting provider (YouTube, Twitch, Instagram, etc.) which have their own unique identifiers, server names, channel URLs, RTMP URLs, auth tokens among other things specific for each. These are used to update the streaming settings pertaining to each broadcasting service.\n\n- `options` : Specific settings indicating how the request should be handled. In this case, it specifies the language of the raw data as JSON."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Update - Event Publishing",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"sessionId\": \"sessionId\",\n    \"accountId\": \"accountId\",\n    \"settingKey\": \"eventPublishing\",\n    \"discord\": {\n        \"apiKey\": \"discord-api-key\",\n        \"apiSecret\": \"discord-api-secret\",\n        \"apiClientId\": \"discord-api-client-id\",\n        \"authToken\": \"discord-auth-token\"\n    },\n    \"medium\": {\n        \"apiKey\": \"medium-api-key\",\n        \"apiSecret\": \"medium-api-secret\",\n        \"apiClientId\": \"medium-api-client-id\",\n        \"authToken\": \"medium-auth-token\"\n    },\n    \"tumblr\": {\n        \"apiKey\": \"tumblr-api-key\",\n        \"apiSecret\": \"tumblr-api-secret\",\n        \"apiClientId\": \"tumblr-api-client-id\",\n        \"authToken\": \"tumblr-auth-token\"\n    },\n    \"wix\": {\n        \"apiKey\": \"wix-api-key\",\n        \"apiSecret\": \"wix-api-secret\",\n        \"apiClientId\": \"wix-api-client-id\",\n        \"authToken\": \"wix-auth-token\"\n    },\n    \"facebook\": {\n        \"apiKey\": \"facebook-api-key\",\n        \"apiSecret\": \"facebook-api-secret\",\n        \"apiClientId\": \"facebook-api-client-id\",\n        \"authToken\": \"facebook-auth-token\"\n    },\n    \"facebookGroup\": {\n        \"apiKey\": \"facebookGroup-api-key\",\n        \"apiSecret\": \"facebookGroup-api-secret\",\n        \"apiClientId\": \"facebookGroup-api-client-id\",\n        \"authToken\": \"facebookGroup-auth-token\"\n    },\n    \"linkedin\": {\n        \"apiKey\": \"linkedin-api-key\",\n        \"apiSecret\": \"linkedin-api-secret\",\n        \"apiClientId\": \"linkedin-api-client-id\",\n        \"authToken\": \"linkedin-auth-token\"\n    },\n    \"youtube\": {\n        \"apiKey\": \"youtube-api-key\",\n        \"apiSecret\": \"youtube-api-secret\",\n        \"apiClientId\": \"youtube-api-client-id\",\n        \"authToken\": \"youtube-auth-token\"\n    },\n    \"meetup\": {\n        \"apiKey\": \"meetup-api-key\",\n        \"apiSecret\": \"meetup-api-secret\",\n        \"apiClientId\": \"meetup-api-client-id\",\n        \"authToken\": \"meetup-auth-token\"\n    },\n    \"eventbrite\": {\n        \"apiKey\": \"eventbrite-api-key\",\n        \"apiSecret\": \"eventbrite-api-secret\",\n        \"apiClientId\": \"eventbrite-api-client-id\",\n        \"authToken\": \"eventbrite-auth-token\"\n    },\n    \"calendly\": {\n        \"apiKey\": \"calendly-api-key\",\n        \"apiSecret\": \"calendly-api-secret\",\n        \"apiClientId\": \"calendly-api-client-id\",\n        \"authToken\": \"calendly-auth-token\"\n    }\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/update",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "update"
+          ]
+        },
+        "description": "**Endpoint Name**: Account - Settings - Update - Event Publishing\n\n**URL**: `http://localhost:3000/api/account/settings/update`\n\n**Method**: PUT\n\n**Description**: This endpoint is used to update an account's settings associated with event publishing to the specified services.\n\n**Headers**:\n\n1. **Authorization (Bearer Token)**: You need to include a bearer token in order to authenticate your request. The key should be `token` and its value should be your `BearerToken`.\n\n2. **Client-UUID**: Represents a unique identifier for the client. Insert your `ClientUUID` in the value field.\n\n**Body**:\n\nThe request body contains user session and account details, along with settings for various social media and event-related platforms. Make sure to replace all placeholders with the corresponding values you want to update to.\n\n1. **sessionId**: User's session id.\n2. **accountId**: Identifier of your account.\n3. **settingKey**: This should be set to \"eventPublishing\" to specify that we are adjusting event publishing settings.\n\nThe body also requires settings-related information for different platforms in JSON format as described below:\n\n- **discord**: For Discord related information.\n  - **apiKey**: Discord's API key\n  - **apiSecret**: Discord's API secret\n  - **apiClientId**: Discord's API client id\n  - **authToken**: Discord's authorization token\n\n- **medium**: For Medium related information.\n  - **apiKey**: Medium's API key\n  - **apiSecret**: Medium's API secret\n  - **apiClientId**: Medium's API client id\n  - **authToken**: Medium's authorization token\n\n- **tumblr**: For Tumblr related information.\n  - **apiKey**: Tumblr's API key\n  - **apiSecret**: Tumblr's API secret\n  - **apiClientId**: Tumblr's API client id\n  - **authToken**: Tumblr's authorization token\n\nAnd similarly for the rest of the platforms: `wix`, `facebook`, `facebookGroup`, `linkedin`, `youtube`, `meetup`, `eventbrite`, `calendly`.\n\n**Response**:\n\nThe response of this API call will depend on the server's implementation. It can provide the updated account settings details if the request was successful or an error message if the request failed."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Update - Token Minimums",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"settingKey\":\"tokenMinimums\",\"voteTokenAmount\":100,\"suggestionTokenAmount\":100,\"announcementTokenAmount\":100,\"teamDraftTokenAmount\":100,\"stickerTokenAmount\":100,\"goalsTokenAmount\":100,\"tipsTokenAmount\":100,\"unlockChannelTokenAmount\":100,\"unlockCameraTokenAmount\":100,\"priorityOneMessageTokenAmount\":100,\"priorityTwoMessageTokenAmount\":100,\"priorityThreeMessageTokenAmount\":100}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/update",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "update"
+          ]
+        },
+        "description": "This endpoint is named \"Account - Settings - Update - Token Minimums\". It uses the PUT method, indicating it's designed for updating existing information.\n\nThe endpoint is protected by bearer token authentication; this type of auth uses a token that the client sends within an \"Authorization\" header. The token key is \"token\", the token type is a string and the token value needs to be replaced with a valid bearer token.\n\nThe request URL is \"http://localhost:3000/api/account/settings/update\". You'll need to replace \"localhost:3000\" with the appropriate base URL for the target environment.\n\nThe request headers include a field for \"Client-UUID\"; this is an identifier for the client making the request and needs to be replaced with a valid UUID.\n\nThe request body contains a number of fields which represent different types of token minimum amounts for various features:\n\n- \"sessionId\" needs to be replaced with a valid Session ID.\n- \"accountId\" needs to be replaced with a valid Account ID.\n- \"settingKey\" is set to \"tokenMinimums\" which refers to the settings that are being updated.\n  \nThen follows the feature specific token amounts each set at 100, these values should be replaced with the respective minimum token amounts needed:\n- \"voteTokenAmount\" refers to the minimum number of tokens necessary for a vote.\n- \"suggestionTokenAmount\" is the minimum number of tokens needed to make a suggestion.\n- \"announcementTokenAmount\" signifies the minimum number of tokens to make an announcement.\n- \"teamDraftTokenAmount\" is the minimum number tokens to draft a team.\n- \"stickerTokenAmount\" indicates the minimum number of tokens required for using stickers.\n- \"goalsTokenAmount\" is for setting goals.\n- \"tipsTokenAmount\" refers to the minimum tokens required for tips.\n- \"unlockChannelTokenAmount\" is the minimum tokens required to unlock a channel.\n- \"unlockCameraTokenAmount\" is the minimum tokens required to unlock camera.\n- \"priorityOneMessageTokenAmount\", \"priorityTwoMessageTokenAmount\", and \"priorityThreeMessageTokenAmount\" represent token amounts for sending messages of different priority levels. \n\nAll fields are mandatory, indicate the minimum limits and need to be supplied with actual data when making a request."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Update - Notifications",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"settingKey\":\"notifications\",\"anyMessageRead\":true,\"emailNotifications\":true,\"priorityMessageRead\":true,\"textNotifications\":true,\"newFollower\":true,\"browserNotifications\":true,\"videoCommentReply\":true,\"followingStreamerActivity\":true,\"newStreamersGoLive\":true,\"newFeatureUpdates\":true,\"newRequestToFollow\":true,\"beladedCharityUpdates\":false,\"newChannelActivities\":true,\"beladedUniversityUpdates\":false,\"announcementRead\":true,\"beladedExchangeUpdates\":false,\"suggestionRead\":true,\"beladedRewardsUpdates\":false,\"commentOnVideo\":true,\"beladedPromotionsUpdates\":false,\"requestToJoinTeam\":false,\"requestToJoinTournament\":true,\"streamerReceivedTip\":false}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/update",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "update"
+          ]
+        },
+        "description": "This endpoint is named \"Account - Settings - Update - Notifications\". This API endpoint is responsible for updating the notification preferences for a specific account. Below is a detailed description of each property in the request:\n\n1. \"auth\": It is the authentication aspect of the API request. The \"type\" is a bearer token. The value for the bearer token key should be replaced with an actual bearer token for access.\n\n2. \"method\": It is the HTTP method for the request which is \"PUT\" in this case. PUT method is used to update data.\n\n3. \"url\": It is the url for the endpoint. \n\n4. \"headers\": \n     - \"Client-UUID\": This key should contain the unique identifier for the client. \n\n5. \"body\": It comprises of the following fields:\n   - \"mode\": Represents the mode in which the body data is sent. Here, the mode is \"raw\".\n   - \"raw\": This is the actual data sent in the body. \n        - \"sessionId\": Represents the session identifier.\n        - \"accountId\": The ID to identify the account.\n        - \"settingKey\": For this request, it is set as \"notifications\" to identify the intending to update notification settings.\n        - \"anyMessageRead\", \"emailNotifications\", \"priorityMessageRead\", \"textNotifications\", \"newFollower\", \"browserNotifications\", \"videoCommentReply\", \"followingStreamerActivity\", \"newStreamersGoLive\", \"newFeatureUpdates\", \"newRequestToFollow\", \"beladedCharityUpdates\", \"newChannelActivities\", \"beladedUniversityUpdates\", \"announcementRead\", \"beladedExchangeUpdates\", \"suggestionRead\", \"beladedRewardsUpdates\", \"commentOnVideo\", \"beladedPromotionsUpdates\", \"requestToJoinTeam\", \"requestToJoinTournament\", \"streamerReceivedTip\" are different settings that can be enabled (true) or disabled (false) based on the user's preferences for notifications. \n\nIt is important to supply accurate values for these fields as it regulates your interaction with our API service."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Update - Payments",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\": \"sessionId\",\"accountId\": \"accountId\",\"settingKey\": \"payments\",\"firstName\": \"John\",\"lastName\": \"Doe\",\"birthday\": \"1990-01-01\",\"email\": \"john.doe@example.com\",\"phoneNumber\": \"+1234567890\",\"addressLine1\": \"123 Main St\",\"addressLine2\": \"Apt 456\",\"city\": \"Anytown\",\"state\": \"CA\",\"country\": \"US\",\"zipCode\": \"12345\",\"companyName\": \"ABC Inc\",\"taxIdNumber\": \"123-45-6789\",\"businessType\": \"LLC\",\"businessStructure\": \"Corporation\",\"bankFirstName\": \"John\",\"bankEmailAddress\": \"john.bank@example.com\",\"bankLastName\": \"Doe\",\"bankPhoneNumber\": \"+1234567890\",\"bankName\": \"Bank of Example\",\"bankAccountNumber\": \"123456789\",\"bankRoutingNumber\": \"987654321\",\"paypalSource\": \"john.paypal@example.com\",\"paypalAuthToken\": \"paypal-auth-token\",\"cashAppSource\": \"john.cashapp\",\"cashAppAuthToken\": \"cashapp-auth-token\",\"venmoSource\": \"john.venmo\",\"venmoAuthToken\": \"venmo-auth-token\",\"zelleSource\": \"john.zelle@example.com\",\"zelleAuthToken\": \"zelle-auth-token\",\"bitPaySource\": \"john.bitpay\",\"bitPayAuthToken\": \"bitpay-auth-token\",\"payoutMinimumAmount\": 50.00,\"payoutOccurrence\": \"monthly\",\"payoutPreferredMethod\": \"bank\",\"payoutStartDate\": \"2023-01-01\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/update",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "update"
+          ]
+        },
+        "description": "This endpoint is named \"Account - Settings - Update - Payments\" and it is used to update an account's payment settings. It uses the HTTP PUT method.\n\nThe 'auth' field includes the authentication type, which is 'bearer' and takes a 'token' whose value is 'BearerToken'. This is a string type.\n\nThe 'request' field refers to the actual request made to the endpoint. The 'url' field in the 'request' object is the endpoint to which the request is being made, in this case, it is \"http://localhost:3000/api/account/settings/update\".\n\nIn the 'headers' section, there is a Client-UUID. This holds unique identification for each client.\n\nThe 'body' section contains the details of the user's account settings that are to be updated. It includes important details like session id, account id, settings key, personal information like name, email id, phone no., address, business-related details like company name, tax ID number, business type and structure, bank details like name, account number, email id, routing number. It also includes various other payment source details related to PayPal, Cash App, Venmo, Zelle, BitPay, etc along with their respective auth tokens. A minimum payout amount is also mentioned along with the frequency of occurrence of the payout (monthly in this case) and the preferred payout method. The start date for payout is provided at the end.\n\nAll of these details will be sent as raw data in JSON format in the HTTP body."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Get - Video Broadcasting",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/get/?settingKey=videoBroadcasting&sessionId=sessionId&accountId=accountId",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "get",
+            ""
+          ],
+          "query": [
+            {
+              "key": "settingKey",
+              "value": "videoBroadcasting"
+            },
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "accountId",
+              "value": "accountId"
+            }
+          ]
+        },
+        "description": "1. `name`: This field signifies the name of the endpoint. Here, it denotes that this API endpoint is used for getting the video broadcasting settings of an account.\n\n2. `request`: This object holds everything necessary to make the HTTP request. \n\n3. `request.auth`: This object specifies the authentication method used for this endpoint. \n\n   - `auth.type`: The authentication type. Here, it indicates that the Bearer authentication scheme is used.\n   - `auth.bearer`: A bearer token is required to authenticate with this API endpoint. \n       - `bearer.key`: Label for bearer token, which is \"token\" here.\n       - `bearer.value`: Placeholder for the value of the bearer token; you should insert actual bearer token in place of \"BearerToken\".\n       - `bearer.type`: Indicates the bearer token is a string.\n\n4. `request.method`: This field signifies the HTTP method used for this request. In this case, it's a GET request being made.\n\n5. `request.url`: This specifies the URL where the HTTP request is sent. This request is sent to http://localhost:3000/api/account/settings/get along with query parameters `settingKey`, `sessionId`, and `accountId`.\n\n6. `request.headers`: This array is used to provide headers for the request. No headers are specified here, and the empty header object is disabled.\n\n7. `request.body`: This object is used to specify the body of the request.\n   - `body.mode`: Indicates the mode used for sending the body of the request. Here, it's \"raw\" mode. However, no data is being sent in the request body here as indicated by the empty `body.raw` field."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Get - Event Publishing",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/get/?settingKey=eventPublishing&sessionId=sessionId&accountId=accountId",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "get",
+            ""
+          ],
+          "query": [
+            {
+              "key": "settingKey",
+              "value": "eventPublishing"
+            },
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "accountId",
+              "value": "accountId"
+            }
+          ]
+        },
+        "description": "This endpoint is titled \"Account - Settings - Get - Event Publishing\". It is designed to fetch the settings related to event publishing for a specific account. Here is a detailed breakdown of the data:\n\n1. `name` - The title of the endpoint. It describes the overall purpose of this endpoint, in this case, getting the settings related to event publishing of an account.\n\n2. `request` - It contains all the necessary details needed for making the request.\n\n3. `auth`:\n   - `type` - Specifies the type of authentication needed for this endpoint which is a bearer token.\n   - `bearer` - An array containing object that has details of the bearer token.\n    - `key` - The token type.\n    - `value` - The token value, here, it's placeholder with a string 'BearerToken'.\n    - `type` - Defines the data type of the token, which is a string.\n\n4. `method` - The HTTP verb that determines the type of request. Here, it is a GET request meaning it retrieves data.\n\n5. `url` - The URL where the request will be sent. This includes the base URL and the endpoint path. Here, the URL queries include a `settingKey`, `sessionId`, and `accountId`. \n    - SettingKey: The setting key for the event publishing.\n    - SessionId: The unique identifier for the current session.\n    - AccountId: The unique identifier of the account whose event publishing settings are to be fetched. \n\n6. `headers` - The HTTP headers that send additional information about the request. Here it's an array but contains no key-value pair and it's set to `disabled`.\n\n7. `body` - Contains any data that must be sent with a POST request. Here, `mode` is set to \"raw\" indicating the data is sent in a string format. `raw` is blank, indicating no data sent with the body of the request."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Get - Token Minimums",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/get/?settingKey=tokenMinimums&sessionId=sessionId&accountId=accountId",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "get",
+            ""
+          ],
+          "query": [
+            {
+              "key": "settingKey",
+              "value": "tokenMinimums"
+            },
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "accountId",
+              "value": "accountId"
+            }
+          ]
+        },
+        "description": "Here are the detailed descriptions of each part of the endpoint:\n\n- `name`: \"Account - Settings - Get - Token Minimums\". This represents the name of the endpoint. It is used to retrieve minimum token settings for an account.\n\n- `request`: This portion of the payload describes the properties of the HTTP request.\n\n- `request.auth`: This relates to the authentication required to access this endpoint. It is of the \"bearer\" type, which typically involves securing an access token to authenticate with the endpoint.\n\n  - `request.auth.bearer`: This is an array representing multiple bearer tokens.\n    - `request.auth.bearer[].key`: It's the key property of the bearer token, set to \"token\".\n    - `request.auth.bearer[].value`: It's the value property of the bearer token, set to \"BearerToken\".\n    - `request.auth.bearer[].type`: It's the bearer token type, here it's a \"string\".\n\n- `request.method`: \"GET\". This is the type of HTTP request. In this case, it's a \"GET\" request, used to retrieve data from an endpoint.\n\n- `request.url`: This is the URL for the HTTP request, and includes any query parameters. Here, the base URL is \"http://localhost:3000/api/account/settings/get\" while the query parameters are settingKey=tokenMinimums\", \"sessionId\" and \"accountId\". The endpoint is for acquiring token minimum settings of a specific account session.\n\n- `request.headers`: This field contains an array of HTTP headers. Each header object has four properties: key, value, type, and disabled flag. Here, the header object is left empty and disabled.\n\n- `request.body`: This is where you would typically send additional data for requests that require it, such as POST and PUT requests. The body mode is set to raw, which allows you to write the body request in plain text.\n\n  - `request.body.mode`: \"raw\". This defines how the body of the HTTP request will be formatted.\n  - `request.body.raw`: It's the data sent in plain text in the body of the HTTP request. In this case, it's empty.        \n\nRemember that the attributes such as `sessionId` and `accountId` in the URL should be replaced with valid sessionID and accountID when making an actual API call.\n"
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Get - Notifications",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/get/?settingKey=notifications&sessionId=sessionId&accountId=accountId",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "get",
+            ""
+          ],
+          "query": [
+            {
+              "key": "settingKey",
+              "value": "notifications"
+            },
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "accountId",
+              "value": "accountId"
+            }
+          ]
+        },
+        "description": "This endpoint titled \"Account - Settings - Get - Notifications\" uses a GET method to retrieve notification settings for a specific account. The details of each data as requested are explained as follows:\n\n- `name`: This specifies the name of the endpoint. The name can typically provide a quick overview of what the endpoint does. In this case, the name tells us that this endpoint is used to get account settings, specifically regarding notifications.\n\n- `request`: This is where the details about the API call are being defined.\n\n    - `auth`: This describes how authentication is handled. \n        - `type`: Here, 'bearer' type is used which refers to HTTP Bearer Authentication. \n        - `bearer`: This array holds the elements required for bearer authentication. \n            - `key`: Refers to the identifier for the bearer token. \n            - `value`: The 'BearerToken' is a placeholder which should be replaced with the actual token.\n            - `type`: Refers to the datatype of value, which is string in this case.      \n       \n    - `method`: This is the HTTP method used for the API call. 'GET' refers to fetching or reading data.\n      \n    - `url`: This is the URL that the GET request is being sent to. It consists of several query parameters that act as individual settings or markers for the request, namely 'settingKey', 'sessionId' and 'accountId'. \n        - `settingKey=notifications`: It tells us that we want to retrieve the notification settings of the user.\n        - `sessionId=sessionId`: 'sessionId' should be replaced with the actual session ID. It represents the current session of the user.\n        - `accountId=accountId`: 'accountId' should be replaced with the actual account ID. It represents the specific account whose notification settings we want to retrieve.\n        \n    - `headers`: An array holding the key-value pairs to be sent in the header of the request. In this instance, it is empty and is disabled. \n\n    - `body`: The HTTP body of the request. In this case it is 'raw', implying that the body content is sent as a string of text. Currently, it's an empty string as GET requests typically don't send data through the body."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Get - Payments",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/get/?settingKey=payments&sessionId=sessionId&accountId=accountId",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "get",
+            ""
+          ],
+          "query": [
+            {
+              "key": "settingKey",
+              "value": "payments"
+            },
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "accountId",
+              "value": "accountId"
+            }
+          ]
+        },
+        "description": "This endpoint titled \"Account - Settings - Get - Payments\" retrieves the payment settings of a particular account. Below is a description of each data field:\n\n- `\"name\"`: This is the name of the endpoint. It indicates that this endpoint is related to \"Account Settings\", specifically \"Payments\", and it uses the GET method.\n\n- `\"request\"`: The object that provides details about the HTTP request made to the endpoint.\n\n- `\"auth\"`: It is the authentication component for securing the endpoint. This API uses bearer token authentication, specified by \"bearer\" type. \n\n   - `\"type\"`: The type of authentication used, which is bearer authentication.\n\n   - `\"bearer\"`: This array carries an object that stores the bearer token for the endpoint. \n\n     - `\"key\"`: The key is 'token' which is a part of the bearer authentication scheme.\n\n     - `\"value\"`: The actual value of the bearer token (BearerToken) that would be used in production environment is placed here.\n\n     - `\"type\"`: The type signifies that the bearer token is represented as a string value.\n\n\n- `\"method\"`: This refers to the HTTP method used to make a request to the endpoint. In this case, it is the 'GET' method.\n\n- `\"url\"`: This is the URL of the API endpoint. It specifies API root(i.e., http://localhost:3000/api/), the path to the endpoint(i.e., account/settings/get/), and query parameters(settingKey, sessionId, accountId).\n\n- `\"headers\"`: This array object would include any additional headers needed for the request, but in this case, it is either left empty or not required for this request, which is indicated by the \"disabled\": true attribute.\n\n- `\"body\"`: This section holds the data that is sent to the API in the body of the request. \n\n   - `\"mode\"`: The mode denotes that the body of the request is to be sent in as 'raw' to the endpoint.\n\n   - `\"raw\"`: The raw field means raw data can be inserted but in the provided data it is left empty, indicating that the GET request does not require additional body data.\n   \nOverall, this endpoint retrieves the payment settings linked to the given sessionId and accountId. Please remember this endpoint needs a bearer token for the authentication."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Get All",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/all/?sessionId=sessionId&accountId=accountId",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "all",
+            ""
+          ],
+          "query": [
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "accountId",
+              "value": "accountId"
+            }
+          ]
+        },
+        "description": "1. \"name\": This is the title of the API endpoint. In this case, it is named as \"Account - Settings - Get All\", which suggests it is used to fetch all settings related to a particular account.\n\n2. \"request\": This is the main object containing all the important data needed to make the request.\n\n3. \"auth\" : The authentication details required to send a successful request.\n\n    - type: The type of authentication. Here, it is \"bearer\".\n\n    - bearer: An array of bearer authentication object that contains following data.\n      \n      - key: Specifies the type of the data that needs to be provided as authentication. In this case, it is a \"token\".\n      \n      - value: The actual value that needs to be submitted for authentication, which is currently set as \"BearerToken\".\n      \n      - type: Defines the datatype of the value, which in this case is a string.\n\n4. \"method\": The HTTP method to be used for the request. Here, it is a \"GET\" request, indicating retrieval of information.\n\n5. \"url\": The endpoint to which the request is sent. Here, the URL points to a localhost API endpoint designed to fetch all settings for an account. It accepts two parameters - sessionId and accountId.\n\n6. \"headers\": This is an array of objects that can contain various HTTP headers to be included in the request. In this case, there is a default empty header provided, which is currently disabled.\n\n7. \"body\": The data that will be sent as part of the HTTP request. In this case, the body is empty and the body mode is set to raw, indicating that the request body is a raw data string, but as per the current setting there will be no data in the request body as \"raw\" field is empty."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Get All - With Deleted",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/all/?sessionId=sessionId&accountId=accountId&includeDeleted=true",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "all",
+            ""
+          ],
+          "query": [
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "accountId",
+              "value": "accountId"
+            },
+            {
+              "key": "includeDeleted",
+              "value": "true"
+            }
+          ]
+        },
+        "description": "The endpoint \"Account - Settings - Get All - With Deleted\" is a GET request that is used to fetch all account settings, even those attached to deleted accounts.\n\n1. \"name\": This is the name of the endpoint - Account - Settings - Get All - With Deleted\n\n2. \"request\": It contains everything about the request.\n\n3. \"auth\": This is the authorization required for this endpoint. Here, authentication needs to be a Bearer type which essentially means you need to send a bearer token to access this endpoint.\n    - \"type\": The type of the authentication required which is 'bearer'\n    - \"bearer\": Contains the key-value pair which would be sent in the header for authentication.\n        - \"key\": The key which is 'token'.\n        - \"value\": It's 'BearerToken'. This will be the actual token required for accessing the endpoint.\n        - \"type\": The type of the value here, borne by the key which is 'string'. \n\n4. \"method\": It is the HTTP verb and here it is 'GET'. This type of request is used to retrieve data from a server.\n\n5. \"url\": This is the link to the specific endpoint where the request is sent. The url here is 'http://localhost:3000/api/account/settings/all/?sessionId=sessionId&accountId=accountId&includeDeleted=true'. It contains query parameters such as sessionId, accountId and includeDeleted which might be required to get the appropriate response.\n\n6. \"headers\": These are used to provide the server with additional information. This endpoint does not require any additional headers, and the default header is disabled.\n\n7. \"body\": The body holds the data to be sent for a POST or PUT request. This is not used in a GET request as in this case, so 'mode' is 'raw', and 'raw' is blank as data is not sent in the body."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Delete - Video Broadcasting",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "sessionId",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"settingKey\":\"videoBroadcasting\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/delete",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "delete"
+          ]
+        },
+        "description": "This endpoint is named \"Account - Settings - Delete - Video Broadcasting\". It is designed to delete the video broadcasting settings of a specific user account via a POST request.\n\nIn the \"request\" field:\n\n1. \"auth\" field: This contains the authentication information required to access the endpoint. It is of the \"bearer\" type, indicating that the request must contain a bearer token to be authenticated. The \"key\" is \"token\", the \"value\" is \"sessionId\", and the \"type\" is a \"string\" which implies that the sessionId must be passed as a string.\n\n2. \"method\" field: This specifies the HTTP method used to request this endpoint, which is \"POST\". This implies that data is sent to the server to create or update a resource.\n\n3. \"url\" field: This is the URL where the API request will be sent. For this endpoint, it is \"http://localhost:3000/api/account/settings/delete\".\n\n4. \"headers\" field: These are the HTTP headers to be included in the request. In this case, no headers need to be sent as the key-value pair is empty, and the \"disabled\" field is set to \"true\".\n\n5. \"body\" field: This includes the actual data to be sent with the request. The \"mode\" is set to \"raw\", which allows the data to be entered manually. The \"raw\" field contains a JSON object, including \"sessionId\", \"accountId\", \"settingKey\". The \"sessionId\" and \"accountId\" are placeholders for the actual sessionId and accountId. The \"settingKey\" is set to \"videoBroadcasting\", meaning this endpoint specifically deletes the \"videoBroadcasting\" setting of the specified account.\n   \nNote that the actual sessionId and accountId need to be provided in place of the placeholders to successfully make the request."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Delete - Event Publishing",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "sessionId",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"settingKey\":\"eventPublishing\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/delete",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "delete"
+          ]
+        },
+        "description": "This API Endpoint is labeled as \"Account - Settings - Delete - Event Publishing\". It utilizes the HTTP POST method to send data to the server at the given URL 'http://localhost:3000/api/account/settings/delete'.\n\n1. \"auth\": It defines the authentication type needed to be used for this request. In this case, it is bearer authentication. It contains one object:\n   - \"token\": A string type bearer token used for user authentication.\n\n2. \"method\": It specifies the HTTP method used for the request. The method type here is POST, intended to submit or send data to be processed by the identified resource.\n\n3. \"url\": The endpoint or URL where the request will be sent. In this case, it will hit the delete method in the accounts settings at: 'http://localhost:3000/api/account/settings/delete'.\n\n4. \"headers\": It is an array of objects where each object stores a pair of key and value to represent a specific header property. However, currently, there is no key-value set and it's disabled.\n\n5. \"body\": It represents the data that will be sent to the URL mentioned above. It's in raw mode. There are three keys that need to be set in this raw data:\n   - \"sessionId\": A unique id associated with the active session.\n   - \"accountId\": The unique id of the account whose settings we are deleting.\n   - \"settingKey\": A string representing the specific setting to be deleted - in this case, it is \"eventPublishing\"."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Delete - Token Minimums",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "sessionId",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"settingKey\":\"tokenMinimums\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/delete",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "delete"
+          ]
+        },
+        "description": "This endpoint is named \"Account - Settings - Delete - Token Minimums\". It mainly focuses on carrying actions related to the deletion of specific settings relating to Token Minimums in an account. Here's a breakdown of each data point:\n\n1. The \"auth\" field controls the authentication method used for this request. It uses the 'bearer' type, which typically involves a server generating a token that the client will then send back in the header of every subsequent request, so the server knows that the request is authenticated. The bearer token is given as a session ID, which is expected to be a string.\n\n2. The request method is defined as \"POST\". This method is used to submit data to be processed to a specified resource.\n\n3. The \"url\" field is the location where the request is being sent to, which is currently set to the local host at port 3000 with the specific endpoint path appended (\"/api/account/settings/delete\").\n\n4. Headers are currently set as default and disabled. The key and values fields are empty, indicating no additional data is carried in the header for this request.\n\n5. The \"body\" of the request is set to 'raw' mode. This typically means that you are sending plain text in JSON format. Its contents show that the raw data holds a JSON string with three key-value pairs:\n       * \"sessionId\": This is likely used for identifying the user's session. Its value is expected to be the session id of the currently active session.\n       * \"accountId\": This could be used to logically identify the account for which you want to delete the settings. Its value is expected to be an account id.\n       * \"settingKey\": Here it has been hardcoded as \"tokenMinimums\". This indicates the specific setting related to token minimums that is to be deleted from the given account point. \n\nPlease note the values injected for \"sessionId\" and \"accountId\" in the raw body are placeholders here, and they should be replaced with actual values during the implementation."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Delete - Notifications",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "sessionId",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"settingKey\":\"notifications\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/delete",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "delete"
+          ]
+        },
+        "description": "This endpoint, named \"Account - Settings - Delete - Notifications\", is designed to delete user settings related to notifications. It uses a POST method, indicating that it executes an action that changes data on the server.\n\nIt requires bearer authentication, which means you need to provide a token to access this endpoint. The token should be placed in the 'bearer' array with the key as 'token' and its value as the 'sessionId'. The 'sessionId' is a unique string attached to each session for user identification.\n\nThe endpoint URL is \"http://localhost:3000/api/account/settings/delete\". This is the path where the command will be sent to execute the data deletion.\n\nIn the 'headers' section, you'll see a default, empty entry which is currently disabled. This can be populated with extra information needed for the request if necessary.\n\nThe body contains the raw data being sent for request processing. The data is a JSON-formatted string including the session ID, the account ID and the setting key. \nThe 'sessionId' is the identifier for the session in which the user made the request. The 'accountId' is the identifier for the account that is updating its settings. The 'settingKey' should always be 'notifications' for this endpoint, signaling that the request is to delete notification settings."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Settings - Delete - Payments",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "sessionId",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"settingKey\":\"payments\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/settings/delete",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "settings",
+            "delete"
+          ]
+        },
+        "description": "The provided data is an endpoint for an API that acts as a back-end functionality for your application.\n\nHere's a detailed breakdown of each data instance:\n\n1. \"name\": Account - Settings - Delete - Payments - This is the name assigned to this API endpoint. It hints that it is used to delete payment settings.\n\n2. \"request\": Houses information about the HTTP request.\n\n3. \"auth\": The authentication method used to validate the given request. A bearer token authorization method is used.\n\n4. \"bearer\": The bearer object that carries the necessary authentication details.\n\n5. \"key\": The key here is named 'token'. It is the placeholder for the actual token.\n\n6. \"value\": Value is the corresponding value for the key (here, 'token'). This field expects a unique 'sessionId' (value) corresponding to the bearer token's name.\n\n7. \"type\": It represents the data type. In this case, it is string.\n\n8. \"method\": The HTTP request method to be used. It uses the POST method, which is used to send data to a server to create a resource.\n\n9. \"url\": This field contains the URL where the request should be made. The server is currently running locally on port 3000.\n\n10. \"headers\": Contains the information passed in header part of the HTTP request. Currently, it's set to 'default' type and is disabled.\n\n11. \"body\": Contains the data to be sent in the body of the HTTP request. It is in raw format and must include a JSON object containing: \n     - \"sessionId\": The session Id for the account.\n     - \"accountId\": The ID identifying the specific user account. \n     - \"settingKey\": Identified as 'payments'. It usually represents the specific settings that need to be affected.\n\nPlease ensure all of the required information (sessionId, accountId, settingKey) is provided when using this endpoint for it to function correctly."
+      },
+      "response": []
+    }
+  ]
+}

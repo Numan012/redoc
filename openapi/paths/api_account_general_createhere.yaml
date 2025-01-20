@@ -1,0 +1,150 @@
+post:
+  tags:
+    - AccountGeneral
+  summary: Account - General - Create
+  description: >-
+    This endpoint is named "Account - General - Create". This name suggests it
+    is used to create a general account.
+
+
+    The request method type is POST. This type of request is typically used to
+    send data to be processed to a specified resource.
+
+
+    The URL of the request is
+    "http://localhost:3000/api/account/general/createhere?locale=en-US9876".
+    This URL includes a query parameter "locale" with a value of "en-US", this
+    indicates that the user interface language is set to English-US.
+
+
+    The request headers are set as default and currently disabled. This means no
+    additional, specific header information is being sent with the request.
+
+
+    The body of the request contains the details for the new account in a JSON
+    format. It includes properties for an email address ("email"), a phone
+    number ("phone"), an account type ("User"), a password ("password"), and a
+    zip code ("95126"). All these fields describe the user-related information
+    required to create a new general account.
+
+
+    The authentication method is of the type "bearer". This means that the
+    requesting client must provide a bearer token named "token" with the value
+    of "BearerToken". Bearer tokens are a type of access token that allows the
+    client to access resources from a server. 
+
+
+    In summary, this 'POST' endpoint is used to create a new general account
+    with specific user details and uses a bearer token for its authorization.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"email\":\"email\",\"phone\":\"phone\",\"accountType\":\"User\",\"password\":\"password\",\"zipcode\":\"95126\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: locale
+      in: query
+      schema:
+        type: string
+      example: en-US
+  responses:
+    '200':
+      description: OK
+      headers:
+        X-Powered-By:
+          schema:
+            type: string
+            example: Express
+        Access-Control-Allow-Origin:
+          schema:
+            type: string
+            example: '*'
+        Content-Type:
+          schema:
+            type: string
+            example: application/json; charset=utf-8
+        Content-Length:
+          schema:
+            type: integer
+            example: '518'
+        ETag:
+          schema:
+            type: string
+            example: W/"206-b3OQDEnGC+KJmh5o+pCyAkiEpDg"
+        Date:
+          schema:
+            type: string
+            example: Fri, 17 Jan 2025 13:11:36 GMT
+        Connection:
+          schema:
+            type: string
+            example: keep-alive
+        Keep-Alive:
+          schema:
+            type: string
+            example: timeout=5
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            success: true
+            message: Login successful
+            token: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYjI3MjI4MDEtNjA5NS00YWRkLThlODMtZWQ2NDNjOTBhNGQzIiwicGhvbmVubyI6IisxMzEyMzQ3NTMxMyIsImlhdCI6MTczNzExOTQ5NiwiZXhwIjoxNzM3MjA1ODk2fQ.uc5t6lY3o8049Vr8nD8-FYDqo0djG8rXsa5iIoeRZE4
+            user:
+              _id: b2722801-6095-4add-8e83-ed643c90a4d3
+              phoneno: '+13123475313'
+              firstname: test
+              lastname: user
+              email: testingemai755125@gmail.com
+              zipcode: '12345'
+              dob: '1998-12-31T19:00:00.000Z'
+              lang: en
+            accessCode: true
+    '401':
+      description: Unauthorized
+      headers:
+        X-Powered-By:
+          schema:
+            type: string
+            example: Express
+        Access-Control-Allow-Origin:
+          schema:
+            type: string
+            example: '*'
+        Content-Type:
+          schema:
+            type: string
+            example: application/json; charset=utf-8
+        Content-Length:
+          schema:
+            type: integer
+            example: '49'
+        ETag:
+          schema:
+            type: string
+            example: W/"31-VmptvJVCxgMiCaKMQdd9IkNBIdc"
+        Date:
+          schema:
+            type: string
+            example: Fri, 17 Jan 2025 13:15:21 GMT
+        Connection:
+          schema:
+            type: string
+            example: keep-alive
+        Keep-Alive:
+          schema:
+            type: string
+            example: timeout=5
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            success: false
+            message: Invalid credentials

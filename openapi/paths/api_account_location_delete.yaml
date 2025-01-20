@@ -1,0 +1,54 @@
+post:
+  tags:
+    - AccountLocation
+  summary: Account - Location - Delete
+  description: >-
+    This endpoint is named "Account - Location - Delete", suggesting it is used
+    to remove a location record associated with a certain account.
+
+
+    Authorization for this endpoint is provided through a bearer token. The
+    "key" is named "token" and its "value" is obtained from a session ID, which
+    is represented as a string.
+
+
+    The request method for this endpoint is POST. This implies that it sends
+    data to the server to create a new resource (in this case, a deletion
+    request).
+
+
+    The URL designated for this endpoint is
+    "http://localhost:3000/api/account/location/delete". This is where the
+    server listens for incoming requests. It's on your local machine,
+    specifically, as is indicated by "localhost:3000".
+
+
+    There's an array of headers in the request where you can set additional
+    information about the request. It currently contains a default header with
+    empty key-value pair that is disabled.
+
+
+    The "body" section carries the data for the request. Its mode is "raw" which
+    means the data is sent as is, a JSON payload in this case. The "raw" field
+    contains a JSON string which includes "sessionId", "accountId", and
+    "locationId". This implies that the deletion operation should target the
+    "locationId" attached to an "accountId" within the current "sessionId".
+
+
+    Recap: This endpoint deletes a location associated with a given account in
+    the provided session, as indicated by the respective IDs in the request
+    body. It uses bearer token authorization parsed from a session ID.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"locationId\":\"locationId\"}"
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

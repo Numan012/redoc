@@ -1,0 +1,163 @@
+post:
+  tags:
+    - AccountGeneral
+  summary: Account - General - Create
+  description: >-
+    This endpoint is titled "Account - General - Create". It's used to create a
+    general account on the server. The actions performed by this endpoint are
+    executed through a POST request.
+
+
+    The base URL for the request is
+    "http://localhost:3000/api/account/general/createnow?locale=en-US98767".
+    This specifies that the request will be sent to your localhost on port 3000,
+    starting with the API endpoint at '/api/account/general/createnow'. The
+    'locale' is added as a query parameter at the end of the URL with the value
+    of 'en-US'.
+
+
+    Inside the 'headers' array, there's an object with empty 'key' and 'value'.
+    The 'type' is set to 'default', and it is 'disabled', which implies that
+    this header does not hold any significant data, and is not required in the
+    request.
+
+
+    The 'body' of the request is a JSON object containing five strings: 'email',
+    'phone', 'accountType', 'password', and 'zipcode'. These are key-value pairs
+    required for the creation of a new account.
+
+
+    - 'email': The email address of the user.
+
+    - 'phone': The phone number of the user.
+
+    - 'accountType': The type of the account to be created for the user. In this
+    case, it is 'User'.
+
+    - 'password': The password string for the new account. 
+
+    - 'zipcode': The zip code of the user's location.
+
+
+    The 'query' array contains objects that hold query parameters. Here, there
+    is one query parameter 'locale' set to 'en-US', which could potentially
+    affect the language or regional settings of the created account.
+
+
+    The 'auth' field is used for authentication purposes. It uses bearer token
+    authentication which is indicated by the 'type' being set to 'bearer'. The
+    'bearer' array contains a 'key' value pair, where the 'key' is 'token', and
+    the 'value' is 'BearerToken'. This is used for validating the client making
+    the request.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"email\":\"email\",\"phone\":\"phone\",\"accountType\":\"User\",\"password\":\"password\",\"zipcode\":\"95126\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: locale
+      in: query
+      schema:
+        type: string
+      example: en-US
+  responses:
+    '200':
+      description: OK
+      headers:
+        X-Powered-By:
+          schema:
+            type: string
+            example: Express
+        Access-Control-Allow-Origin:
+          schema:
+            type: string
+            example: '*'
+        Content-Type:
+          schema:
+            type: string
+            example: application/json; charset=utf-8
+        Content-Length:
+          schema:
+            type: integer
+            example: '518'
+        ETag:
+          schema:
+            type: string
+            example: W/"206-b3OQDEnGC+KJmh5o+pCyAkiEpDg"
+        Date:
+          schema:
+            type: string
+            example: Fri, 17 Jan 2025 13:11:36 GMT
+        Connection:
+          schema:
+            type: string
+            example: keep-alive
+        Keep-Alive:
+          schema:
+            type: string
+            example: timeout=5
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            success: true
+            message: Login successful
+            token: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYjI3MjI4MDEtNjA5NS00YWRkLThlODMtZWQ2NDNjOTBhNGQzIiwicGhvbmVubyI6IisxMzEyMzQ3NTMxMyIsImlhdCI6MTczNzExOTQ5NiwiZXhwIjoxNzM3MjA1ODk2fQ.uc5t6lY3o8049Vr8nD8-FYDqo0djG8rXsa5iIoeRZE4
+            user:
+              _id: b2722801-6095-4add-8e83-ed643c90a4d3
+              phoneno: '+13123475313'
+              firstname: test
+              lastname: user
+              email: testingemai755125@gmail.com
+              zipcode: '12345'
+              dob: '1998-12-31T19:00:00.000Z'
+              lang: en
+            accessCode: true
+    '401':
+      description: Unauthorized
+      headers:
+        X-Powered-By:
+          schema:
+            type: string
+            example: Express
+        Access-Control-Allow-Origin:
+          schema:
+            type: string
+            example: '*'
+        Content-Type:
+          schema:
+            type: string
+            example: application/json; charset=utf-8
+        Content-Length:
+          schema:
+            type: integer
+            example: '49'
+        ETag:
+          schema:
+            type: string
+            example: W/"31-VmptvJVCxgMiCaKMQdd9IkNBIdc"
+        Date:
+          schema:
+            type: string
+            example: Fri, 17 Jan 2025 13:15:21 GMT
+        Connection:
+          schema:
+            type: string
+            example: keep-alive
+        Keep-Alive:
+          schema:
+            type: string
+            example: timeout=5
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            success: false
+            message: Invalid credentials

@@ -1,0 +1,75 @@
+post:
+  tags:
+    - AccountVerify
+  summary: Account - Verify - Phone Number
+  description: >-
+    This endpoint is for the `Account - Verify - Phone Number` API.
+
+
+    **Method**: POST
+
+    The HTTP method used for this endpoint is a POST request. It's typically
+    used to send data to a server to create a new resource.
+
+
+    **URL**: `http://localhost:3000/api/account/verify/phone`
+
+    This is the URL at which the API needs to be hit. Since we're in a local
+    development environment, we're using `localhost`. The port we're using to
+    access the local server is `3000`. The path of the API is
+    `/api/account/verify/phone`, which is used to verify an account's phone
+    number.
+
+
+    **Headers**: []
+
+    This field is empty, meaning we're not sending any additional metadata in
+    the header of this HTTP request. Headers often include items like
+    authorization tokens, content type etc. However, none of that is required by
+    this endpoint.
+
+
+    **Body**:
+
+    The body of the HTTP request is sent in a `raw` format. This is the data
+    that the API takes as input in order to verify a phone number.
+
+
+    - `verificationCode`: This is the code that is used to verify a phone
+    number. Typically, it's sent by an SMS to the phone number that needs to be
+    verified. 
+
+
+    - `phone`: This is the phone number that needs to be verified. It needs to
+    be provided so the API knows which phone number it's supposed to verify.
+
+
+    This endpoint requires both `verificationCode` and `phone` to be present in
+    the raw JSON body of the HTTP request in order to work correctly.
+
+
+    Example of the request body would be:
+
+    ```
+
+    {
+      "verificationCode": "123456",
+      "phone": "+1234567890"
+    }
+
+    ```
+
+
+    Make sure to replace the values with the actual verification code received
+    and the phone number to be verified.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: '"{\"verificationCode\":\"verificationCode\",\"phone\":\"phone\"}"'
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

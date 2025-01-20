@@ -1,0 +1,57 @@
+post:
+  tags:
+    - AccountVerify
+  summary: Account - Verify - Username
+  description: >-
+    The given endpoint is called "Account - Verify - Username". It is configured
+    to make a POST request to the URL:
+    http://localhost:3000/api/account/verify/username. 
+
+
+    Here's a detailed description of each data it includes:
+
+
+    1. "name": This is the title or name of the endpoint. You can think of this
+    as a label to identify what the endpoint does. 
+
+
+    2. "request": This is a complex object that includes all the information
+    necessary for the request. It includes several child objects and data
+    fields.
+
+       a. "method": This denotes the HTTP method of the request. In this case, it's a POST request, which implies that this endpoint is used to send data to be processed to a specified resource.
+
+       b. "url": This is the URL where the request will be made. Our requests get sent to "http://localhost:3000/api/account/verify/username". This is typically the location of the server that will process our request.
+
+       c. "headers": This is an array that should include any HTTP headers we want to send with our request. However, in this case, it's empty, which means no additional headers are being sent with the request.
+
+       d. "body": This contains the actual data that we're sending with our request. 
+
+    3. "body": This is a complex object that includes the data we're sending and
+    the format we're sending it in. 
+
+       a. "mode": This describes the format of the data. The value "raw" tells us that the data in "raw" field is sent as is, and not in any specific format like form-data or x-www-form-urlencoded.
+
+       b. "raw": This is the actual data we're sending for processing. In this case, we're sending a JSON object with three properties: 
+          
+           i. "username": The username of the account that needs verification.
+          
+          ii. "accountId": The ID related to the account that is currently being verified.
+         
+         iii. "sessionId": The session ID associated with the current user or current verification process.
+      
+    In a nutshell, this endpoint is used to verify a username for a given
+    account ID and session ID in our system by making a POST request to the
+    given URL.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"username\":\"fortunevieyra1\",\"accountId\":\"accountId\",\"sessionId\":\"sessionId\"}"
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

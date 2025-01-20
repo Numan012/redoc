@@ -1,0 +1,61 @@
+get:
+  tags:
+    - AccountLocation
+  summary: Account - Location - Get All
+  description: >-
+    This endpoint is named "Account - Location - Get All". Its main function is
+    to retrieve all the location data related to a specific account.
+
+
+    The request uses a 'GET' method, which implies that information is being
+    fetched from this particular URL:
+    "http://localhost:3000/api/account/location/all/?sessionId=sessionId&accountId=accountId".
+    From this URL, we can observe that the request is being sent to an API
+    related to account locations, on a locally hosted server (localhost) running
+    on port 3000. 
+
+
+    Two parameters are required in the root URL - 'sessionId' and 'accountId'.
+    The 'sessionId' parameter is likely tied to the active session of the
+    requester, presumably for security and tracking purposes. The 'accountId'
+    parameter is probably related to the specific account from which all
+    location data are required. Both of these parameters should be populated
+    with appropriate values for this request to function correctly. 
+
+
+    Bearer token authentication is utilized for this request as specified under
+    the 'auth' section. This indicates that a token, identified by "BearerToken"
+    under the bearer section would need to be provided for successful validation
+    and subsequent execution of this request. 
+
+
+    No specific headers are required for this request as the key-value pair
+    under the 'headers' section is left empty and is marked as "disabled". 
+
+
+    The 'body' mode for this request is set to 'raw', but since no raw input is
+    mentioned, it is concluded that this endpoint does not need an HTTP body
+    payload. 
+
+
+    In Summary, to use this endpoint, one would need the two parameters
+    'sessionId' and 'accountId' to be correctly filled in the URL, as well as a
+    valid bearer token to be supplied under the 'auth' section.
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: sessionId
+      in: query
+      schema:
+        type: string
+      example: sessionId
+    - name: accountId
+      in: query
+      schema:
+        type: string
+      example: accountId
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

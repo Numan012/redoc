@@ -1,0 +1,68 @@
+put:
+  tags:
+    - AccountKeys
+  summary: Account - Keys - Update
+  description: >-
+    This endpoint is titled "Account - Keys - Update" and it's used to update
+    the specific keys related to an account in a system. It sends a PUT HTTP
+    request to the given URL, "http://localhost:3000/api/account/keys/update".
+    PUT is a method used to update resource available on the server. Here is a
+    detailed explanation about each component in the request:
+
+
+    1. `auth`: This object sets the authorization strategy for your request.
+    Here, it's a bearer token authorization. It contains a bearer token string
+    which needs to be passed in the 'token' key.
+
+
+    2. `method`: This field is for specifying the HTTP method. In this case,
+    it's a PUT method which is used for updating existing resources.
+
+
+    3. `url`: This is the endpoint URL where the request will be sent. Here,
+    it's running on localhost on port 3000.
+
+
+    4. `headers`: This is a list where you define request headers. Here, we have
+    a "Client-UUID" key with a default string value, which is likely used to
+    uniquely identify the client.
+
+
+    5. `body`: This is the request payload, it contains necessary information to
+    update an account's keys. The 'mode' property is set as 'raw', implying that
+    you have to provide a input JSON object in 'raw' format.
+
+        - `keysId`: Unique identifier for the keys associated with an account.
+        - `sessionId`: The session identifier.
+        - `accountId`: The account identifier.
+        - `country`: The country associated with the key's location (in this case, "United States").
+        - `region`: The region associated with the key's location (here, "California").
+        - `city`: The city associated with the key's location (here, "San Jose").
+        - `postal`: The postal code associated with the key's location.
+        - `latitude` and `longitude`: Geographical coordinates for the key's location.
+        - `ipAddress`: The IP address associated with the request to update the keys.
+        
+    It's important to provide valid data for all these fields for the request to
+    be processed correctly.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"keysId\":\"f7e29500-b1a9-4d5a-a68b-23ece984b2d4\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"country\":\"United
+            States\",\"region\":\"California\",\"city\":\"San
+            Jose\",\"postal\":\"94109\",\"latitude\":\"-123.423\",\"longitude\":\"123.123\",\"ipAddress\":\"12.45.67.89.0\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

@@ -1,0 +1,69 @@
+put:
+  tags:
+    - AccountUpdate
+  summary: Account - Update - Display
+  description: >-
+    This endpoint, named "Account - Update - Display", is designed to update a
+    user's account display settings in your system.
+
+
+    Starting with the "auth" key, it uses the authentication method "bearer".
+    This requires a token, which is labelled under the "key" as "token". The
+    value for this is "BearerToken". This authentication method verifies that
+    the requests being sent to your API are from a trusted source.
+
+
+    The "request" key defines the HTTP method to be a "PUT", signifying this
+    endpoint is used to update existing resources or create them if they don't
+    exist.
+
+
+    The "url" key specifies the URL of the API endpoint, to which requests need
+    to be sent. The link is "http://localhost:3000/api/account/update/display".
+
+
+    The "headers" key contains a "Client-UUID" which serves as an identifier for
+    the client making the API request. Its value is "ClientUUID".
+
+
+    The "body" key is where you specify the details to be sent to the server.
+    The "mode" is "raw", meaning that the data is sent in a raw, unprocessed
+    format.
+
+
+    The "body" also contains the "raw" key, which carries a JSON string. It
+    includes parameters:
+
+    - "displayPreference": This specifies the desired display setting; in this
+    example, it is set to "dark".
+
+    - "sessionId": This is a unique identifier for the user's current session;
+    in this example, it is labeled as "sessionId".
+
+    - "accountId": This is a unique identifier for the user's account; in this
+    example, it is labeled as "accountId".
+
+
+    These are provided as raw JSON input when making the PUT request. When using
+    this endpoint to update an account's display settings, replace these things
+    with actual values.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"displayPreference\":\"dark\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

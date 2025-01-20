@@ -1,0 +1,82 @@
+put:
+  tags:
+    - AccountSettings
+  summary: Account - Settings - Update - Payments
+  description: >-
+    This endpoint is named "Account - Settings - Update - Payments" and it is
+    used to update an account's payment settings. It uses the HTTP PUT method.
+
+
+    The 'auth' field includes the authentication type, which is 'bearer' and
+    takes a 'token' whose value is 'BearerToken'. This is a string type.
+
+
+    The 'request' field refers to the actual request made to the endpoint. The
+    'url' field in the 'request' object is the endpoint to which the request is
+    being made, in this case, it is
+    "http://localhost:3000/api/account/settings/update".
+
+
+    In the 'headers' section, there is a Client-UUID. This holds unique
+    identification for each client.
+
+
+    The 'body' section contains the details of the user's account settings that
+    are to be updated. It includes important details like session id, account
+    id, settings key, personal information like name, email id, phone no.,
+    address, business-related details like company name, tax ID number, business
+    type and structure, bank details like name, account number, email id,
+    routing number. It also includes various other payment source details
+    related to PayPal, Cash App, Venmo, Zelle, BitPay, etc along with their
+    respective auth tokens. A minimum payout amount is also mentioned along with
+    the frequency of occurrence of the payout (monthly in this case) and the
+    preferred payout method. The start date for payout is provided at the end.
+
+
+    All of these details will be sent as raw data in JSON format in the HTTP
+    body.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\": \"sessionId\",\"accountId\":
+            \"accountId\",\"settingKey\": \"payments\",\"firstName\":
+            \"John\",\"lastName\": \"Doe\",\"birthday\":
+            \"1990-01-01\",\"email\": \"john.doe@example.com\",\"phoneNumber\":
+            \"+1234567890\",\"addressLine1\": \"123 Main St\",\"addressLine2\":
+            \"Apt 456\",\"city\": \"Anytown\",\"state\": \"CA\",\"country\":
+            \"US\",\"zipCode\": \"12345\",\"companyName\": \"ABC
+            Inc\",\"taxIdNumber\": \"123-45-6789\",\"businessType\":
+            \"LLC\",\"businessStructure\": \"Corporation\",\"bankFirstName\":
+            \"John\",\"bankEmailAddress\":
+            \"john.bank@example.com\",\"bankLastName\":
+            \"Doe\",\"bankPhoneNumber\": \"+1234567890\",\"bankName\": \"Bank of
+            Example\",\"bankAccountNumber\":
+            \"123456789\",\"bankRoutingNumber\": \"987654321\",\"paypalSource\":
+            \"john.paypal@example.com\",\"paypalAuthToken\":
+            \"paypal-auth-token\",\"cashAppSource\":
+            \"john.cashapp\",\"cashAppAuthToken\":
+            \"cashapp-auth-token\",\"venmoSource\":
+            \"john.venmo\",\"venmoAuthToken\":
+            \"venmo-auth-token\",\"zelleSource\":
+            \"john.zelle@example.com\",\"zelleAuthToken\":
+            \"zelle-auth-token\",\"bitPaySource\":
+            \"john.bitpay\",\"bitPayAuthToken\":
+            \"bitpay-auth-token\",\"payoutMinimumAmount\":
+            50.00,\"payoutOccurrence\": \"monthly\",\"payoutPreferredMethod\":
+            \"bank\",\"payoutStartDate\": \"2023-01-01\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

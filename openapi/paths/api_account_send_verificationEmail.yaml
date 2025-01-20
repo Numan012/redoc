@@ -1,0 +1,50 @@
+post:
+  tags:
+    - AccountSend
+  summary: Account - Send - Verification Email
+  description: >-
+    This data describes an endpoint titled "Account - Send - Verification
+    Email". 
+
+
+    1. `name`: This defines the name of the endpoint. It is named "Account -
+    Send - Verification Email". 
+
+
+    2. `request`: This section houses all the information about the HTTP request
+    that is sent to the server. 
+
+        A. `auth`: The `auth` section describes the type of authorization used for the request. The type specifies the format of authorization, and in this case, it is 'bearer'. The `bearer` is an array of authentication-related objects.
+        
+             - `key`: The key is the identifier for the authentication value. Here, it is labeled "token".
+             - `value`: The value tag in the bearer array symbolizes the actual token value. Here, it is represented as "BearerToken".
+             - `type`: The type indicates the data type of the bearer token. Here, it is "string".
+
+        B. `method`: The method property indicates the HTTP method used to send the request to the API. In this case, it's a "POST" request.
+
+        C. `url`: This is the URL that the API request will be sent to. Here, it is "http://localhost:3000/api/account/send/verificationEmail".
+
+        D. `headers`: An array of objects signifying the collection of HTTP headers enclosed with the request.
+        
+             - `key`: This element indicates the name of the header field. It is empty in this case.
+             - `value`: This represents the associated value for the corresponding header key. In this case, it is also empty.
+             - `type`: Denotes the header content type. It is labeled as "default" in this instance.
+             - `disabled`: Shows whether the header is enabled or not. In this case, it is set to true, meaning the header is disabled.
+
+        E. `body`: Contains the actual request body sent to the API.
+        
+            - `mode`: Determines the format of the body sent with the request. In this case, it is "raw", indicating unprocessed data.
+            - `raw`: Contains the actual raw body content. Here, it is a JSON string with property "email" and value "email".
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: '"{\"email\":\"email\"}"'
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

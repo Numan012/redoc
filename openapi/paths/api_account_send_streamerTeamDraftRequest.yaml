@@ -1,0 +1,61 @@
+post:
+  tags:
+    - AccountSend
+  summary: Account - Send - Streamer Team Draft Request Email
+  description: >-
+    This endpoint is named "Account - Send - Streamer Team Draft Request Email".
+    It is designed to send a team draft request email through the streamer
+    account. Here's a detailed description of all components of the endpoint:
+
+
+    1. Auth: This endpoint uses bearer token authentication, which means that
+    the server and client could pass a `token` as the value of the bearer token
+    to authenticate each other. The type of the `token` is string.
+
+
+    2. Request Method: The HTTP method used by this endpoint is `POST`, which
+    means it submits data to be processed to a specified resource.
+
+
+    3. URL: This HTTP request is sent to the URL:
+    `http://localhost:3000/api/account/send/streamerTeamDraftRequest`.
+
+
+    4. Headers: This HTTP request contains headers, which allow the client to
+    pass additional information about the request or about itself, to the
+    server. The `Client-UUID` is sent as a header with the type set to
+    `default`. Replace `ClientUUID` with the unique identifier of the client.
+
+
+    5. Body: The body of this request contains the data to be sent to the
+    server. The data is sent in `raw` mode which contains the following
+    parameters:
+      
+        - `sessionId`: A unique identifier for the session.
+      
+        - `accountId`: The account identifier of the user.
+      
+        - `ownerId`: The unique identifier of the owner. The value `KALSDF98-OJOASDF9=OASKDHFL-OIUAHSD89=ASDFDSS` is just a placeholder and needs to be replaced with the actual ownerId.
+
+    Make sure to replace the placeholder data with actual values when making the
+    request.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"ownerId\":\"KALSDF98-OJOASDF9=OASKDHFL-OIUAHSD89=ASDFDSS\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

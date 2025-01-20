@@ -1,0 +1,68 @@
+post:
+  tags:
+    - AccountSend
+  summary: Account - Send - New Message Notification Email
+  description: >-
+    The provided data describes a POST endpoint for sending a new message
+    notification email in an account.
+
+
+    1. `name`: This is the unique identifier or the title of the endpoint. In
+    this case, it is "Account - Send - New Message Notification Email".
+
+
+    2. `request`: This encapsulates all the information needed to make the API
+    call.
+
+       - `auth`: Specifies the authentication details.
+         - `type`: It denotes the type of authentication. Here, it is a "bearer" type.
+         - `bearer`:[{...}]: This array contains an object defining a bearer token, specified by:
+           - `key`: The key "token" used for identification during authentication.
+           - `value`: It is the actual bearer token to be used. Here, it is denoted as "BearerToken".
+           - `type`: It defines what type of data the bearer token is. Here, it is a "string".
+
+       - `method`: The HTTP method employed for calling the API. Here, it is "POST".
+      
+       - `url`: The URL to which the request is made. For the given data, the API endpoint is "http://localhost:3000/api/account/send/newMessage".
+
+       - `headers`: An array containing all the headers to be included in the request.
+         - `key`: The identifying key for the header. Here, it is "Client-UUID".
+         - `value`: The corresponding value to the key. In this case, "ClientUUID".
+         - `type`: The kind of header it is. Here, it is "default".
+
+       - `body`: This includes the body of the HTTP request.
+         - `mode`: Indicates the mode of the request body. For this endpoint, it's "raw".
+         - `raw`: Contains the actual body of the request sent to the server as a raw string. This string could ideally be a properly formatted JSON, XML, or even just plain text. Here, it is a JSON string containing sessionId, accountId, sender and message properties.
+      
+    The body values:
+
+    - `sessionId`: The unique identifier for a specific session.
+
+    - `accountId`: Represents the id of the account.
+
+    - `sender`: A string that represents the sender's name. In this case, 
+    "Fortune Vieyra".
+
+    - `message`: The actual content of your message. Provided example is a
+    greeting, "Hello World".
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"sender\":\"Fortune
+            Vieyra\",\"message\":\"Hello World\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

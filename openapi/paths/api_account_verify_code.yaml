@@ -1,0 +1,52 @@
+post:
+  tags:
+    - AccountVerify
+  summary: Account - Verify - Unlock Code
+  description: >-
+    This endpoint is labeled as `Account - Verify - Unlock Code`. The purpose of
+    this endpoint is to verify and unlock a specific code for an account. 
+
+
+    The method used for this API call is `POST`, indicating that this endpoint
+    is used to send data to the server to create a resource.
+
+
+    The URL or endpoint where the API call is made is
+    `http://localhost:3000/api/account/verify/code`. This is the path in your
+    API where resources related to verifying and unlocking the account code can
+    be created.
+
+
+    This endpoint does not use any predefined HTTP headers. Headers are often
+    used to provide information about the request body or response, or about the
+    server or client. Since there are no headers indicated here, the request
+    doesn't carry any additional information in the headers.
+
+
+    The `body` of the request consists of raw data sent to the server. It is in
+    JSON format which is a standard data format with a diverse range of
+    functionality. Two parameters are passed in this request body:
+
+
+    1. `securityCode`: This is an alphanumeric code associated with the account
+    that needs verification. This will be unique per individual account and must
+    be supplied by the user.
+      
+    2. `email`: This is the email address associated with the user's account. It
+    is used to identify the user's account that is being processed for the
+    unlock code.
+
+
+    Remember to replace `securityCode` and `email` placeholders with actual
+    values when you are using this endpoint.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: '"{\"securityCode\":\"securityCode\",\"email\":\"email\"}"'
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

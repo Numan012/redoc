@@ -1,0 +1,365 @@
+openapi: 3.0.0
+info:
+  title: Combined API Documentation
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+tags:
+  - name: Admin
+  - name: Customer
+  - name: Driver
+  - name: Otp
+  - name: Category
+paths:
+  /api/v1/admin/signup:
+    post:
+      tags:
+        - General
+      summary: Admin Signup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Super-Admin
+                email: super-admin@gmail.com
+                password: Test@123
+                role: super-admin
+                phone: '+923041234567'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/admin/login:
+    post:
+      tags:
+        - General
+      summary: Login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: super-admin@gmail.com
+                password: Test@123
+                otp: '725292'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/admin/get-profile:
+    get:
+      tags:
+        - General
+      summary: Get Profile
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/admin/list:
+    get:
+      tags:
+        - General
+      summary: Listing
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+          example: '1'
+        - name: limit
+          in: query
+          schema:
+            type: integer
+          example: '10'
+        - name: sort
+          in: query
+          schema:
+            type: string
+          example: desc
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/customer/signup:
+    post:
+      tags:
+        - General
+      summary: Customer Signup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Jhon-Wick
+                email: jhon-wick@gmail.com
+                gender: male
+                phone: '+923041209567'
+                dob: '1999-09-27T18:00:00.000Z'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/customer/login:
+    post:
+      tags:
+        - General
+      summary: Login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                phone: '+923041209567'
+                otp: '587368'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/customer/update-profile:
+    put:
+      tags:
+        - General
+      summary: Update Profile
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                gender: female
+                dob: '1998-09-27T18:00:00.000Z'
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/customer/get-profile:
+    get:
+      tags:
+        - General
+      summary: Get Profile
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/customer/list:
+    get:
+      tags:
+        - General
+      summary: Listing
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: integer
+          example: '1'
+        - name: limit
+          in: query
+          schema:
+            type: integer
+          example: '10'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/driver/signup:
+    post:
+      tags:
+        - General
+      summary: Driver Signup
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: Jhon-Wick
+                email: jhon-wick@gmail.com
+                phone: '+923041209767'
+                license_number: ABC-123
+                vehicle_details: Mehran LEO-3432
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/driver/login:
+    post:
+      tags:
+        - General
+      summary: Login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                phone: '+923041209767'
+                otp: '277423'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/driver/update-profile:
+    put:
+      tags:
+        - General
+      summary: Update Profile
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                license_number: ABC-4321
+                vehicle_details: Alto LEO-3432
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/driver/get-profile:
+    get:
+      tags:
+        - General
+      summary: Get Profile
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/send-otp:
+    post:
+      tags:
+        - General
+      summary: Send Otp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                type: customer
+                email: jhon-wick@gmail.com
+                phone: '+923041209567'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/verify-otp:
+    post:
+      tags:
+        - General
+      summary: Verify Otp
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                type: customer
+                email: jhon-wick@gmail.com
+                otp: '338562'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/category/6751636a843cc47ff02a0d28:
+    put:
+      tags:
+        - General
+      summary: Update Category
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                vehicleType: bike
+                perKilometerCost: 15
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    get:
+      tags:
+        - General
+      summary: Category Details
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /api/v1/category:
+    get:
+      tags:
+        - General
+      summary: Category Listing
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - General
+      summary: Create Category
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                vehicleType: business
+                perKilometerCost: 100
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+security:
+  - bearerAuth: []

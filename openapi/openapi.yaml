@@ -1,22 +1,118 @@
 openapi: 3.0.0
 info:
-  title: ActionEarn
+  title: Combined API Documentation
   version: 1.0.0
 servers:
   - url: http://localhost:3000
 security:
   - bearerAuth: []
 paths:
-  /api/action/earn/create:
-    $ref: paths/api_action_earn_create.yaml
-  /api/action/earn/update:
-    $ref: paths/api_action_earn_update.yaml
-  /api/action/earn/get:
-    $ref: paths/api_action_earn_get.yaml
-  /api/action/earn/all:
-    $ref: paths/api_action_earn_all.yaml
-  /api/action/earn/delete:
-    $ref: paths/api_action_earn_delete.yaml
+  /api/account/general/create877:
+    $ref: paths/api_account_general_create877.yaml
+  /api/account/general/createnow:
+    $ref: paths/api_account_general_createnow.yaml
+  /api/account/general/createhere:
+    $ref: paths/api_account_general_createhere.yaml
+  /api/account/general/loginClear:
+    $ref: paths/api_account_general_loginClear.yaml
+  /api/account/general/login:
+    $ref: paths/api_account_general_login.yaml
+  /api/account/general/forgot:
+    $ref: paths/api_account_general_forgot.yaml
+  /api/account/general/session:
+    $ref: paths/api_account_general_session.yaml
+  /api/account/general/reset:
+    $ref: paths/api_account_general_reset.yaml
+  /api/account/general/logout:
+    $ref: paths/api_account_general_logout.yaml
+  /api/account/keys/create:
+    $ref: paths/api_account_keys_create.yaml
+  /api/account/keys/update:
+    $ref: paths/api_account_keys_update.yaml
+  /api/account/keys/get:
+    $ref: paths/api_account_keys_get.yaml
+  /api/account/keys/all:
+    $ref: paths/api_account_keys_all.yaml
+  /api/account/keys/delete:
+    $ref: paths/api_account_keys_delete.yaml
+  /api/account/location/create:
+    $ref: paths/api_account_location_create.yaml
+  /api/account/location/update:
+    $ref: paths/api_account_location_update.yaml
+  /api/account/location/get:
+    $ref: paths/api_account_location_get.yaml
+  /api/account/location/all:
+    $ref: paths/api_account_location_all.yaml
+  /api/account/location/delete:
+    $ref: paths/api_account_location_delete.yaml
+  /api/account/send/accountCreated:
+    $ref: paths/api_account_send_accountCreated.yaml
+  /api/account/send/verificationEmail:
+    $ref: paths/api_account_send_verificationEmail.yaml
+  /api/account/send/verificationSMS:
+    $ref: paths/api_account_send_verificationSMS.yaml
+  /api/account/send/emailAddressChanged:
+    $ref: paths/api_account_send_emailAddressChanged.yaml
+  /api/account/send/phoneNumberChanged:
+    $ref: paths/api_account_send_phoneNumberChanged.yaml
+  /api/account/send/passwordChanged:
+    $ref: paths/api_account_send_passwordChanged.yaml
+  /api/account/send/passwordResetEmail:
+    $ref: paths/api_account_send_passwordResetEmail.yaml
+  /api/account/send/passwordResetSMS:
+    $ref: paths/api_account_send_passwordResetSMS.yaml
+  /api/account/send/newMessage:
+    $ref: paths/api_account_send_newMessage.yaml
+  /api/account/send/newFollowers:
+    $ref: paths/api_account_send_newFollowers.yaml
+  /api/account/send/streamerNewComment:
+    $ref: paths/api_account_send_streamerNewComment.yaml
+  /api/account/send/streamerTeamDraftRequest:
+    $ref: paths/api_account_send_streamerTeamDraftRequest.yaml
+  /api/account/send/userNewComment:
+    $ref: paths/api_account_send_userNewComment.yaml
+  /api/account/send/userTeamDraftRequest:
+    $ref: paths/api_account_send_userTeamDraftRequest.yaml
+  /api/account/settings/create:
+    $ref: paths/api_account_settings_create.yaml
+  /api/account/settings/update:
+    $ref: paths/api_account_settings_update.yaml
+  /api/account/settings/get:
+    $ref: paths/api_account_settings_get.yaml
+  /api/account/settings/all:
+    $ref: paths/api_account_settings_all.yaml
+  /api/account/settings/delete:
+    $ref: paths/api_account_settings_delete.yaml
+  /api/account/update/account:
+    $ref: paths/api_account_update_account.yaml
+  /api/account/update/display:
+    $ref: paths/api_account_update_display.yaml
+  /api/account/update/email:
+    $ref: paths/api_account_update_email.yaml
+  /api/account/update/language:
+    $ref: paths/api_account_update_language.yaml
+  /api/account/update/phone:
+    $ref: paths/api_account_update_phone.yaml
+  /api/account/update/type:
+    $ref: paths/api_account_update_type.yaml
+  /api/account/update/username:
+    $ref: paths/api_account_update_username.yaml
+  /api/account/update/password:
+    $ref: paths/api_account_update_password.yaml
+  /api/account/verify/account:
+    $ref: paths/api_account_verify_account.yaml
+  /api/account/verify/email:
+    $ref: paths/api_account_verify_email.yaml
+  /api/account/verify/phone:
+    $ref: paths/api_account_verify_phone.yaml
+  /api/account/verify/unlock:
+    $ref: paths/api_account_verify_unlock.yaml
+  /api/account/verify/link:
+    $ref: paths/api_account_verify_link.yaml
+  /api/account/verify/code:
+    $ref: paths/api_account_verify_code.yaml
+  /api/account/verify/username:
+    $ref: paths/api_account_verify_username.yaml
 components:
   securitySchemes:
     bearerAuth:

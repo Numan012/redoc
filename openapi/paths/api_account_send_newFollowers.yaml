@@ -1,0 +1,58 @@
+post:
+  tags:
+    - AccountSend
+  summary: Account - Send - New Followers Notification Email
+  description: >-
+    This endpoint, named "Account - Send - New Followers Notification Email", is
+    designed to automatically send an email notification when a user has new
+    followers on their account. It utilizes the `POST` method and interacts with
+    a specific `API` at "http://localhost:3000/api/account/send/newFollowers".
+
+
+    Starting with `auth` block, it employs `bearer token` authentication which
+    denotes that to achieve successful communication with this API, you'll need
+    to include the relevant access token string under the `bearer` field in the
+    `auth` section. The placeholder for this token is represented as
+    "BearerToken".
+
+
+    The `request` section also defines a `client-UUID` header where a
+    universally unique client identifier must be substituted in place of
+    "ClientUUID". This identifier is used to uniquely identify each client that
+    uses this endpoint.
+
+
+    And finally, the `body` section of the request takes three key parts which
+    are `sessionId`, `accountId`, and `newFollowers` in JSON format. The
+    `sessionId` and `accountId` refer to the unique identifiers for a user's
+    session and account respectively where you would replace "sessionId" and
+    "accountId" with actual values. For the `newFollowers`, it takes an array of
+    strings replacing "John Smith","Andy Lee","Michael Jordan" with the actual
+    names of new followers.
+
+
+    Remember that all the data provided in `request` section should adhere to
+    the right string format as stipulated for each item. Keep your `token`,
+    `ClientUUID`, `sessionId` and `accountId` confidential in order to uphold
+    the security of your data.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"newFollowers\":[\"John
+            Smith\",\"Andy Lee\",\"Michael Jordan\"]}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

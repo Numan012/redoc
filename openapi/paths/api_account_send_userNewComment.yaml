@@ -1,0 +1,69 @@
+post:
+  tags:
+    - AccountSend
+  summary: Account - Send - User New Comment Request Email
+  description: >-
+    This endpoint is named "Account - Send - User New Comment Request Email". It
+    is designed to send an email notification to a user when a new comment is
+    made on their account.
+
+
+    Here is a breakdown of the data:
+
+
+    - `auth`: This specifies the authorization method that is being used. In
+    this case, the type is "bearer". The bearer key-value pair should be
+    supplied, having a value of type string. 
+
+
+    - `method`: This specifies the HTTP method that should be used for the
+    request. In this case, the POST method is used, indicating that data will be
+    sent to the server.
+
+
+    - `url`: This is the URL that the request will be sent to. The path
+    `http://localhost:3000/api/account/send/userNewComment` is the designated
+    route for sending user new comment request emails.
+
+
+    - `headers`: This is an array of objects that represents the headers that
+    should be included in the HTTP request. The Client-UUID key, which carries a
+    value of type default is required, you need to substitute "ClientUUID" with
+    the appropriate value.
+
+
+    - `body`: This describes the data that is being sent in the request. The
+    body content is in raw format. The raw string contains a JSON object with
+    four properties:
+      
+      - `sessionId`: A string that uniquely identifies the current session.
+
+      - `accountId`: A string that uniquely identifies the account that the comment is being made on. 
+
+      - `commenterId`: A unique identifier for the user who has made the comment. The example provided is a placeholder and should be replaced with the actual value.
+
+      - `comment`: A string representing the content of the user's comment. The example "HELLO WORLD!" is a placeholder for actual comment.
+
+    Do replace the placeholder values with actual values before making the
+    request.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"commenterId\":\"12345AD3DS-ASDFSA2-ASDFASD-2ASDFASD\",\"comment\":\"HELLO
+            WORLD!\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

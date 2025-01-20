@@ -1,0 +1,54 @@
+get:
+  tags:
+    - AccountKeys
+  summary: Account - Keys - Get
+  description: >-
+    The provided endpoint contains detailed information about how to retrieve
+    account keys using a GET request. Here's a detailed explanation for each
+    data point:
+
+
+    1. "name": This represents the name of the endpoint. In this case, the name
+    is "Account - Keys - Get", signifying that this endpoint is utilized to
+    retrieve keys associated with a specific account.
+
+
+    2. "request": This field specifies the type of the request, the associated
+    authorization details, the target URL of the request, headers, and the body.
+    Each attribute under this field is as follows -
+
+       a. "auth": The "auth" field contains details about the authorization required to use this API. It includes type of the authorization, which is "bearer" and the object array "bearer" that includes the "key", which is the authorization token name, "value", which is the bearer token, and "type" which is the datatype of the token.
+
+       b. "method": This is the request method, which for the provided endpoint is GET. This means data is being retrieved or 'got' from the server.
+
+       c. "url": This is the URL where the API request would be sent. The URL parameters include keysId, sessionId, and accountId. These parameters are used to specify a unique set of keys, session, and account respectively that are targeted by this request.
+
+       d. "headers": Headers let the server and client pass additional information with an HTTP request. In this case, no key-value pairs are provided and it's set to default, meaning no custom headers are being used unless they are disabled.
+
+       e. "body": The "body" field provides the request's body. As per the provided data, "mode" suggests it's in "raw" form. However, since the request method is GET, the "raw" body is empty.
+
+    If you're using this API, make sure to replace the dummy "token", "keysId",
+    "sessionId", and "accountId" with actual valid values.
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: keysId
+      in: query
+      schema:
+        type: string
+      example: keysId
+    - name: sessionId
+      in: query
+      schema:
+        type: string
+      example: sessionId
+    - name: accountId
+      in: query
+      schema:
+        type: string
+      example: accountId
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

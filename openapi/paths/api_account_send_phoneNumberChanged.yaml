@@ -1,0 +1,64 @@
+post:
+  tags:
+    - AccountSend
+  summary: Account - Send - Phone Number Changed Notification
+  description: >-
+    This endpoint accepts a POST request to the path
+    "http://localhost:3000/api/account/send/phoneNumberChanged". It's used to
+    notify the system that the phone number associated with the provided account
+    has been changed.
+
+
+    Let's break the request into parts:
+
+
+    1. `"name"`: The name field provides a descriptive label for the endpoint.
+    In this case, the name suggests an action, which in terminalogy, "sends a
+    notification for a changed phone number on an account".
+
+
+    2. `"auth"`: This is the type of authorization needed to access the endpoint
+    with bearer as the authentication method. This means a bearer token needs to
+    be attached in the header of the request for successful authorization. 
+       - `"key"`: Describes the key used within the bearer authorization, which here is "token".
+       - `"value"`: The value associated with the key. For this request, the value should be the actual bearer token, "BearerToken" is just a placeholder.
+
+    3. `"method"`: The HTTP verb associated with the request. In this case, it's
+    a "POST" method, which is typically used to send data to a server to create
+    a new resource.
+
+
+    4. `"url"`: The URL field contains the endpoint's path. This is required for
+    determining where the request will be sent.
+
+
+    5. `"headers"`: These are additional pieces of information required by the
+    server.
+       - `"key"`: The header's key which is "Client-UUID".
+       - `"value"`: The value associated with the key in the header, represented here by "ClientUUID".
+
+    6. `"body"`: Contains the data that is sent to the server. In "raw" mode,
+    the data must be a string, often in JSON format.
+       - `"sessionId"`: Identifies the current user's session. This ID is unique to a user's session.
+       - `"accountId"`: The unique identifier for the user's account.
+       - `"email"`: The email associated with the user's account.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"email\":\"email\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

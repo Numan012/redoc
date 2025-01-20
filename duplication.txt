@@ -1,0 +1,47 @@
+[
+  {
+    "url": "http://localhost:3000/api/account/general/forgot",
+    "files": [
+      "_latest_collections/account/AccountGeneral.json",
+      "_latest_collections/account/AccountGeneral.json"
+    ],
+    "params": [
+      "Account - General - Forgot Email",
+      "Account - General - Forgot Phone"
+    ]
+  },
+  {
+    "url": "http://localhost:3000/api/account/settings/update",
+    "files": [
+      "_latest_collections/account/AccountSettings.json",
+      "_latest_collections/account/AccountSettings.json",
+      "_latest_collections/account/AccountSettings.json",
+      "_latest_collections/account/AccountSettings.json",
+      "_latest_collections/account/AccountSettings.json"
+    ],
+    "params": [
+      "Account - Settings - Update - Video Broadcasting",
+      "Account - Settings - Update - Event Publishing",
+      "Account - Settings - Update - Token Minimums",
+      "Account - Settings - Update - Notifications",
+      "Account - Settings - Update - Payments"
+    ]
+  },
+  {
+    "url": "http://localhost:3000/api/account/settings/delete",
+    "files": [
+      "_latest_collections/account/AccountSettings.json",
+      "_latest_collections/account/AccountSettings.json",
+      "_latest_collections/account/AccountSettings.json",
+      "_latest_collections/account/AccountSettings.json",
+      "_latest_collections/account/AccountSettings.json"
+    ],
+    "params": [
+      "Account - Settings - Delete - Video Broadcasting",
+      "Account - Settings - Delete - Event Publishing",
+      "Account - Settings - Delete - Token Minimums",
+      "Account - Settings - Delete - Notifications",
+      "Account - Settings - Delete - Payments"
+    ]
+  }
+]

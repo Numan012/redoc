@@ -1,0 +1,52 @@
+get:
+  tags:
+    - AccountLocation
+  summary: Account - Location - Get
+  description: >-
+    This data refers to an API endpoint named "Account - Location - Get". It
+    deals with retrieving location related information associated with a
+    specific user account. 
+
+
+    1. "name": This field refers to the name of the API endpoint. In this case,
+    the name of the endpoint is "Account - Location - Get".
+
+
+    2. "request": This field contains the details for making the API request.
+       
+        a. "auth": This section contains information related to the method of authentication. The "type" field indicates that a bearer token is being used for the API request authorization. The "bearer" array holds information about the token key and its value.
+       
+        b. "method": This field specifies the HTTP method to be used for the request, which is "GET" in this case.
+       
+        c. "url": This field defines the exact URL to which the request is to be sent. It contains parameters called "locationId", "sessionId", and "accountId". These parameters are placeholders and are expected to be replaced by actual values during the execution of the request. 
+
+        d. "headers": This field represents the HTTP headers to be sent with the request. The "key" and "value" are left blank intentionally indicating that there are no additional headers needed for this request.
+
+        e. "body": This field represents the body of the request. "mode" field specifies that the body content type is "raw". However, the "raw" field doesn't contain any data, indicating that GET request does not require a body.
+
+    Remember to replace all the placeholder values in the "url" with actual
+    values before sending the request. Also, ensure that the "token" field under
+    "auth" is updated with a valid bearer token for successful authorization.
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: locationId
+      in: query
+      schema:
+        type: string
+      example: locationId
+    - name: sessionId
+      in: query
+      schema:
+        type: string
+      example: sessionId
+    - name: accountId
+      in: query
+      schema:
+        type: string
+      example: accountId
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

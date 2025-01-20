@@ -1,0 +1,146 @@
+post:
+  tags:
+    - AccountGeneral
+  summary: Account - General - Login Email
+  description: >-
+    This endpoint is titled "Account - General - Login Email". It defines how to
+    post (create) a login request for an account using email and password
+    credentials.
+
+
+    - **Request Method:** The request method is POST. This method is used when
+    you want to send data to the server. Here, it is used to submit the login
+    credentials to the server.
+
+
+    - **URL:** The URL where the request is sent to is
+    "http://localhost:3000/api/account/general/loginClear". 
+
+
+    - **Headers:** There's a single header in this request:
+      - "Client-UUID" is the key of the header, and "ClientUUID" is its corresponding value. This serve as a unique identifier for the client making the request.
+
+    - **Body:** The body of the request is a JSON object containing two fields:
+      - "email" field for the user's email address. Replace "email" with actual email-address.
+      - "password" field for the user's password. Replace "password" with actual password.
+
+    - **Auth:** The authorization method used is the "bearer" type.
+      - "token" is the key, and "BearerToken" is its corresponding value. Replace "BearerToken" with actual token. It's used to validate the request. Bearer type auth is a security measure to prevent unauthorized access.
+      
+    Remember to replace the placeholders in "value" with actual values before
+    making a request. The actual values are typically generated or provided by
+    the back-end system or are set up in your configuration files. This endpoint
+    takes these details and uses them to attempt a login, and subsequently sends
+    a valid or invalid response based on whether the authentication was
+    successful or not.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: '"{\"email\":\"email\",\"password\":\"password\"}"'
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: OK
+      headers:
+        X-Powered-By:
+          schema:
+            type: string
+            example: Express
+        Access-Control-Allow-Origin:
+          schema:
+            type: string
+            example: '*'
+        Content-Type:
+          schema:
+            type: string
+            example: application/json; charset=utf-8
+        Content-Length:
+          schema:
+            type: integer
+            example: '518'
+        ETag:
+          schema:
+            type: string
+            example: W/"206-b3OQDEnGC+KJmh5o+pCyAkiEpDg"
+        Date:
+          schema:
+            type: string
+            example: Fri, 17 Jan 2025 13:11:36 GMT
+        Connection:
+          schema:
+            type: string
+            example: keep-alive
+        Keep-Alive:
+          schema:
+            type: string
+            example: timeout=5
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            success: true
+            message: Login successful
+            token: >-
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYjI3MjI4MDEtNjA5NS00YWRkLThlODMtZWQ2NDNjOTBhNGQzIiwicGhvbmVubyI6IisxMzEyMzQ3NTMxMyIsImlhdCI6MTczNzExOTQ5NiwiZXhwIjoxNzM3MjA1ODk2fQ.uc5t6lY3o8049Vr8nD8-FYDqo0djG8rXsa5iIoeRZE4
+            user:
+              _id: b2722801-6095-4add-8e83-ed643c90a4d3
+              phoneno: '+13123475313'
+              firstname: test
+              lastname: user
+              email: testingemai755125@gmail.com
+              zipcode: '12345'
+              dob: '1998-12-31T19:00:00.000Z'
+              lang: en
+            accessCode: true
+    '401':
+      description: Unauthorized
+      headers:
+        X-Powered-By:
+          schema:
+            type: string
+            example: Express
+        Access-Control-Allow-Origin:
+          schema:
+            type: string
+            example: '*'
+        Content-Type:
+          schema:
+            type: string
+            example: application/json; charset=utf-8
+        Content-Length:
+          schema:
+            type: integer
+            example: '49'
+        ETag:
+          schema:
+            type: string
+            example: W/"31-VmptvJVCxgMiCaKMQdd9IkNBIdc"
+        Date:
+          schema:
+            type: string
+            example: Fri, 17 Jan 2025 13:15:21 GMT
+        Connection:
+          schema:
+            type: string
+            example: keep-alive
+        Keep-Alive:
+          schema:
+            type: string
+            example: timeout=5
+      content:
+        application/json:
+          schema:
+            type: object
+          example:
+            success: false
+            message: Invalid credentials

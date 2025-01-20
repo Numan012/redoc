@@ -1,0 +1,1365 @@
+{
+  "item": [
+    {
+      "name": "Account - General - Create",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"email\",\"phone\":\"phone\",\"accountType\":\"User\",\"password\":\"password\",\"zipcode\":\"95126\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/create877?locale=en-US987678",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "create"
+          ],
+          "query": [
+            {
+              "key": "locale",
+              "value": "en-US"
+            }
+          ]
+        },
+        "description": "This endpoint is labeled \"Account - General - Create\". It is a POST request, which typically is used for submitting data to be processed to a specified resource.\n\nThe URL for the request is http://localhost:3000/api/account/general/create877?locale=en-US987678. Notice there is a query string present at the end of URL. This contains the key \"locale\" with a value of \"en-US\", which suggests we're specifying US English as our preferred language for the response from the server.\n\nIn the headers, there is a single entry which is empty and disabled by default. Headers can often be used for sending additional information to the server such as client type, timestamps, action type information, etc.\n\nThe body of the request contains a JSON object with the following fields: \"email\", \"phone\", \"accountType\", \"password\", and \"zipcode\". Normally these fields are required when creating an account. It's important to note that the actual data (i.e. the actual email, phone, account type, password, and zipcode) must be replaced with valid information when making the POST request.\n\nFinally, there is also an \"auth\" field indicating that authentication is required for this endpoint. The type of authentication is a bearer token. The token value labeled as \"BearerToken\" should be replaced with the actual token string before making the request.\n\nIn conclusion, this endpoint is for creating a new account with specific account information. It requires authentication via a bearer token. The preferred locale is also specified in the query string. This is important information developers need to successfully interact with this endpoint."
+      },
+      "response": [
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "lang",
+                "value": "en",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"phoneno\": \"3000000000\",\r\n    // \"password\": \"Admin123!\"\r\n    \"phoneno\": \"3123475313\",\r\n    \"password\": \"123456\"\r\n    // \"phoneno\": \"3030667698\",\r\n    // \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/users/login8763",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "518"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"206-b3OQDEnGC+KJmh5o+pCyAkiEpDg\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jan 2025 13:11:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYjI3MjI4MDEtNjA5NS00YWRkLThlODMtZWQ2NDNjOTBhNGQzIiwicGhvbmVubyI6IisxMzEyMzQ3NTMxMyIsImlhdCI6MTczNzExOTQ5NiwiZXhwIjoxNzM3MjA1ODk2fQ.uc5t6lY3o8049Vr8nD8-FYDqo0djG8rXsa5iIoeRZE4\",\n    \"user\": {\n        \"_id\": \"b2722801-6095-4add-8e83-ed643c90a4d3\",\n        \"phoneno\": \"+13123475313\",\n        \"firstname\": \"test\",\n        \"lastname\": \"user\",\n        \"email\": \"testingemai755125@gmail.com\",\n        \"zipcode\": \"12345\",\n        \"dob\": \"1998-12-31T19:00:00.000Z\",\n        \"lang\": \"en\"\n    },\n    \"accessCode\": true\n}"
+        },
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "lang",
+                "value": "en",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"phoneno\": \"3000000000\",\r\n    // \"password\": \"Admin123!\"\r\n    \"phoneno\": \"3123475313\",\r\n    \"password\": \"12345\"\r\n    // \"phoneno\": \"3030667698\",\r\n    // \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/users/login987",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "49"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"31-VmptvJVCxgMiCaKMQdd9IkNBIdc\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jan 2025 13:15:21 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Invalid credentials\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Account - General - Create",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"email\",\"phone\":\"phone\",\"accountType\":\"User\",\"password\":\"password\",\"zipcode\":\"95126\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/createnow?locale=en-US98767",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "create"
+          ],
+          "query": [
+            {
+              "key": "locale",
+              "value": "en-US"
+            }
+          ]
+        },
+        "description": "This endpoint is titled \"Account - General - Create\". It's used to create a general account on the server. The actions performed by this endpoint are executed through a POST request.\n\nThe base URL for the request is \"http://localhost:3000/api/account/general/createnow?locale=en-US98767\". This specifies that the request will be sent to your localhost on port 3000, starting with the API endpoint at '/api/account/general/createnow'. The 'locale' is added as a query parameter at the end of the URL with the value of 'en-US'.\n\nInside the 'headers' array, there's an object with empty 'key' and 'value'. The 'type' is set to 'default', and it is 'disabled', which implies that this header does not hold any significant data, and is not required in the request.\n\nThe 'body' of the request is a JSON object containing five strings: 'email', 'phone', 'accountType', 'password', and 'zipcode'. These are key-value pairs required for the creation of a new account.\n\n- 'email': The email address of the user.\n- 'phone': The phone number of the user.\n- 'accountType': The type of the account to be created for the user. In this case, it is 'User'.\n- 'password': The password string for the new account. \n- 'zipcode': The zip code of the user's location.\n\nThe 'query' array contains objects that hold query parameters. Here, there is one query parameter 'locale' set to 'en-US', which could potentially affect the language or regional settings of the created account.\n\nThe 'auth' field is used for authentication purposes. It uses bearer token authentication which is indicated by the 'type' being set to 'bearer'. The 'bearer' array contains a 'key' value pair, where the 'key' is 'token', and the 'value' is 'BearerToken'. This is used for validating the client making the request."
+      },
+      "response": [
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "lang",
+                "value": "en",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"phoneno\": \"3000000000\",\r\n    // \"password\": \"Admin123!\"\r\n    \"phoneno\": \"3123475313\",\r\n    \"password\": \"123456\"\r\n    // \"phoneno\": \"3030667698\",\r\n    // \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "518"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"206-b3OQDEnGC+KJmh5o+pCyAkiEpDg\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jan 2025 13:11:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYjI3MjI4MDEtNjA5NS00YWRkLThlODMtZWQ2NDNjOTBhNGQzIiwicGhvbmVubyI6IisxMzEyMzQ3NTMxMyIsImlhdCI6MTczNzExOTQ5NiwiZXhwIjoxNzM3MjA1ODk2fQ.uc5t6lY3o8049Vr8nD8-FYDqo0djG8rXsa5iIoeRZE4\",\n    \"user\": {\n        \"_id\": \"b2722801-6095-4add-8e83-ed643c90a4d3\",\n        \"phoneno\": \"+13123475313\",\n        \"firstname\": \"test\",\n        \"lastname\": \"user\",\n        \"email\": \"testingemai755125@gmail.com\",\n        \"zipcode\": \"12345\",\n        \"dob\": \"1998-12-31T19:00:00.000Z\",\n        \"lang\": \"en\"\n    },\n    \"accessCode\": true\n}"
+        },
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "lang",
+                "value": "en",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"phoneno\": \"3000000000\",\r\n    // \"password\": \"Admin123!\"\r\n    \"phoneno\": \"3123475313\",\r\n    \"password\": \"12345\"\r\n    // \"phoneno\": \"3030667698\",\r\n    // \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "49"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"31-VmptvJVCxgMiCaKMQdd9IkNBIdc\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jan 2025 13:15:21 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Invalid credentials\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Account - General - Create",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"email\",\"phone\":\"phone\",\"accountType\":\"User\",\"password\":\"password\",\"zipcode\":\"95126\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/createhere?locale=en-US9876",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "create"
+          ],
+          "query": [
+            {
+              "key": "locale",
+              "value": "en-US"
+            }
+          ]
+        },
+        "description": "This endpoint is named \"Account - General - Create\". This name suggests it is used to create a general account.\n\nThe request method type is POST. This type of request is typically used to send data to be processed to a specified resource.\n\nThe URL of the request is \"http://localhost:3000/api/account/general/createhere?locale=en-US9876\". This URL includes a query parameter \"locale\" with a value of \"en-US\", this indicates that the user interface language is set to English-US.\n\nThe request headers are set as default and currently disabled. This means no additional, specific header information is being sent with the request.\n\nThe body of the request contains the details for the new account in a JSON format. It includes properties for an email address (\"email\"), a phone number (\"phone\"), an account type (\"User\"), a password (\"password\"), and a zip code (\"95126\"). All these fields describe the user-related information required to create a new general account.\n\nThe authentication method is of the type \"bearer\". This means that the requesting client must provide a bearer token named \"token\" with the value of \"BearerToken\". Bearer tokens are a type of access token that allows the client to access resources from a server. \n\nIn summary, this 'POST' endpoint is used to create a new general account with specific user details and uses a bearer token for its authorization."
+      },
+      "response": [
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "lang",
+                "value": "en",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"phoneno\": \"3000000000\",\r\n    // \"password\": \"Admin123!\"\r\n    \"phoneno\": \"3123475313\",\r\n    \"password\": \"123456\"\r\n    // \"phoneno\": \"3030667698\",\r\n    // \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/users/loginHell",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "518"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"206-b3OQDEnGC+KJmh5o+pCyAkiEpDg\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jan 2025 13:11:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYjI3MjI4MDEtNjA5NS00YWRkLThlODMtZWQ2NDNjOTBhNGQzIiwicGhvbmVubyI6IisxMzEyMzQ3NTMxMyIsImlhdCI6MTczNzExOTQ5NiwiZXhwIjoxNzM3MjA1ODk2fQ.uc5t6lY3o8049Vr8nD8-FYDqo0djG8rXsa5iIoeRZE4\",\n    \"user\": {\n        \"_id\": \"b2722801-6095-4add-8e83-ed643c90a4d3\",\n        \"phoneno\": \"+13123475313\",\n        \"firstname\": \"test\",\n        \"lastname\": \"user\",\n        \"email\": \"testingemai755125@gmail.com\",\n        \"zipcode\": \"12345\",\n        \"dob\": \"1998-12-31T19:00:00.000Z\",\n        \"lang\": \"en\"\n    },\n    \"accessCode\": true\n}"
+        },
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "lang",
+                "value": "en",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"phoneno\": \"3000000000\",\r\n    // \"password\": \"Admin123!\"\r\n    \"phoneno\": \"3123475313\",\r\n    \"password\": \"12345\"\r\n    // \"phoneno\": \"3030667698\",\r\n    // \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/users/loginHell",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "49"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"31-VmptvJVCxgMiCaKMQdd9IkNBIdc\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jan 2025 13:15:21 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Invalid credentials\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Account - General - Login Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"email\",\"password\":\"password\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/loginClear",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "login"
+          ]
+        },
+        "description": "This endpoint is titled \"Account - General - Login Email\". It defines how to post (create) a login request for an account using email and password credentials.\n\n- **Request Method:** The request method is POST. This method is used when you want to send data to the server. Here, it is used to submit the login credentials to the server.\n\n- **URL:** The URL where the request is sent to is \"http://localhost:3000/api/account/general/loginClear\". \n\n- **Headers:** There's a single header in this request:\n  - \"Client-UUID\" is the key of the header, and \"ClientUUID\" is its corresponding value. This serve as a unique identifier for the client making the request.\n\n- **Body:** The body of the request is a JSON object containing two fields:\n  - \"email\" field for the user's email address. Replace \"email\" with actual email-address.\n  - \"password\" field for the user's password. Replace \"password\" with actual password.\n\n- **Auth:** The authorization method used is the \"bearer\" type.\n  - \"token\" is the key, and \"BearerToken\" is its corresponding value. Replace \"BearerToken\" with actual token. It's used to validate the request. Bearer type auth is a security measure to prevent unauthorized access.\n  \nRemember to replace the placeholders in \"value\" with actual values before making a request. The actual values are typically generated or provided by the back-end system or are set up in your configuration files. This endpoint takes these details and uses them to attempt a login, and subsequently sends a valid or invalid response based on whether the authentication was successful or not."
+      },
+      "response": [
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "lang",
+                "value": "en",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"phoneno\": \"3000000000\",\r\n    // \"password\": \"Admin123!\"\r\n    \"phoneno\": \"3123475313\",\r\n    \"password\": \"123456\"\r\n    // \"phoneno\": \"3030667698\",\r\n    // \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "518"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"206-b3OQDEnGC+KJmh5o+pCyAkiEpDg\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jan 2025 13:11:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYjI3MjI4MDEtNjA5NS00YWRkLThlODMtZWQ2NDNjOTBhNGQzIiwicGhvbmVubyI6IisxMzEyMzQ3NTMxMyIsImlhdCI6MTczNzExOTQ5NiwiZXhwIjoxNzM3MjA1ODk2fQ.uc5t6lY3o8049Vr8nD8-FYDqo0djG8rXsa5iIoeRZE4\",\n    \"user\": {\n        \"_id\": \"b2722801-6095-4add-8e83-ed643c90a4d3\",\n        \"phoneno\": \"+13123475313\",\n        \"firstname\": \"test\",\n        \"lastname\": \"user\",\n        \"email\": \"testingemai755125@gmail.com\",\n        \"zipcode\": \"12345\",\n        \"dob\": \"1998-12-31T19:00:00.000Z\",\n        \"lang\": \"en\"\n    },\n    \"accessCode\": true\n}"
+        },
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "lang",
+                "value": "en",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    // \"phoneno\": \"3000000000\",\r\n    // \"password\": \"Admin123!\"\r\n    \"phoneno\": \"3123475313\",\r\n    \"password\": \"12345\"\r\n    // \"phoneno\": \"3030667698\",\r\n    // \"password\": \"123456\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "49"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"31-VmptvJVCxgMiCaKMQdd9IkNBIdc\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jan 2025 13:15:21 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Invalid credentials\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Account - General - Login Phone",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"phone\":\"phone\",\"password\":\"password\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/login",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "login"
+          ]
+        },
+        "description": "This endpoint is named \"Account - General - Login Phone\". \n\n- It uses the POST request method, meaning this endpoint is used to submit data to be processed to the URL \"http://localhost:3000/api/account/general/login\".\n\n- The request headers are currently empty and disabled by default. Although not in use at the moment, these could provide the server with additional instructions or information about the format or language of the request. \n\n- The body of the request contains a JSON object with two properties, \"phone\" and \"password\". These properties are likely used to validate the identity of the user trying to initiate a new session. In this case scenario, the user tries to login with their phone and password.\n\n- The request uses Bearer Token Authentication, a method of HTTP authentication that allows users to access protected resources with a cryptic string - the bearer token. The \"token\" key is assigned to the value \"BearerToken\". This bearer token would typically be randomly generated and associated with the user's session, and be used to authenticate subsequent requests."
+      },
+      "response": [
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "lang",
+                "value": "en",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"phoneno\": \"3123475313\",\r\n    \"password\": \"wrongpassword\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "49"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"31-VmptvJVCxgMiCaKMQdd9IkNBIdc\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jan 2025 13:15:21 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Invalid credentials\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Account - General - Forgot Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"email\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/forgot",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "forgot"
+          ]
+        },
+        "description": "This endpoint is labeled \"Account - General - Forgot Email\". It's a POST request, which indicates that it is used to submit data to be processed to a specified resource. The URL for this endpoint is \"http://localhost:3000/api/account/general/forgot\".\n\nThere is a required request header named \"Client-UUID\". This header utilizes a default type and its value is \"ClientUUID\".\n\nAs for the body of the request, it contains one field, \"email\", which should be a valid email address. This part of the request is in JSON format.\n\nThe endpoint also requires bearer authentication. This type of authentication uses security tokens called bearer tokens. You need to provide the \"token\" (with the value \"BearerToken\") for the bearer authentication.\n\nThis endpoint might be used when a user has forgotten their email and requires some form of recovery process. The user's email information is sent to the server for validation, and if successful, relevant actions (like sending a recovery email) might be initiated. Keep in mind to replace \"ClientUUID\", \"email\", and \"BearerToken\" with actual values when making a request to the endpoint."
+      },
+      "response": [
+        {
+          "name": "Login",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "lang",
+                "value": "en",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"phoneno\": \"3030667698\",\r\n    \"password\": \"mypassword123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "518"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"206-b3OQDEnGC+KJmh5o+pCyAkiEpDg\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 17 Jan 2025 13:11:36 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYjI3MjI4MDEtNjA5NS00YWRkLThlODMtZWQ2NDNjOTBhNGQzIiwicGhvbmVubyI6IisxMzEyMzQ3NTMxMyIsImlhdCI6MTczNzExOTQ5NiwiZXhwIjoxNzM3MjA1ODk2fQ.uc5t6lY3o8049Vr8nD8-FYDqo0djG8rXsa5iIoeRZE4\",\n    \"user\": {\n        \"_id\": \"b2722801-6095-4add-8e83-ed643c90a4d3\",\n        \"phoneno\": \"+13030667698\",\n        \"firstname\": \"Alice\",\n        \"lastname\": \"Smith\",\n        \"email\": \"alice.smith@example.com\",\n        \"zipcode\": \"54321\",\n        \"dob\": \"1995-05-15T19:00:00.000Z\",\n        \"lang\": \"en\"\n    },\n    \"accessCode\": true\n}"
+        }
+      ]
+    },
+    {
+      "name": "Account - General - Forgot Phone",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"phone\":\"phone\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/forgot",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "forgot"
+          ]
+        },
+        "description": "This endpoint description is for the \"Account - General - Forgot Phone\" functionality. \n\nThe endpoint is expecting a `POST` request at the URL `http://localhost:3000/api/account/general/forgot`.\n\nIn the request header, there's one key-value pair. The key `\"Client-UUID\"` which should have the value that identifies the client, usually a unique string provided by the server for each user—\"ClientUUID\" in this given scenario.\n\nRequest body requires a JSON formatted string containing the phone number that needs to be recovered. The key for this must be \"phone\" and its value will be the user's phone number.\n\nAuthorization type is `Bearer` so you should supply a bearer token in the header for authorization, using the key \"token\" and corresponding token value as \"BearerToken\".\n\nThis endpoint is generally used when a user forgets their connected phone number to the account and needs to bring up that information."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - General - Session",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/session?accountId=accountId&sessionId=sessionId",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "session"
+          ],
+          "query": [
+            {
+              "key": "accountId",
+              "value": "accountId"
+            },
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            }
+          ]
+        },
+        "description": "This endpoint, \"Account - General - Session\", is a GET request designed to retrieve session information related to a specified user account. The server URL for the request is \"http://localhost:3000/api/account/general/session\" followed by query parameters for the account and session identifiers. This request requires two key-value pairs in its query parameters: 'accountId' and 'sessionId'. The significance of these parameters is to specify the particular account and session whose details are being requested.\n\nThe 'accountId' query parameter is used to determine the unique account from which the session is to be fetched. The 'sessionId' parameter specifies which particular session related to the account is preferred. The values for both the 'accountId' and 'sessionId' keys need to be provided in the URL.\n\nThe headers for the GET request are left blank by default as indicated with empty key and value fields. However, these are disabled and the request does not require any special headers.\n\nThis GET request uses Bearer authentication type. Bearer authentication (also known as token authentication) is an HTTP authentication scheme that involves security tokens called bearer tokens. The bearer token is sent in an HTTP header. The key is named 'token' and its value, 'BearerToken', needs to be a valid bearer token.\n\nThe data in the body of the request is empty, meaning there are no additional information or requirements needed for the request. \n\nIn summary, this endpoint provides API consumers with a means to retrieve session information related to an Account ID and a Session ID, authenticated by means of a bearer token."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - General - Session [Testing]",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/session?accountId=accountId&sessionId=sessionId&test=1",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "session"
+          ],
+          "query": [
+            {
+              "key": "accountId",
+              "value": "accountId"
+            },
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "test",
+              "value": "1"
+            }
+          ]
+        },
+        "description": "This endpoint, named \"Account - General - Session [Testing]\", is used to access certain account and session details, and it is designed for testing purposes.\n\nThe request made by this endpoint is a GET request, which means it retrieves data from a specified URL. The endpoint's URL includes a query string with three parameters: accountId, sessionId, and test.\n\n- The \"accountId\" query parameter is used to identify a specific account from which you want to access data. \n- The \"sessionId\" query parameter is used to identify a specific session associated with the account.\n- The \"test\" query parameter is presumably a flag used for testing; within this context, a value of \"1\" indicates that testing is active.\n\nThere are no specified headers in this request, as indicated by an empty \"key\" and \"value\" field. These are usually used to give the server additional information about the request and could be left blank if not needed.\n\nThe request doesn't carry a payload (\"body\"), as reflected in the blank body object, which is common for GET request since payloads are typically used to send data to the server during POST or PUT requests.\n\nFinally, the request requires a Bearer Token for authorization. This is an authentication method that involves the client (the person or entity accessing the endpoint) sending the token in the Authorization header. The \"BearerToken\" in this context must be replaced with the actual token.\n\nReceiving a successful response from this endpoint should provide information related to the Session and Account based on the provided accountID, sessionID, and test parameter. If the test flag (test=1) is set, it implies that some test-related data might be returned."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - General - Session - Get Email Phone",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/session?accountId=accountId&sessionId=sessionId&get=email,phone",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "session"
+          ],
+          "query": [
+            {
+              "key": "accountId",
+              "value": "accountId"
+            },
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "get",
+              "value": "email,phone"
+            }
+          ]
+        },
+        "description": "This endpoint is titled \"Account - General - Session - Get Email Phone\". \n\nIt is a GET request, indicating it's designed to retrieve data, which in this case consists of the email and phone information associated with an account's session. \n\nThe URL for this request is http://localhost:3000/api/account/general/session. It includes query parameters for 'accountId', 'sessionId', and 'get'. The 'get' query parameter is used to specify the type of data we want to fetch, which are 'email' and 'phone' in this case. \n\nThe 'accountId' and 'sessionId' keys take corresponding 'accountId' and 'sessionId' as their values. It is assumed that these would be replaced with actual account ID and session ID when the request is made.\n\nAs for authorization, it uses Bearer token authentication, indicated in the \"auth\" section. The key field is labeled \"token\", and the value is \"BearerToken\". In a real-life usage scenario, these placeholders ('BearerToken') would be replaced by the actual Bearer token. \n\nThere is a placeholder for headers in the request, but it's currently left empty and disabled.\n\nPlease take note that the \"body\" field is left empty. This is because GET requests typically do not have a request body as all the required data is provided in the URL or through parameters.\n\nThe endpoint seems to be designed to access specific user session information for the particular account. By providing the account's ID, session ID, and stating the information required (email and phone), you can retrieve that specific data. The specific usage of the endpoint could vary depending on the software's requirements."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - General - Session - Get Account Type",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/session?accountId=accountId&sessionId=sessionId&get=accountType",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "session"
+          ],
+          "query": [
+            {
+              "key": "accountId",
+              "value": "accountId"
+            },
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "get",
+              "value": "accountType"
+            }
+          ]
+        },
+        "description": "The endpoint described is named `Account - General - Session - Get Account Type`. It's a GET type HTTP request that is made to the URL `http://localhost:3000/api/account/general/session`.\n\nThis URL accepts three query parameters: `accountId`, `sessionId`, and `get`. \n\n1. The `accountId` parameter is used to specify the unique identifier of the account for which the type is being requested.\n   \n2. The `sessionId` parameter is being used to determine the valid session from which the request is made.\n   \n3. The `get` parameter value is set to `accountType`, which indicates the type of information being requested from this API endpoint.\n\nFor authentication, this endpoint requires a bearer token which is passed under the `auth` object. The `key` is set to `token` and its `value` needs to be replaced with the actual `BearerToken`.\n\nThe headers part of the request is currently empty and disabeled, indicating that no additional metadata is being sent in the request header.\n\nThe body of the request is also empty, which is consistent with a GET type request that normally does not contain a body but fetches data based on provided parameters in the URL.\n\nThis endpoint basically provides a method for developers to retrieve the type of the account linked with the provided `accountId` during an active, authenticated `sessionId`."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - General - Reset Password",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"email\":\"email\",\"password\":\"helloworld\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/reset",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "reset"
+          ]
+        },
+        "description": "This endpoint is named \"Account - General - Reset Password\". It is designed to handle PUT requests for resetting a user's password in the account. \n\nThe URL where this request is sent to is: http://localhost:3000/api/account/general/reset. \n\nThis request does not use any specific headers (the provided header field is made blank by default and thus disabled). \n\nIn the body of the request, a JSON object is sent that includes values for the sessionId, email, and the new password. The respective values should replace the placeholders: \"sessionId\", \"email\", and \"helloworld\".\n\nThe authentication required for this endpoint is of type `bearer`. The bearer token to authenticate the request is provided in the `auth` section, with the key named 'token' and value 'BearerToken'. The type of the bearer token is string. \n\nIn a nutshell, when this endpoint is hit with appropriate values in the request body and the bearer token, the password for the associated email account will be reset. This is a sensitive operation so the token is mandatory for giving access and validating the request."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - General - Logout",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "sessionId",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/general/logout",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "general",
+            "logout"
+          ]
+        },
+        "description": "This endpoint is named \"Account - General - Logout\". It's used to log out an account from the service. It uses the POST method, meaning it's sending data to a specified resource, in this case, the logout URL.\n\nThe URL of the endpoint is \"http://localhost:3000/api/account/general/logout\". \"localhost:3000\" is usually used for local development, so it might vary when deployed.\n\nIn the headers section, it's currently empty with default type and it is disabled. Headers usually contain additional information for processing the request or response. In this case, none is needed.\n\nThe body of the request contains the data JSON format which includes two properties: \"sessionId\" and \"accountId\". These are placeholders and need to be replaced with actual values when making a request. Typically, \"sessionId\" is to identify a user's current session, generated when a user logs in, and \"accountId\" is the unique identifier of the user's account. Both are required to successfully process a logout request.\n\nFor authentication, this endpoint uses the bearer authentication scheme. This simply sends the token with a 'Bearer ' prefix in the Authorization header. The key is labeled \"token\" and the value is \"sessionId\", where \"sessionId\" corresponds to the current session's ID. This is most likely used to ensure only the authorized user can log out their account. \n\nIn summary, to use this endpoint to log out a user, you need to make a POST request to the provided URL, send the sessionId and accountId within the body of the request in JSON format, and send the sessionId as bearer token in the auth section."
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+post:
+  tags:
+    - AccountSend
+  summary: Account - Send - Account Created
+  description: >-
+    The provided data appears to be related to an API endpoint specifically
+    designed to confirm the creation of an account. The key elements can be
+    broken down as follows:
+
+
+    - **name:** The name is 'Account - Send - Account Created'. It identifies
+    this particular endpoint. This string is typically used by developers to
+    understand what the endpoint is for, particularly during testing.
+
+
+    - **request:** This details the HTTP request to be made; in this case, a
+    POST request.
+
+      - **auth:** This object details the authentication required in order to access this endpoint. Specifically, it uses a 'bearer token' type of authentication. The token (value = 'BearerToken') must be supplied in string format (type = 'string') to gain access.
+
+      - **method:** The HTTP method used is 'POST'. This is generally used to send data to a server to create/update a resource.
+
+      - **url:** The URL for this endpoint is 'http://localhost:3000/api/account/send/accountCreated'. This is the target address on the server where the HTTP request should be sent.
+
+      - **headers:** The headers object is generally used to define the operating parameters for HTTP transactions. Here, the only defined header element is set to 'default' type and is disabled (disabled = true). The key and value are both empty, meaning no specific HTTP header is defined.
+
+      - **body:** The body object pertains to data that must be sent in the HTTP request. In this case, the body content is in 'raw' format (mode = 'raw'), featuring a JSON string that includes 'sessionId' and 'accountId'. These are placeholders for the actual session ID and account ID that should be sent in the body of the POST HTTP request.
+      
+    Every time a POST request is made to this endpoint, an account is created,
+    identified by the 'sessionId' and 'accountId'. This endpoint, therefore, is
+    critical in creating user accounts for your application.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: '"{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"'
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

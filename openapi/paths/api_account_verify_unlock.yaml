@@ -1,0 +1,52 @@
+post:
+  tags:
+    - AccountVerify
+  summary: Account - Verify - Security Code
+  description: >-
+    This endpoint is labeled as "Account - Verify - Security Code" and it
+    represents an API operation for verifying a security code for a specific
+    user account.
+
+
+    1. Method: POST
+       This endpoint uses the HTTP POST method, which is typically used to send (or create) data to the server.
+
+    2. URL: `http://localhost:3000/api/account/verify/unlock`
+       This is the endpoint's URL. The base URL is `http://localhost:3000`, which denotes your local server when the application is run locally. The path `/api/account/verify/unlock` is the specific route in your application where the data will be sent to be processed.
+
+    3. Headers: []  
+       The headers field is currently empty. This is where you'd usually provide additional information, like content type or authentication tokens.
+
+    4. Body: 
+         In body, we have the following fields:
+       
+       - `mode`: `raw`  
+         The mode property specifies how the request data is being sent. The value `raw` means the data is being sent as a string in the body of the request.
+
+       - `raw`:  
+         This is the actual data payload in string format that's being sent in the request.
+       
+         It contains three fields:
+
+         - `accountId`: The unique identifier of the account. This is a placeholder and should be replaced with actual account Id during the API request.
+      
+         - `sessionId`: Represents a session identifier, typically used for tracking or authenticating user sessions. Replace this placeholder with an actual session Id.
+        
+         - `unlockCode`: This is the security code that needs to be verified for the account. Replace the placeholder with the actual unlock code.
+
+    This endpoint is used to verify a security code (unlockCode) pertaining to a
+    user's session (sessionId) for a specific account (accountId). The payload
+    should be formed by replacing the placeholders with real data and sent as a
+    raw JSON string.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"accountId\":\"accountId\",\"sessionId\":\"sessionId\",\"unlockCode\":\"unlockCode\"}"
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

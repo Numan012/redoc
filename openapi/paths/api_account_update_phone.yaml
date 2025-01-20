@@ -1,0 +1,60 @@
+put:
+  tags:
+    - AccountUpdate
+  summary: Account - Update - Phone
+  description: >-
+    1. "name": This represents the name of the endpoint. In this case, the name
+    "Account - Update - Phone" is indicative of an endpoint that handles updates
+    to a phone number in an account.
+
+
+    2. "request": This object contains details about the request to be made to
+    the API.
+
+
+    3. "auth": This object describes the authorization method required to access
+    the endpoint. It includes:
+       - "type": The type of authorization used, which here is "bearer", indicating the Bearer Token Authorization method.
+       - "bearer": This array contains an object with three keys:
+         - "key": The key which represents the name of the authorization token, here it's "token".
+         - "value": The value of the token which is "BearerToken".
+         - "type": Represents the data type of the token, which is "string".
+
+    4. "method": This is the HTTP method used to call the endpoint. For this
+    endpoint, the method is "PUT", indicating that we're executing an update
+    operation.
+
+
+    5. "url": The URL of the endpoint. In this case, it's
+    "http://localhost:3000/api/account/update/phone".
+
+
+    6. "headers": The headers to include in the HTTP request. Here, there's a
+    single header with:
+       - "key": The key or name of the header field, here it's "Client-UUID".
+       - "value": The value of this header field, which is "ClientUUID".
+       - "type": The type of the header field, here it's "default".
+
+    7. "body": The body of the request. This object has two fields:
+       - "mode": The type or format of the body data, which is "raw" in this case, meaning that the data is sent in a raw block of text.
+       - "raw": The actual content to send with the request. This field contains a JSON string with the new phone number ("newPhone"), the session ID ("sessionId"), and account ID ("accountId"). Please note that values shown here are placeholders, replace them with actual values while using the API.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"newPhone\":\"4084599441\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

@@ -1,0 +1,81 @@
+get:
+  tags:
+    - AccountSettings
+  summary: Account - Settings - Get - Payments
+  description: >-
+    This endpoint titled "Account - Settings - Get - Payments" retrieves the
+    payment settings of a particular account. Below is a description of each
+    data field:
+
+
+    - `"name"`: This is the name of the endpoint. It indicates that this
+    endpoint is related to "Account Settings", specifically "Payments", and it
+    uses the GET method.
+
+
+    - `"request"`: The object that provides details about the HTTP request made
+    to the endpoint.
+
+
+    - `"auth"`: It is the authentication component for securing the endpoint.
+    This API uses bearer token authentication, specified by "bearer" type. 
+
+       - `"type"`: The type of authentication used, which is bearer authentication.
+
+       - `"bearer"`: This array carries an object that stores the bearer token for the endpoint. 
+
+         - `"key"`: The key is 'token' which is a part of the bearer authentication scheme.
+
+         - `"value"`: The actual value of the bearer token (BearerToken) that would be used in production environment is placed here.
+
+         - `"type"`: The type signifies that the bearer token is represented as a string value.
+
+
+    - `"method"`: This refers to the HTTP method used to make a request to the
+    endpoint. In this case, it is the 'GET' method.
+
+
+    - `"url"`: This is the URL of the API endpoint. It specifies API root(i.e.,
+    http://localhost:3000/api/), the path to the endpoint(i.e.,
+    account/settings/get/), and query parameters(settingKey, sessionId,
+    accountId).
+
+
+    - `"headers"`: This array object would include any additional headers needed
+    for the request, but in this case, it is either left empty or not required
+    for this request, which is indicated by the "disabled": true attribute.
+
+
+    - `"body"`: This section holds the data that is sent to the API in the body
+    of the request. 
+
+       - `"mode"`: The mode denotes that the body of the request is to be sent in as 'raw' to the endpoint.
+
+       - `"raw"`: The raw field means raw data can be inserted but in the provided data it is left empty, indicating that the GET request does not require additional body data.
+       
+    Overall, this endpoint retrieves the payment settings linked to the given
+    sessionId and accountId. Please remember this endpoint needs a bearer token
+    for the authentication.
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: settingKey
+      in: query
+      schema:
+        type: string
+      example: payments
+    - name: sessionId
+      in: query
+      schema:
+        type: string
+      example: sessionId
+    - name: accountId
+      in: query
+      schema:
+        type: string
+      example: accountId
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

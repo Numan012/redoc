@@ -1,0 +1,50 @@
+post:
+  tags:
+    - AccountGeneral
+  summary: Account - General - Forgot Phone
+  description: >-
+    This endpoint description is for the "Account - General - Forgot Phone"
+    functionality. 
+
+
+    The endpoint is expecting a `POST` request at the URL
+    `http://localhost:3000/api/account/general/forgot`.
+
+
+    In the request header, there's one key-value pair. The key `"Client-UUID"`
+    which should have the value that identifies the client, usually a unique
+    string provided by the server for each user—"ClientUUID" in this given
+    scenario.
+
+
+    Request body requires a JSON formatted string containing the phone number
+    that needs to be recovered. The key for this must be "phone" and its value
+    will be the user's phone number.
+
+
+    Authorization type is `Bearer` so you should supply a bearer token in the
+    header for authorization, using the key "token" and corresponding token
+    value as "BearerToken".
+
+
+    This endpoint is generally used when a user forgets their connected phone
+    number to the account and needs to bring up that information.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: '"{\"phone\":\"phone\"}"'
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

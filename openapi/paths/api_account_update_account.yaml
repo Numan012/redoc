@@ -1,0 +1,61 @@
+put:
+  tags:
+    - AccountUpdate
+  summary: Account - Update - Account
+  description: >-
+    This endpoint is named "Account - Update - Account". It is used to update an
+    existing account on the system. The HTTP request method used is PUT and the
+    endpoint URL is 'http://localhost:3000/api/account/update/account'.
+
+
+    - Authentication:
+      The endpoint requires bearer token authentication. The token should be replaced with valid "BearerToken".
+
+    - HTTP Headers:
+      In the headers, you need to include a key named "Client-UUID", replacing "ClientUUID" with the actual UUID related to the client application.
+
+    - Request Body:
+      The request body should be of JSON format and contains the following fields:
+
+        * "zipcode": The postal code associated with the user's address, replace "95126" with the actual value.
+        * "instagram": The user's Instagram handle, replace "fortunevieyra_" with the user's actual Instagram handle.
+        * "username": A unique username for the user. You should replace "fortunevieyra" with the user's actual username.
+        * "firstName": The first name of the user. Replace "fortune" with the user's actual first name.
+        * "lastName": The last name of the user. Replace "vieyra" with the user's actual last name.
+        * "birthday": The date of birth of the user in the format "MM/DD/YYYY", replace "02/02/1988" with user's actual birthday.
+        * "sessionId": The ID of the session. Replace "sessionId" with the correct session ID.
+        * "accountId": Unique identifier for the user's account. Replace "accountId" with the actual account ID of the user.
+
+    Please note, all values need to be sent as strings. So, always encapsulate
+    them in quotes.
+
+
+    In the "options" field of the request body, the "raw" language is set to
+    JSON, indicating that the data should be sent in the JSON format.
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          example:
+            zipcode: '95126'
+            instagram: fortunevieyra_
+            username: fortunevieyra
+            firstName: fortune
+            lastName: vieyra
+            birthday: 02/02/1988
+            sessionId: sessionId
+            accountId: accountId
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

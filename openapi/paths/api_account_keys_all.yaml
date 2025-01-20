@@ -1,0 +1,77 @@
+get:
+  tags:
+    - AccountKeys
+  summary: Account - Keys - Get All
+  description: >-
+    This endpoint is called "Account - Keys - Get All". It's responsible for
+    fetching all the keys related to a particular account.
+
+
+    Here is a description of all the elements in the endpoint:
+
+
+    1. **name:** This is the name of the endpoint. This is how you would refer
+    to the endpoint in the documentation or when discussing it with other
+    developers. In this case, the name indicates that this endpoint is used to
+    get all keys for a given account.
+
+
+    2. **request:** This object contains all information required to make the
+    HTTP request.
+
+
+    3. **auth:** This is the authorization method that is used when making the
+    request. For this endpoint, the authorization is of the type "bearer" which
+    means it uses a bearer token for authorization. A bearer token is a type of
+    access token that is issued to the client.
+
+
+    4. **bearer:** This is an array of objects that contains the bearer token
+    for the request. Each object has a "key", "value", and "type". The "key" is
+    the name given to the token, the "value" is the actual value of the token,
+    and the "type" is the data type of the token.
+
+
+    5. **method:** This is the HTTP method used for the request. In this case,
+    it's a "GET" request, which means data is being retrieved from the server. 
+
+
+    6. **url:** This is the URL where the request will be sent. In our case,
+    it's
+    "http://localhost:3000/api/account/keys/all/?sessionId=sessionId&accountId=accountId".
+    It includes query parameters for "sessionId" and "accountId", presumably
+    used to identify the relevant session and account.
+
+
+    7. **headers:** This is an array of objects, each representing a header that
+    will be included in the request. Currently, the endpoint provides a default
+    empty header which is disabled. Headers can include metadata about the
+    request or other necessary information.
+
+
+    8. **body:** This is the body of the request. For this endpoint, the "body"
+    is set as "raw", but no data is needed or included as part of the request
+    since it's a "GET" request.
+
+
+    This is a high-level overview of the endpoint data. For all specific data
+    usage, please refer to the application's API documentation or any inline
+    comments provided in the application code.
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: sessionId
+      in: query
+      schema:
+        type: string
+      example: sessionId
+    - name: accountId
+      in: query
+      schema:
+        type: string
+      example: accountId
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

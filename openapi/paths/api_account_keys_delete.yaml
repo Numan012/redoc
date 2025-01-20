@@ -1,0 +1,69 @@
+post:
+  tags:
+    - AccountKeys
+  summary: Account - Keys - Delete
+  description: >-
+    The data provided describes the details of an Endpoint (in an API) for
+    Account - Keys - Delete operation. Here's a detailed description of each
+    datapoint:
+
+
+    1. **name**: This represents the name of the endpoint, which in this case is
+    "Account - Keys - Delete". This endpoint is designed to delete keys from a
+    specific account.
+       
+    2. **request**: This encapsulates all the details needed to make the actual
+    HTTP request.
+       
+    3. **auth**: This field describes the authorization details used for the
+    request. It uses a bearer token for authorization. 
+
+        - **type**: The type of authentication applied, which is "bearer" in this case.
+       
+        - **bearer**: This is an array containing bearer token details. Each object inside the bearer array includes:
+
+            - **key**: The key is set as "token".
+           
+            - **value**: It holds the actual token value, denoted as "sessionId".
+           
+            - **type**: Defines the datatype of the value of the key, here it is "string".
+
+    4. **method**: The HTTP method used for the request. In this case, the
+    request method is POST which is typically used to send data to the server.
+
+
+    5. **url**: The URL where the API request is to be sent. In this case, it's
+    "http://localhost:3000/api/account/keys/delete".
+
+
+    6. **headers**: An array containing the details of the headers to be sent
+    along with the request. This example has a default header with no key-value
+    pair.
+
+
+    7. **body**: Contains the details of the body to be sent along with the
+    request.
+        
+        - **mode**: This field tells what type of body is being sent with the request, here it's "raw".
+            
+        - **raw**: This contains the raw data in the form of a JSON object to be sent in the body of the request. It contains three fields
+     
+            - **sessionId**: String representing the session identifier.
+           
+            - **accountId**: String representing the account identifier.
+           
+            - **keysId**: String representing the keys identifier to delete from the account.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"keysId\":\"keysId\"}"
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

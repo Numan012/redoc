@@ -1,0 +1,40 @@
+post:
+  tags:
+    - AccountSettings
+  summary: Account - Settings - Create
+  description: >
+    The given endpoint information has the following data:
+
+
+    1. `name`: "Account - Settings - Create". This indicates the purpose or
+    function of the endpoint. It is used to create settings for an account.
+
+
+    2. `request`: A container for the various details of the API request.
+
+        a. `auth`: The authentication method used for the endpoint is a bearer token, defined as a JSON object. This object contains a `key` "token", indicating the reference name for the token. Its corresponding `value` is "BearerToken". Its `type` is "string", signifying the data format.
+
+        b. `method`: "POST". This represents the HTTP method to be used when making a request to the endpoint. Since it's a POST request, it means this endpoint is used to send data to the server to create a new resource.
+
+        c. `url`: "http://localhost:3000/api/account/settings/create". This is the URL of the server where the request will be made. It indicates where the API service is hosted.
+
+        d. `headers`: An array for storing header data. In this instance, it doesn't contain any active data as shown by `disabled` set to `true`, it's typically used to define the metadata of the HTTP request.
+
+        e. `body`: This is used to specify the data to be sent to the server. Its `mode` is "raw", meaning that data are sent in an unprocessed form. The `raw` property contains the actual data to be sent to the server as a JSON object. Here, it's sending "accountId" and "sessionId" as key-value pairs.
+
+    Please note that actual values for "accountId" and "sessionId" in the `body`
+    and "BearerToken" in the `auth` must be replaced by the user with actual
+    valid tokens to successfully use this endpoint.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: '"{\"accountId\":\"accountId\",\"sessionId\":\"sessionId\"}"'
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

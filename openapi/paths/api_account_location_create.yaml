@@ -1,0 +1,72 @@
+post:
+  tags:
+    - AccountLocation
+  summary: Account - Location - Create
+  description: >-
+    This endpoint is referred to as "Account - Location - Create". It uses a
+    "POST" method for creating a new location entry for a specific account.
+    Below is the detailed description of each field in this endpoint.
+
+
+    1. **name**: This field indicates the name of this endpoint, which is
+    "Account - Location - Create".
+
+
+    2. **request**: This field contains all the necessary information required
+    to make a request to this endpoint.
+
+
+    3. **auth**: This field specifies the authentication method needed for this
+    endpoint. In this case, it's 'Bearer' authentication and the token is
+    provided as the value.
+
+        a. **type**: The type of authorization required which is 'Bearer'.
+        
+        b. **bearer**: An array containing the key-value pair for bearer token. The key is 'token' and the value is 'BearerToken'. The type confirms the value is a string format.
+
+    4. **method**: The HTTP method used for the request. For this endpoint, it's
+    "POST".
+
+
+    5. **url**: The URL for the request is
+    'http://localhost:3000/api/account/location/create'.
+
+
+    6. **headers**: An array that contains the key/value pairs to be sent in the
+    header of the request. In this case, it's empty and disabled.
+       
+    7. **body**: This field contains the data to be sent with the request. 
+
+        a. **mode**: Specifies the mode of the body of the request. Here it is in 'raw' format.
+        
+        b. **raw**: The raw data to be included in the body of the request, described in JSON format. It contains the following keys:
+
+                - accountId: Identifies the account for which the location is to be created.
+                - sessionId: Identifies the session related to the account.
+                - country: The country of the location (e.g., "United States").
+                - region: The region of the location (e.g., "California").
+                - city: The city of the location (e.g., "San Francisco").
+                - postal: The postal code of the location (e.g., "94109").
+                - latitude: The geographical latitude of the location (e.g., "-123.423").
+                - longitude: The geographical longitude of the location (e.g., "123.123").
+                - ipAddress: The IP address related to the location (e.g., "12.45.67.89.0").
+
+    Thus, this endpoint is used to create a location entry for an account with
+    the provided attributions in JSON format within the body of the request. The
+    endpoint requires 'Bearer' authentication and the request is of 'POST' type.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"accountId\":\"accountId\",\"sessionId\":\"sessionId\",\"country\":\"United
+            States\",\"region\":\"California\",\"city\":\"San
+            Francisco\",\"postal\":\"94109\",\"latitude\":\"-123.423\",\"longitude\":\"123.123\",\"ipAddress\":\"12.45.67.89.0\"}"
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

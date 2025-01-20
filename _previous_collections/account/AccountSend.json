@@ -1,0 +1,581 @@
+{
+  "item": [
+    {
+      "name": "Account - Send - Account Created",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/accountCreated",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "accountCreated"
+          ]
+        },
+        "description": "The provided data appears to be related to an API endpoint specifically designed to confirm the creation of an account. The key elements can be broken down as follows:\n\n- **name:** The name is 'Account - Send - Account Created'. It identifies this particular endpoint. This string is typically used by developers to understand what the endpoint is for, particularly during testing.\n\n- **request:** This details the HTTP request to be made; in this case, a POST request.\n\n  - **auth:** This object details the authentication required in order to access this endpoint. Specifically, it uses a 'bearer token' type of authentication. The token (value = 'BearerToken') must be supplied in string format (type = 'string') to gain access.\n\n  - **method:** The HTTP method used is 'POST'. This is generally used to send data to a server to create/update a resource.\n\n  - **url:** The URL for this endpoint is 'http://localhost:3000/api/account/send/accountCreated'. This is the target address on the server where the HTTP request should be sent.\n\n  - **headers:** The headers object is generally used to define the operating parameters for HTTP transactions. Here, the only defined header element is set to 'default' type and is disabled (disabled = true). The key and value are both empty, meaning no specific HTTP header is defined.\n\n  - **body:** The body object pertains to data that must be sent in the HTTP request. In this case, the body content is in 'raw' format (mode = 'raw'), featuring a JSON string that includes 'sessionId' and 'accountId'. These are placeholders for the actual session ID and account ID that should be sent in the body of the POST HTTP request.\n  \nEvery time a POST request is made to this endpoint, an account is created, identified by the 'sessionId' and 'accountId'. This endpoint, therefore, is critical in creating user accounts for your application."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - Verification Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"email\":\"email\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/verificationEmail",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "verificationEmail"
+          ]
+        },
+        "description": "This data describes an endpoint titled \"Account - Send - Verification Email\". \n\n1. `name`: This defines the name of the endpoint. It is named \"Account - Send - Verification Email\". \n\n2. `request`: This section houses all the information about the HTTP request that is sent to the server. \n\n    A. `auth`: The `auth` section describes the type of authorization used for the request. The type specifies the format of authorization, and in this case, it is 'bearer'. The `bearer` is an array of authentication-related objects.\n    \n         - `key`: The key is the identifier for the authentication value. Here, it is labeled \"token\".\n         - `value`: The value tag in the bearer array symbolizes the actual token value. Here, it is represented as \"BearerToken\".\n         - `type`: The type indicates the data type of the bearer token. Here, it is \"string\".\n\n    B. `method`: The method property indicates the HTTP method used to send the request to the API. In this case, it's a \"POST\" request.\n\n    C. `url`: This is the URL that the API request will be sent to. Here, it is \"http://localhost:3000/api/account/send/verificationEmail\".\n\n    D. `headers`: An array of objects signifying the collection of HTTP headers enclosed with the request.\n    \n         - `key`: This element indicates the name of the header field. It is empty in this case.\n         - `value`: This represents the associated value for the corresponding header key. In this case, it is also empty.\n         - `type`: Denotes the header content type. It is labeled as \"default\" in this instance.\n         - `disabled`: Shows whether the header is enabled or not. In this case, it is set to true, meaning the header is disabled.\n\n    E. `body`: Contains the actual request body sent to the API.\n    \n        - `mode`: Determines the format of the body sent with the request. In this case, it is \"raw\", indicating unprocessed data.\n        - `raw`: Contains the actual raw body content. Here, it is a JSON string with property \"email\" and value \"email\"."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - Verification SMS",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"phone\":\"phone\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/verificationSMS",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "verificationSMS"
+          ]
+        },
+        "description": "This endpoint is named `Account - Send - Verification SMS`. It uses the `POST` method to send a verification SMS to a user's phone.\n\n- `auth`: The endpoint uses `bearer` authentication, which means you need to provide a bearer token in the request header. The key for this token is `token` and its initial value is `BearerToken`. The token's data type is `string`. You will likely replace `BearerToken` with an actual token value when you run this endpoint.\n\n- `method`: This is a `POST` endpoint. That means it is designed to accept and process the submitted data.\n\n- `url`: The endpoint's URL is `http://localhost:3000/api/account/send/verificationSMS`. You can replace `localhost:3000` with any server's address where this API is running.\n\n- `headers`: By default, this API does not require any additional request headers. The header object is set to `disabled` and both the `key` and `value` properties are empty strings. You can add headers if required for your application.\n\n- `body`: The body of the request should be a 'raw' JSON object that includes the phone number where the verification SMS will be sent. The `phone` field should contain the phone number.\n\nRemember to replace the `BearerToken` with an actual bearer token and the `phone` field value with an actual phone number when you run this endpoint."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - Email Address Changed Notification",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"email\":\"email\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/emailAddressChanged",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "emailAddressChanged"
+          ]
+        },
+        "description": "1. \"name\": This field contains the name of the current action that's been taken; in this case, it is sending a notification about an account email address change.\n\n2. \"request\": This field encapsulates all the data related to making the specific API request.\n\n2.1. \"auth\": It represents the authentication of the API request. The \"type\" of authentication here is a \"bearer\" token which means that the sender is the bearer of the token.\n\n    2.1.1. \"bearer\": It is an array containing the bearer token type credentials, represented by an object holding the properties \"key\", \"value\", and \"type\". The \"key\" value is the token name, \"value\" is the actual token, and \"type\" indicates the data type of the value as string.\n\n3. \"method\": This field represents the HTTP method used for the API request. A \"POST\" method is used here which generally means the request is intended to send data to the server.\n\n4. \"url\": This field specifies the URL where the API request would be sent.\n\n5. \"headers\": This field is an array of objects which contains the additional information to pass together with the request. Here, an object is present with \"key\" as \"Client-UUID\", a unique identifier for the client, the \"value\" is the actual UUID value and \"type\" indicates it's a default header.\n\n6. \"body\": This section includes the exact data that'll be sent with the POST request.\n\n    6.1. \"mode\": This field signifies the way the body will be sent. In this case, \"raw\" indicates the body content will be sent as a raw data string.\n\n    6.2. \"raw\": This field consists of the actual raw data string which is a JSON string including \"sessionId\", \"accountId\", and \"email\" as properties. \"sessionId\" represents the session's unique identifier, \"accountId\" is the account's unique identifier and \"email\" is the new email address."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - Phone Number Changed Notification",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"email\":\"email\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/phoneNumberChanged",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "phoneNumberChanged"
+          ]
+        },
+        "description": "This endpoint accepts a POST request to the path \"http://localhost:3000/api/account/send/phoneNumberChanged\". It's used to notify the system that the phone number associated with the provided account has been changed.\n\nLet's break the request into parts:\n\n1. `\"name\"`: The name field provides a descriptive label for the endpoint. In this case, the name suggests an action, which in terminalogy, \"sends a notification for a changed phone number on an account\".\n\n2. `\"auth\"`: This is the type of authorization needed to access the endpoint with bearer as the authentication method. This means a bearer token needs to be attached in the header of the request for successful authorization. \n   - `\"key\"`: Describes the key used within the bearer authorization, which here is \"token\".\n   - `\"value\"`: The value associated with the key. For this request, the value should be the actual bearer token, \"BearerToken\" is just a placeholder.\n\n3. `\"method\"`: The HTTP verb associated with the request. In this case, it's a \"POST\" method, which is typically used to send data to a server to create a new resource.\n\n4. `\"url\"`: The URL field contains the endpoint's path. This is required for determining where the request will be sent.\n\n5. `\"headers\"`: These are additional pieces of information required by the server.\n   - `\"key\"`: The header's key which is \"Client-UUID\".\n   - `\"value\"`: The value associated with the key in the header, represented here by \"ClientUUID\".\n\n6. `\"body\"`: Contains the data that is sent to the server. In \"raw\" mode, the data must be a string, often in JSON format.\n   - `\"sessionId\"`: Identifies the current user's session. This ID is unique to a user's session.\n   - `\"accountId\"`: The unique identifier for the user's account.\n   - `\"email\"`: The email associated with the user's account."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - Password Changed Notification",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"email\":\"email\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/passwordChanged",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "passwordChanged"
+          ]
+        },
+        "description": "This endpoint is named \"Account - Send - Password Changed Notification\". It is responsible for sending notification when a user changes their password.\n\n**Authentication:**\nThe endpoint requires Bearer authentication. The bearer token needs to be provided in under the \"token\" key.\n\nKey: 'token'\nValue: 'BearerToken'\nType: 'string'\n\nThe value is where you'll substitute the actual bearer token when making your request.\n\n**Method:**\nThe request method for this endpoint is POST.\n\n**URL:**\nThis endpoint is to be hit at 'http://localhost:3000/api/account/send/passwordChanged'. This URL is bound to change depending on the environment/server where this service is deployed.\n\n**Headers:**\nThis endpoint requires one additional header 'Client-UUID' which must be included with each request. The value for 'Client-UUID' corresponds to your project's unique identifier.\n\nKey: 'Client-UUID'\nValue: 'ClientUUID'\nType: 'default'\n\n**Body:**\nThe request body should be in `raw` mode and contains the following keys:\n\n- sessionId : Represents the ongoing session ID.\n- accountId : The unique identifier of the account.\n- email : The email associated with the account.\n\nAn example body would look like \n\n```json\n{\n  \"sessionId\":\"MySessionId\",\n  \"accountId\":\"MyAccountId\",\n  \"email\":\"MyEmail\"\n}\n```\n\nIn this example, `MySessionId`, `MyAccountId`, and `MyEmail` should be replaced with actual values while making the request."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - Password Reset Code to Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"securityCode\":\"123\",\"email\":\"fortunevieyra@icloud.com\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/passwordResetEmail",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "passwordResetEmail"
+          ]
+        },
+        "description": "Here's a detailed description of each data field in this API endpoint:\n\n1. \"name\" - This denotes the name or title of the API endpoint. It's a significant identifier that describes what the API endpoint does. In this case, \"Account - Send - Password Reset Code to Email\" suggests that the API endpoint is used to transmit password reset codes to email addresses linked with user accounts.\n\n2. \"request\" - This outlines the specifics of the HTTP request that will be made. It includes several sub-components detailing the manner and content of the method.\n\n3. \"auth\" - This presents information about the authentication protocol that the API will employ for the HTTP request. The \"type\" is \"bearer\", implying that the request will utilize bearer token authentication.\n   \n    \"bearer\" is an array comprises a single object carrying three properties:\n   \n   - \"key\": Represents the header field for the bearer token, here it is named as \"token\".\n   \n   - \"value\": The actual token/credential that's used for authentication. Here it's called \"BearerToken\".\n   \n   - \"type\": Describes the data type of the \"value\". In this case, it is a string.\n\n4. \"method\" - This data field signifies the HTTP method for the request. In this case, \"POST\" indicates that the endpoint is expecting data to be sent in the request body for processing.\n\n5. \"url\" - This contains the exact URL that the request will call. Here the API endpoint is hosted locally on port 3000.\n\n6. \"headers\" - This includes any headers required for the request. In this case, a client UUID (Universally Unique Identifier) should be mentioned as the header with the key called \"Client-UUID\".\n\n7. \"body\" - This pertains to the main content of the request. \"mode\" is set to \"raw\", which means the request will be made with the raw data as is, without any encoding or modifying. Under \"raw\", several items need to be sent in JSON form:\n   \n   - \"sessionId\": A unique identifier for a single browsing session.\n   \n   - \"accountId\": Identifier for a specific user account.\n   \n   - \"securityCode\": Security code arranged to verify the identity of the user. In this example, its value is set as '123'.\n   \n   - \"email\": The email address linked with the user's account. In this case, `fortunevieyra@icloud.com` is the account email where the reset password link will be dispatched."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - Password Reset Code to SMS",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"securityCode\":\"123456\",\"phone\":\"18327051031\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/passwordResetSMS",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "passwordResetSMS"
+          ]
+        },
+        "description": "This endpoint is named \"Account - Send - Password Reset Code to SMS\". It adopts the POST method, indicating that it is designed to push (insert) data to the server. The request URL of this endpoint is \"http://localhost:3000/api/account/send/passwordResetSMS\". This suggests that it is locally hosted and used for sending password reset codes to a specified SMS.\n\nIt requires bearer authentication. It means you need to supply a bearer token which is used to authorize and authenticate the request.\n\n\"token\": This is a string type data where the bearer token should be placed. The placeholder value here is \"BearerToken.\"\n\nUnder Headers, we find additional authorization parameters.\n\n\"Client-UUID\": It refers to the unique identifier used to recognize individual clients invoking this API endpoint. Put your Client UUID in the place of 'ClientUUID' here.\n\nComing to the body of the endpoint, it contains a raw JSON object with the following data,\n\n\"sessionId\": It refers to the unique session identifier. Replace 'sessionId' with the actual session Id.\n\n\"accountId\": It refers to a specific user's account identifier. 'accountId' here needs to be replaced with the actual account Id.\n\n\"securityCode\": A placeholder (123456) for the security code used in the password reset process. It should be replaced with a real security code.\n\n\"phone\": A placeholder (18327051031) for the phone number to which the password reset SMS will be sent. It should be replaced with the target phone number.\n  \nPlease ensure to replace all the placeholder values with real-time data while using this endpoint."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - New Message Notification Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"sender\":\"Fortune Vieyra\",\"message\":\"Hello World\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/newMessage",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "newMessage"
+          ]
+        },
+        "description": "The provided data describes a POST endpoint for sending a new message notification email in an account.\n\n1. `name`: This is the unique identifier or the title of the endpoint. In this case, it is \"Account - Send - New Message Notification Email\".\n\n2. `request`: This encapsulates all the information needed to make the API call.\n\n   - `auth`: Specifies the authentication details.\n     - `type`: It denotes the type of authentication. Here, it is a \"bearer\" type.\n     - `bearer`:[{...}]: This array contains an object defining a bearer token, specified by:\n       - `key`: The key \"token\" used for identification during authentication.\n       - `value`: It is the actual bearer token to be used. Here, it is denoted as \"BearerToken\".\n       - `type`: It defines what type of data the bearer token is. Here, it is a \"string\".\n\n   - `method`: The HTTP method employed for calling the API. Here, it is \"POST\".\n  \n   - `url`: The URL to which the request is made. For the given data, the API endpoint is \"http://localhost:3000/api/account/send/newMessage\".\n\n   - `headers`: An array containing all the headers to be included in the request.\n     - `key`: The identifying key for the header. Here, it is \"Client-UUID\".\n     - `value`: The corresponding value to the key. In this case, \"ClientUUID\".\n     - `type`: The kind of header it is. Here, it is \"default\".\n\n   - `body`: This includes the body of the HTTP request.\n     - `mode`: Indicates the mode of the request body. For this endpoint, it's \"raw\".\n     - `raw`: Contains the actual body of the request sent to the server as a raw string. This string could ideally be a properly formatted JSON, XML, or even just plain text. Here, it is a JSON string containing sessionId, accountId, sender and message properties.\n  \nThe body values:\n- `sessionId`: The unique identifier for a specific session.\n- `accountId`: Represents the id of the account.\n- `sender`: A string that represents the sender's name. In this case,  \"Fortune Vieyra\".\n- `message`: The actual content of your message. Provided example is a greeting, \"Hello World\"."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - New Followers Notification Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"newFollowers\":[\"John Smith\",\"Andy Lee\",\"Michael Jordan\"]}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/newFollowers",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "newFollowers"
+          ]
+        },
+        "description": "This endpoint, named \"Account - Send - New Followers Notification Email\", is designed to automatically send an email notification when a user has new followers on their account. It utilizes the `POST` method and interacts with a specific `API` at \"http://localhost:3000/api/account/send/newFollowers\".\n\nStarting with `auth` block, it employs `bearer token` authentication which denotes that to achieve successful communication with this API, you'll need to include the relevant access token string under the `bearer` field in the `auth` section. The placeholder for this token is represented as \"BearerToken\".\n\nThe `request` section also defines a `client-UUID` header where a universally unique client identifier must be substituted in place of \"ClientUUID\". This identifier is used to uniquely identify each client that uses this endpoint.\n\nAnd finally, the `body` section of the request takes three key parts which are `sessionId`, `accountId`, and `newFollowers` in JSON format. The `sessionId` and `accountId` refer to the unique identifiers for a user's session and account respectively where you would replace \"sessionId\" and \"accountId\" with actual values. For the `newFollowers`, it takes an array of strings replacing \"John Smith\",\"Andy Lee\",\"Michael Jordan\" with the actual names of new followers.\n\nRemember that all the data provided in `request` section should adhere to the right string format as stipulated for each item. Keep your `token`, `ClientUUID`, `sessionId` and `accountId` confidential in order to uphold the security of your data."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - Streamer New Comment Notification Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"commenterId\":\"12345AD3DS-ASDFSA2-ASDFASD-2ASDFASD\",\"comment\":\"HELLO WORLD!\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/streamerNewComment",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "streamerNewComment"
+          ]
+        },
+        "description": "This API endpoint is named \"Account - Send - Streamer New Comment Notification Email\". The endpoint is designed to send a notification email to a user (presumably a streamer), whenever a new comment is made on their content.\n\nAuthentication: This endpoint requires an authentication method of type 'Bearer'. The 'BearerToken' needs to be passed as the value for the 'token' key in the authentication section of the request.\n\nHTTP Request Method: The request method used for this endpoint is POST.\n\nURL: The endpoint resides at the URL \"http://localhost:3000/api/account/send/streamerNewComment\". \n\nHeaders: The request requires a header field of 'Client-UUID', it is used to identify the client making the request. The value for the 'Client-UUID' field in the headers section is 'ClientUUID'.\n\nBody: The body of the request should be in 'raw' format. There are four data fields to be included in the body of the request.\n\n- \"sessionId\": This refers to the unique identifier for the streaming session. Replace 'sessionId' with the valid session ID.\n- \"accountId\": It represents the unique identifier for the user's account. Replace 'accountId' with the valid account ID.\n- \"commenterId\": The unique identifier for the person who made the comment. The placeholder value here is a UUID, and should be replaced with the ID of the commenter.\n- \"comment\": The content of the comment made by the commenter. It is filled with placeholder text 'HELLO WORLD!'\n  \nPlease ensure to replace these placeholder values with actual data during implementation."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - Streamer Team Draft Request Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"ownerId\":\"KALSDF98-OJOASDF9=OASKDHFL-OIUAHSD89=ASDFDSS\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/streamerTeamDraftRequest",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "streamerTeamDraftRequest"
+          ]
+        },
+        "description": "This endpoint is named \"Account - Send - Streamer Team Draft Request Email\". It is designed to send a team draft request email through the streamer account. Here's a detailed description of all components of the endpoint:\n\n1. Auth: This endpoint uses bearer token authentication, which means that the server and client could pass a `token` as the value of the bearer token to authenticate each other. The type of the `token` is string.\n\n2. Request Method: The HTTP method used by this endpoint is `POST`, which means it submits data to be processed to a specified resource.\n\n3. URL: This HTTP request is sent to the URL: `http://localhost:3000/api/account/send/streamerTeamDraftRequest`.\n\n4. Headers: This HTTP request contains headers, which allow the client to pass additional information about the request or about itself, to the server. The `Client-UUID` is sent as a header with the type set to `default`. Replace `ClientUUID` with the unique identifier of the client.\n\n5. Body: The body of this request contains the data to be sent to the server. The data is sent in `raw` mode which contains the following parameters:\n  \n    - `sessionId`: A unique identifier for the session.\n  \n    - `accountId`: The account identifier of the user.\n  \n    - `ownerId`: The unique identifier of the owner. The value `KALSDF98-OJOASDF9=OASKDHFL-OIUAHSD89=ASDFDSS` is just a placeholder and needs to be replaced with the actual ownerId.\n\nMake sure to replace the placeholder data with actual values when making the request."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - User New Comment Request Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"commenterId\":\"12345AD3DS-ASDFSA2-ASDFASD-2ASDFASD\",\"comment\":\"HELLO WORLD!\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/userNewComment",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "userNewComment"
+          ]
+        },
+        "description": "This endpoint is named \"Account - Send - User New Comment Request Email\". It is designed to send an email notification to a user when a new comment is made on their account.\n\nHere is a breakdown of the data:\n\n- `auth`: This specifies the authorization method that is being used. In this case, the type is \"bearer\". The bearer key-value pair should be supplied, having a value of type string. \n\n- `method`: This specifies the HTTP method that should be used for the request. In this case, the POST method is used, indicating that data will be sent to the server.\n\n- `url`: This is the URL that the request will be sent to. The path `http://localhost:3000/api/account/send/userNewComment` is the designated route for sending user new comment request emails.\n\n- `headers`: This is an array of objects that represents the headers that should be included in the HTTP request. The Client-UUID key, which carries a value of type default is required, you need to substitute \"ClientUUID\" with the appropriate value.\n\n- `body`: This describes the data that is being sent in the request. The body content is in raw format. The raw string contains a JSON object with four properties:\n  \n  - `sessionId`: A string that uniquely identifies the current session.\n\n  - `accountId`: A string that uniquely identifies the account that the comment is being made on. \n\n  - `commenterId`: A unique identifier for the user who has made the comment. The example provided is a placeholder and should be replaced with the actual value.\n\n  - `comment`: A string representing the content of the user's comment. The example \"HELLO WORLD!\" is a placeholder for actual comment.\n\nDo replace the placeholder values with actual values before making the request."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Send - Users Team Draft Request Email",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"streamerId\":\"12345AD3DS-ASDFSA2-ASDFASD-2ASDFASD\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/send/userTeamDraftRequest",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "send",
+            "userTeamDraftRequest"
+          ]
+        },
+        "description": "This endpoint is named 'Account - Send - Users Team Draft Request Email'. Its purpose is to facilitate a POST request to send a draft request email to the user's team in your account.\n\n1. Authentication:\n   This endpoint is protected by 'bearer' authentication type. The bearer token is passed to authenticate requests made to the endpoint. The 'token' key holds the value of the bearer token in string format.\n\n2. HTTP Method: \n   This endpoint uses the 'POST' HTTP method. A POST method is used when you want to send some data to the server, for example, file update, form data, etc.\n\n3. URL: \n   The URL to which the request is to be sent is 'http://localhost:3000/api/account/send/userTeamDraftRequest'. This URL may change depending on the running environment of your application.\n\n4. Headers: \n   The 'Client-UUID' is the only header key in this endpoint. The value for this key should be your client's unique identifier. It must be sent in the request headers to the server for identification purposes.\n\n5. Body:\n   The body of the request is in 'raw' format. It consists of:\n   - 'sessionId', which should hold the unique session identifier.\n   - 'accountId', that should include the unique id of the user's account.\n   - 'streamerId', a unique identifier to identify individual streamers. \n\nPlease replace 'BearerToken', 'ClientUUID', 'sessionId', 'accountId', and 'streamerId' with their actual values when using this API endpoint. \n\nRemember to adhere to the correct data types (e.g., strings) for each of these fields to avoid unexpected errors.\n\nThis endpoint will handle the logic behind the sending of the draft request email to all members of your user's team."
+      },
+      "response": []
+    }
+  ]
+}

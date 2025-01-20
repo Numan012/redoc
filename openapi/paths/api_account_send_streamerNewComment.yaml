@@ -1,0 +1,68 @@
+post:
+  tags:
+    - AccountSend
+  summary: Account - Send - Streamer New Comment Notification Email
+  description: >-
+    This API endpoint is named "Account - Send - Streamer New Comment
+    Notification Email". The endpoint is designed to send a notification email
+    to a user (presumably a streamer), whenever a new comment is made on their
+    content.
+
+
+    Authentication: This endpoint requires an authentication method of type
+    'Bearer'. The 'BearerToken' needs to be passed as the value for the 'token'
+    key in the authentication section of the request.
+
+
+    HTTP Request Method: The request method used for this endpoint is POST.
+
+
+    URL: The endpoint resides at the URL
+    "http://localhost:3000/api/account/send/streamerNewComment". 
+
+
+    Headers: The request requires a header field of 'Client-UUID', it is used to
+    identify the client making the request. The value for the 'Client-UUID'
+    field in the headers section is 'ClientUUID'.
+
+
+    Body: The body of the request should be in 'raw' format. There are four data
+    fields to be included in the body of the request.
+
+
+    - "sessionId": This refers to the unique identifier for the streaming
+    session. Replace 'sessionId' with the valid session ID.
+
+    - "accountId": It represents the unique identifier for the user's account.
+    Replace 'accountId' with the valid account ID.
+
+    - "commenterId": The unique identifier for the person who made the comment.
+    The placeholder value here is a UUID, and should be replaced with the ID of
+    the commenter.
+
+    - "comment": The content of the comment made by the commenter. It is filled
+    with placeholder text 'HELLO WORLD!'
+      
+    Please ensure to replace these placeholder values with actual data during
+    implementation.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"commenterId\":\"12345AD3DS-ASDFSA2-ASDFASD-2ASDFASD\",\"comment\":\"HELLO
+            WORLD!\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

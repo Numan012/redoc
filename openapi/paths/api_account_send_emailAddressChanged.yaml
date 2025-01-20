@@ -1,0 +1,60 @@
+post:
+  tags:
+    - AccountSend
+  summary: Account - Send - Email Address Changed Notification
+  description: >-
+    1. "name": This field contains the name of the current action that's been
+    taken; in this case, it is sending a notification about an account email
+    address change.
+
+
+    2. "request": This field encapsulates all the data related to making the
+    specific API request.
+
+
+    2.1. "auth": It represents the authentication of the API request. The "type"
+    of authentication here is a "bearer" token which means that the sender is
+    the bearer of the token.
+
+        2.1.1. "bearer": It is an array containing the bearer token type credentials, represented by an object holding the properties "key", "value", and "type". The "key" value is the token name, "value" is the actual token, and "type" indicates the data type of the value as string.
+
+    3. "method": This field represents the HTTP method used for the API request.
+    A "POST" method is used here which generally means the request is intended
+    to send data to the server.
+
+
+    4. "url": This field specifies the URL where the API request would be sent.
+
+
+    5. "headers": This field is an array of objects which contains the
+    additional information to pass together with the request. Here, an object is
+    present with "key" as "Client-UUID", a unique identifier for the client, the
+    "value" is the actual UUID value and "type" indicates it's a default header.
+
+
+    6. "body": This section includes the exact data that'll be sent with the
+    POST request.
+
+        6.1. "mode": This field signifies the way the body will be sent. In this case, "raw" indicates the body content will be sent as a raw data string.
+
+        6.2. "raw": This field consists of the actual raw data string which is a JSON string including "sessionId", "accountId", and "email" as properties. "sessionId" represents the session's unique identifier, "accountId" is the account's unique identifier and "email" is the new email address.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"email\":\"email\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

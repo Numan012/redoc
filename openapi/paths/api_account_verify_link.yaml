@@ -1,0 +1,43 @@
+post:
+  tags:
+    - AccountVerify
+  summary: Account - Verify - Verification Link
+  description: >-
+    The endpoint is named "Account - Verify - Verification Link". It is used to
+    validate a user account through a verification link. This endpoint uses the
+    POST method, which is mainly for sending data.
+
+
+    Endpoint URL: This is the URL where the request is sent. In this case, the
+    URL is http://localhost:3000/api/account/verify/link. 
+
+
+    The endpoint does not require any specific headers. Headers are often used
+    to provide additional information that the server needs to process the
+    request.
+
+
+    Body of the request: Here, the body is provided in raw format and contains
+    two data fields that you need to fill:
+
+
+    1. verificationToken: This is the token that is unique to each user and is
+    used to verify the user's identity.
+     
+    2. email: This is the email address of the user who is trying to verify
+    their account. 
+
+
+    Remember to replace "verificationToken" and "email" with the actual values
+    before sending the request.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: '"{\"verificationToken\":\"verificationToken\",\"email\":\"email\"}"'
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

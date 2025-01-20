@@ -1,0 +1,64 @@
+get:
+  tags:
+    - AccountGeneral
+  summary: Account - General - Session - Get Account Type
+  description: >-
+    The endpoint described is named `Account - General - Session - Get Account
+    Type`. It's a GET type HTTP request that is made to the URL
+    `http://localhost:3000/api/account/general/session`.
+
+
+    This URL accepts three query parameters: `accountId`, `sessionId`, and
+    `get`. 
+
+
+    1. The `accountId` parameter is used to specify the unique identifier of the
+    account for which the type is being requested.
+       
+    2. The `sessionId` parameter is being used to determine the valid session
+    from which the request is made.
+       
+    3. The `get` parameter value is set to `accountType`, which indicates the
+    type of information being requested from this API endpoint.
+
+
+    For authentication, this endpoint requires a bearer token which is passed
+    under the `auth` object. The `key` is set to `token` and its `value` needs
+    to be replaced with the actual `BearerToken`.
+
+
+    The headers part of the request is currently empty and disabeled, indicating
+    that no additional metadata is being sent in the request header.
+
+
+    The body of the request is also empty, which is consistent with a GET type
+    request that normally does not contain a body but fetches data based on
+    provided parameters in the URL.
+
+
+    This endpoint basically provides a method for developers to retrieve the
+    type of the account linked with the provided `accountId` during an active,
+    authenticated `sessionId`.
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: accountId
+      in: query
+      schema:
+        type: string
+      example: accountId
+    - name: sessionId
+      in: query
+      schema:
+        type: string
+      example: sessionId
+    - name: get
+      in: query
+      schema:
+        type: string
+      example: accountType
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

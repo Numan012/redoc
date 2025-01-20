@@ -1,0 +1,179 @@
+{
+  "item": [
+    {
+      "name": "Account - Verify - Account",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"unlockCode\":\"unlockCode\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/verify/account",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "verify",
+            "account"
+          ]
+        },
+        "description": "This endpoint is named \"Account - Verify - Account\". It is designed to verify an account using the POST method. \n\n1. `name`: The name is \"Account - Verify - Account\". This illustrates the purpose of the endpoint, which is to verify an account.\n \n2. `request`: This object contains all the information about the HTTP request.\n\n3. `method`: The method indicates the type of HTTP request method used for the API request. In this case, the method is \"POST\", which signifies that this request will submit data to the server to be processed.\n\n4. `url`: This specifies the URL for the endpoint. The URL is \"http://localhost:3000/api/account/verify/account\". This is the address that we will send our POST request to.\n\n5. `headers`: This currently contains no values; headers are used to pass additional information with the request or the response. They define the operating parameters of an HTTP request or response.\n\n6. `body`: This object contains the information that will be sent to the server. It contains another object with the `mode` and `raw` properties.\n\n7. `mode`: The mode is \"raw\". This refers to the raw body content of the HTTP request. The \"raw\" mode here means that we are sending a raw request body, which is not formatted in any specific way.\n\n8. `raw`: This is the raw request body. It's in the form of a JSON object. It contains three properties: \"unlockCode\", \"sessionId\", and \"accountId\".\n   - `unlockCode`: This is the unlock code used for account verification.\n   - `sessionId`: This refers to the unique identifier of a user session.\n   - `accountId`: This refers to the unique identifier of the account to be verified.\n   \nThis endpoint should be used when you want to verify an account by sending a POST request to the server. The request will contain the user's unlock code, session ID and account ID as parameters."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Verify - Email Address",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"verificationToken\":\"verificationToken\",\"email\":\"email\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/verify/email",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "verify",
+            "email"
+          ]
+        },
+        "description": "This endpoint is named \"Account - Verify - Email Address\". It is designed to verify an email address linked to an account. \n\nIt uses the `POST` method, which allows it to send data to the server to create a new entry in the database. The `POST` method is often used when submitting filled forms.\n\nThe URL for this endpoint is `\"http://localhost:3000/api/account/verify/email\"`. This endpoint lies within your local server running on port 3000. Its path is `/api/account/verify/email`, whereby it's within the 'api', 'account', 'verify', then finally, 'email' subdirectory.\n\nCurrently, it does not contain any custom `headers`. Headers are often used to provide information about the request body and the response, such as its MIME type, or to provide authentication information. If necessary, headers could be added accordingly.\n\nThe `body` of the request is being sent in `raw` mode. Raw mode is used when you want to send information without any encoding. This is useful when you want to send JSON or XML data to the server.\n\nThe raw data being sent consists of two key-value pairs:\n\n- `verificationToken`: The token used to verify the email. This would typically be a unique string that the server generates and sends to the email address for verification.\n- `email`: The email address to be verified. This must match the email address that the server has on record for the associated verification token.\n\nIn normal usage, both `verificationToken` and `email` would need to be replaced with actual data."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Verify - Phone Number",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"verificationCode\":\"verificationCode\",\"phone\":\"phone\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/verify/phone",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "verify",
+            "phone"
+          ]
+        },
+        "description": "This endpoint is for the `Account - Verify - Phone Number` API.\n\n**Method**: POST\nThe HTTP method used for this endpoint is a POST request. It's typically used to send data to a server to create a new resource.\n\n**URL**: `http://localhost:3000/api/account/verify/phone`\nThis is the URL at which the API needs to be hit. Since we're in a local development environment, we're using `localhost`. The port we're using to access the local server is `3000`. The path of the API is `/api/account/verify/phone`, which is used to verify an account's phone number.\n\n**Headers**: []\nThis field is empty, meaning we're not sending any additional metadata in the header of this HTTP request. Headers often include items like authorization tokens, content type etc. However, none of that is required by this endpoint.\n\n**Body**:\nThe body of the HTTP request is sent in a `raw` format. This is the data that the API takes as input in order to verify a phone number.\n\n- `verificationCode`: This is the code that is used to verify a phone number. Typically, it's sent by an SMS to the phone number that needs to be verified. \n\n- `phone`: This is the phone number that needs to be verified. It needs to be provided so the API knows which phone number it's supposed to verify.\n\nThis endpoint requires both `verificationCode` and `phone` to be present in the raw JSON body of the HTTP request in order to work correctly.\n\nExample of the request body would be:\n```\n{\n  \"verificationCode\": \"123456\",\n  \"phone\": \"+1234567890\"\n}\n```\n\nMake sure to replace the values with the actual verification code received and the phone number to be verified."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Verify - Security Code",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"accountId\":\"accountId\",\"sessionId\":\"sessionId\",\"unlockCode\":\"unlockCode\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/verify/unlock",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "verify",
+            "unlock"
+          ]
+        },
+        "description": "This endpoint is labeled as \"Account - Verify - Security Code\" and it represents an API operation for verifying a security code for a specific user account.\n\n1. Method: POST\n   This endpoint uses the HTTP POST method, which is typically used to send (or create) data to the server.\n\n2. URL: `http://localhost:3000/api/account/verify/unlock`\n   This is the endpoint's URL. The base URL is `http://localhost:3000`, which denotes your local server when the application is run locally. The path `/api/account/verify/unlock` is the specific route in your application where the data will be sent to be processed.\n\n3. Headers: []  \n   The headers field is currently empty. This is where you'd usually provide additional information, like content type or authentication tokens.\n\n4. Body: \n     In body, we have the following fields:\n   \n   - `mode`: `raw`  \n     The mode property specifies how the request data is being sent. The value `raw` means the data is being sent as a string in the body of the request.\n\n   - `raw`:  \n     This is the actual data payload in string format that's being sent in the request.\n   \n     It contains three fields:\n\n     - `accountId`: The unique identifier of the account. This is a placeholder and should be replaced with actual account Id during the API request.\n  \n     - `sessionId`: Represents a session identifier, typically used for tracking or authenticating user sessions. Replace this placeholder with an actual session Id.\n    \n     - `unlockCode`: This is the security code that needs to be verified for the account. Replace the placeholder with the actual unlock code.\n\nThis endpoint is used to verify a security code (unlockCode) pertaining to a user's session (sessionId) for a specific account (accountId). The payload should be formed by replacing the placeholders with real data and sent as a raw JSON string."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Verify - Verification Link",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"verificationToken\":\"verificationToken\",\"email\":\"email\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/verify/link",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "verify",
+            "link"
+          ]
+        },
+        "description": "The endpoint is named \"Account - Verify - Verification Link\". It is used to validate a user account through a verification link. This endpoint uses the POST method, which is mainly for sending data.\n\nEndpoint URL: This is the URL where the request is sent. In this case, the URL is http://localhost:3000/api/account/verify/link. \n\nThe endpoint does not require any specific headers. Headers are often used to provide additional information that the server needs to process the request.\n\nBody of the request: Here, the body is provided in raw format and contains two data fields that you need to fill:\n\n1. verificationToken: This is the token that is unique to each user and is used to verify the user's identity.\n \n2. email: This is the email address of the user who is trying to verify their account. \n\nRemember to replace \"verificationToken\" and \"email\" with the actual values before sending the request."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Verify - Unlock Code",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"securityCode\":\"securityCode\",\"email\":\"email\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/verify/code",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "verify",
+            "code"
+          ]
+        },
+        "description": "This endpoint is labeled as `Account - Verify - Unlock Code`. The purpose of this endpoint is to verify and unlock a specific code for an account. \n\nThe method used for this API call is `POST`, indicating that this endpoint is used to send data to the server to create a resource.\n\nThe URL or endpoint where the API call is made is `http://localhost:3000/api/account/verify/code`. This is the path in your API where resources related to verifying and unlocking the account code can be created.\n\nThis endpoint does not use any predefined HTTP headers. Headers are often used to provide information about the request body or response, or about the server or client. Since there are no headers indicated here, the request doesn't carry any additional information in the headers.\n\nThe `body` of the request consists of raw data sent to the server. It is in JSON format which is a standard data format with a diverse range of functionality. Two parameters are passed in this request body:\n\n1. `securityCode`: This is an alphanumeric code associated with the account that needs verification. This will be unique per individual account and must be supplied by the user.\n  \n2. `email`: This is the email address associated with the user's account. It is used to identify the user's account that is being processed for the unlock code.\n\nRemember to replace `securityCode` and `email` placeholders with actual values when you are using this endpoint."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Verify - Username",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\":\"fortunevieyra1\",\"accountId\":\"accountId\",\"sessionId\":\"sessionId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/verify/username",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "verify",
+            "username"
+          ]
+        },
+        "description": "The given endpoint is called \"Account - Verify - Username\". It is configured to make a POST request to the URL: http://localhost:3000/api/account/verify/username. \n\nHere's a detailed description of each data it includes:\n\n1. \"name\": This is the title or name of the endpoint. You can think of this as a label to identify what the endpoint does. \n\n2. \"request\": This is a complex object that includes all the information necessary for the request. It includes several child objects and data fields.\n\n   a. \"method\": This denotes the HTTP method of the request. In this case, it's a POST request, which implies that this endpoint is used to send data to be processed to a specified resource.\n\n   b. \"url\": This is the URL where the request will be made. Our requests get sent to \"http://localhost:3000/api/account/verify/username\". This is typically the location of the server that will process our request.\n\n   c. \"headers\": This is an array that should include any HTTP headers we want to send with our request. However, in this case, it's empty, which means no additional headers are being sent with the request.\n\n   d. \"body\": This contains the actual data that we're sending with our request. \n\n3. \"body\": This is a complex object that includes the data we're sending and the format we're sending it in. \n\n   a. \"mode\": This describes the format of the data. The value \"raw\" tells us that the data in \"raw\" field is sent as is, and not in any specific format like form-data or x-www-form-urlencoded.\n\n   b. \"raw\": This is the actual data we're sending for processing. In this case, we're sending a JSON object with three properties: \n      \n       i. \"username\": The username of the account that needs verification.\n      \n      ii. \"accountId\": The ID related to the account that is currently being verified.\n     \n     iii. \"sessionId\": The session ID associated with the current user or current verification process.\n  \nIn a nutshell, this endpoint is used to verify a username for a given account ID and session ID in our system by making a POST request to the given URL."
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+put:
+  tags:
+    - AccountUpdate
+  summary: Account - Update - Username
+  description: >-
+    This endpoint is named "Account - Update - Username" and it is used to
+    update the username of an account.
+
+
+    It uses the "PUT" method of request which means it's designed to update or
+    replace existing data.
+
+
+    The URL for this endpoint is
+    "http://localhost:3000/api/account/update/username". You can replace the
+    "localhost:3000" part with the actual server address where your API is
+    hosted. 
+
+
+    Authorization of the request is managed using a "bearer" token which needs
+    to be provided in the "auth" field. The key for this is "token" and the
+    value should be the actual "BearerToken", which is a unique token assigned
+    for each user.
+
+
+    There is a header field which expects a "Client-UUID", this is essentially
+    the unique identifier for each client. The client is expected to send their
+    UUID every time they make a request to this endpoint.
+
+
+    The request body is sent in "raw" mode. The payload contains the new
+    "username" that needs to be updated. It also contains a "sessionId" which
+    represents the session of the user. The "accountId" is the unique identifier
+    of the account that you wish to update the username of.
+
+
+    In summary, to use this endpoint effectively, you need to include the bearer
+    token, the client UUID, and an appropriate payload in the request. If all
+    these details are accurate, the username of the specified account will be
+    updated successfully.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"username\":\"fortunevieyra\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

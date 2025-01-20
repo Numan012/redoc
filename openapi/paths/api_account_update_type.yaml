@@ -1,0 +1,65 @@
+put:
+  tags:
+    - AccountUpdate
+  summary: Account - Update - Type
+  description: >-
+    This endpoint represents an operation to update the 'type' of an account in
+    a system. It is named "Account - Update - Type". The operation uses the
+    'PUT' method, implying it is for updating a resource on the server. 
+
+
+    Here's a breakdown of all the data:
+
+
+    1. `name`: This is the identifier of the endpoint. In this context, it
+    represents the name of the operation which is "Account - Update - Type". 
+
+
+    2. `request`: This contains all the details of the request that needs to be
+    made to the server.
+
+
+    3. `auth`: This holds the authentication method and credentials required to
+    gain access to the endpoint. The type of authorization here is "bearer". It
+    requires a "token" for authorization which is a "BearerToken" here.
+
+
+    4. `method`: This specifies the HTTP method for the request. In this case,
+    it's "PUT", which means it’s used to update an existing resource.
+
+
+    5. `url`: This is the URL of the server where the request will be made.
+    'http://localhost:3000/api/account/update/type' is the URL in this case.
+
+
+    6. `headers`: These are used to send additional information to the server.
+    In this case, there is one key-value pair as header input. The 'key' is the
+    'Client-UUID', and its 'value' is the 'ClientUUID'.
+
+
+    7. `body`: This holds the actual data that needs to be sent to the server.
+    Body type is 'raw', implying the data is sent in plain text. An object is
+    being sent here with the following fields:
+       - `accountType`: It signifies the type of the account. In this case, it's "Business".
+       - `sessionId`: This is a unique identifier for a session. It's current value is "sessionId".
+       - `accountId`: It stands for the unique identifier of the account. It's current value is "accountId".
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"accountType\":\"Business\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

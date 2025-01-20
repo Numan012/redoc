@@ -1,0 +1,46 @@
+put:
+  tags:
+    - AccountGeneral
+  summary: Account - General - Reset Password
+  description: >-
+    This endpoint is named "Account - General - Reset Password". It is designed
+    to handle PUT requests for resetting a user's password in the account. 
+
+
+    The URL where this request is sent to is:
+    http://localhost:3000/api/account/general/reset. 
+
+
+    This request does not use any specific headers (the provided header field is
+    made blank by default and thus disabled). 
+
+
+    In the body of the request, a JSON object is sent that includes values for
+    the sessionId, email, and the new password. The respective values should
+    replace the placeholders: "sessionId", "email", and "helloworld".
+
+
+    The authentication required for this endpoint is of type `bearer`. The
+    bearer token to authenticate the request is provided in the `auth` section,
+    with the key named 'token' and value 'BearerToken'. The type of the bearer
+    token is string. 
+
+
+    In a nutshell, when this endpoint is hit with appropriate values in the
+    request body and the bearer token, the password for the associated email
+    account will be reset. This is a sensitive operation so the token is
+    mandatory for giving access and validating the request.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"email\":\"email\",\"password\":\"helloworld\"}"
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

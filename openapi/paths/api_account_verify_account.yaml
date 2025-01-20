@@ -1,0 +1,61 @@
+post:
+  tags:
+    - AccountVerify
+  summary: Account - Verify - Account
+  description: >-
+    This endpoint is named "Account - Verify - Account". It is designed to
+    verify an account using the POST method. 
+
+
+    1. `name`: The name is "Account - Verify - Account". This illustrates the
+    purpose of the endpoint, which is to verify an account.
+     
+    2. `request`: This object contains all the information about the HTTP
+    request.
+
+
+    3. `method`: The method indicates the type of HTTP request method used for
+    the API request. In this case, the method is "POST", which signifies that
+    this request will submit data to the server to be processed.
+
+
+    4. `url`: This specifies the URL for the endpoint. The URL is
+    "http://localhost:3000/api/account/verify/account". This is the address that
+    we will send our POST request to.
+
+
+    5. `headers`: This currently contains no values; headers are used to pass
+    additional information with the request or the response. They define the
+    operating parameters of an HTTP request or response.
+
+
+    6. `body`: This object contains the information that will be sent to the
+    server. It contains another object with the `mode` and `raw` properties.
+
+
+    7. `mode`: The mode is "raw". This refers to the raw body content of the
+    HTTP request. The "raw" mode here means that we are sending a raw request
+    body, which is not formatted in any specific way.
+
+
+    8. `raw`: This is the raw request body. It's in the form of a JSON object.
+    It contains three properties: "unlockCode", "sessionId", and "accountId".
+       - `unlockCode`: This is the unlock code used for account verification.
+       - `sessionId`: This refers to the unique identifier of a user session.
+       - `accountId`: This refers to the unique identifier of the account to be verified.
+       
+    This endpoint should be used when you want to verify an account by sending a
+    POST request to the server. The request will contain the user's unlock code,
+    session ID and account ID as parameters.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"unlockCode\":\"unlockCode\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

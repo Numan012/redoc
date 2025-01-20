@@ -1,0 +1,58 @@
+post:
+  tags:
+    - AccountSend
+  summary: Account - Send - Users Team Draft Request Email
+  description: >-
+    This endpoint is named 'Account - Send - Users Team Draft Request Email'.
+    Its purpose is to facilitate a POST request to send a draft request email to
+    the user's team in your account.
+
+
+    1. Authentication:
+       This endpoint is protected by 'bearer' authentication type. The bearer token is passed to authenticate requests made to the endpoint. The 'token' key holds the value of the bearer token in string format.
+
+    2. HTTP Method: 
+       This endpoint uses the 'POST' HTTP method. A POST method is used when you want to send some data to the server, for example, file update, form data, etc.
+
+    3. URL: 
+       The URL to which the request is to be sent is 'http://localhost:3000/api/account/send/userTeamDraftRequest'. This URL may change depending on the running environment of your application.
+
+    4. Headers: 
+       The 'Client-UUID' is the only header key in this endpoint. The value for this key should be your client's unique identifier. It must be sent in the request headers to the server for identification purposes.
+
+    5. Body:
+       The body of the request is in 'raw' format. It consists of:
+       - 'sessionId', which should hold the unique session identifier.
+       - 'accountId', that should include the unique id of the user's account.
+       - 'streamerId', a unique identifier to identify individual streamers. 
+
+    Please replace 'BearerToken', 'ClientUUID', 'sessionId', 'accountId', and
+    'streamerId' with their actual values when using this API endpoint. 
+
+
+    Remember to adhere to the correct data types (e.g., strings) for each of
+    these fields to avoid unexpected errors.
+
+
+    This endpoint will handle the logic behind the sending of the draft request
+    email to all members of your user's team.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"streamerId\":\"12345AD3DS-ASDFSA2-ASDFASD-2ASDFASD\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

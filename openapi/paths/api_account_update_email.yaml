@@ -1,0 +1,69 @@
+put:
+  tags:
+    - AccountUpdate
+  summary: Account - Update - Email
+  description: >-
+    This endpoint is named "Account - Update - Email". This specifies its
+    purpose: It's a component in an API that facilitates email updates in an
+    account. 
+
+
+    - The `request` field contains the defining features of the endpoint's
+    request parameters. 
+
+
+    - The `auth` form of this endpoint is "bearer". This signifies that it uses
+    bearer tokens for authorization. The token's details are stored in a
+    subfield where "key" is "token", the "value" is "BearerToken" and the token
+    type is set to "string".
+
+
+    - The `method` details the type of HTTP request that should be made. In this
+    case, it's a `PUT` request indicating that it's used to update current
+    resource.
+
+
+    - The `url` field provides the exact location at which the request should be
+    pointed. Here, it's targeted at the
+    "http://localhost:3000/api/account/update/email" endpoint. 
+
+
+    - Inside the `headers` is a single object that indicates "Client-UUID" as a
+    "key" with a "value" of "ClientUUID". The type of this header is "default".
+    This header might be used to specify the unique identifier of the client
+    making the request.
+
+
+    - The `body` of the request includes three parameters packed into a raw JSON
+    payload. The `mode` is set to "raw" indicating the form in which the body
+    data is sent.
+
+      - The `newEmail` field is likely expected to receive the updated email address. For example, "fortunevieyra@icloud.com" has been used in the placeholder.
+
+      - `sessionId` is likely a unique identifier for the session during which the request is made. 
+
+      - The `accountId` is probably the unique identifier of the account for which the email is to be updated. 
+
+    Each of these fields and their particular values work together to form the
+    complete functionality of this endpoint. Be sure to replace placeholders
+    with actual data before use.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"newEmail\":\"fortunevieyra@icloud.com\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

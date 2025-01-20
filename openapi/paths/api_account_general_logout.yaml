@@ -1,0 +1,52 @@
+post:
+  tags:
+    - AccountGeneral
+  summary: Account - General - Logout
+  description: >-
+    This endpoint is named "Account - General - Logout". It's used to log out an
+    account from the service. It uses the POST method, meaning it's sending data
+    to a specified resource, in this case, the logout URL.
+
+
+    The URL of the endpoint is
+    "http://localhost:3000/api/account/general/logout". "localhost:3000" is
+    usually used for local development, so it might vary when deployed.
+
+
+    In the headers section, it's currently empty with default type and it is
+    disabled. Headers usually contain additional information for processing the
+    request or response. In this case, none is needed.
+
+
+    The body of the request contains the data JSON format which includes two
+    properties: "sessionId" and "accountId". These are placeholders and need to
+    be replaced with actual values when making a request. Typically, "sessionId"
+    is to identify a user's current session, generated when a user logs in, and
+    "accountId" is the unique identifier of the user's account. Both are
+    required to successfully process a logout request.
+
+
+    For authentication, this endpoint uses the bearer authentication scheme.
+    This simply sends the token with a 'Bearer ' prefix in the Authorization
+    header. The key is labeled "token" and the value is "sessionId", where
+    "sessionId" corresponds to the current session's ID. This is most likely
+    used to ensure only the authorized user can log out their account. 
+
+
+    In summary, to use this endpoint to log out a user, you need to make a POST
+    request to the provided URL, send the sessionId and accountId within the
+    body of the request in JSON format, and send the sessionId as bearer token
+    in the auth section.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: '"{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"'
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

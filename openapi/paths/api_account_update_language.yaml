@@ -1,0 +1,77 @@
+put:
+  tags:
+    - AccountUpdate
+  summary: Account - Update - Language
+  description: >-
+    **Endpoint Name:** Account - Update - Language
+
+
+    This endpoint is used to update the language preference of an account. Below
+    is a comprehensive analysis of the data fields involved:
+
+
+    **Request Authentication:**
+
+
+    * `auth`: Describes the authentication method. Specifically, the type is
+    bearer type authentication. 
+
+
+    * `bearer` Array: This holds the access token information. 
+        * `key`: Refers to the identifier of the token. By default, it is "token".
+        * `value`: This is the actual token value used for authorization. Placeholder here is "BearerToken".
+        * `type`: This is the data type of the token, and the default is set as "string".
+
+    **Request Method:**
+
+
+    * `method`: The HTTP method used for the API call. This endpoint uses the
+    "PUT" method, implying that it is intended for updating an existing
+    resource.
+
+
+    **Request URL:**
+
+
+    * `url`: The URL of the API endpoint. For this request, it is
+    "http://localhost:3000/api/account/update/language".
+
+
+    **Request Headers:**
+
+
+    * `headers`: This includes extra information sent with the request. Here, a
+    "Client-UUID" is sent, which uniquely identifies every client.
+
+
+    **Request Body:**
+
+
+    * `body`: This is the main content of the request. In this case, it's in raw
+    JSON format.
+        * `mode`: Specifies that the request body is raw.
+        * `raw`: This includes the essential details viz., language preference ('languagePreference'), a unique session identifier ('sessionId'), and the account identifier ('accountId') of the account for which the language preference needs to be updated. The language preference here is set to Spanish ('es'). 
+
+    This endpoint, thus, takes an Authorization token, client UUID, session ID,
+    account ID, and the preferred language to update the language preference of
+    the specific account.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"languagePreference\":\"es\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

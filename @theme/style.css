@@ -1,0 +1,52 @@
+:root {
+  --pastel-green: #d2e7d6;
+  --pastel-green-secondary: #00a84e;
+  --pastel-blue: #94b5e3;
+  --pastel-purple: #b9c3fc;
+  --pastel-active: #ffdf82;
+  --text-color-dark-green: #3b4a3f;
+
+  --navbar-bg-color: var(--pastel-green);
+  --navbar-item-bg-color-hover: var(--pastel-active);
+  --navbar-item-bg-color-active: var(--pastel-active);
+  --navbar-border-color: var(--pastel-purple);
+  --search-trigger-border-color: var(--pastel-purple);
+  --search-input-placeholder-color: var(--pastel-purple);
+
+  --sidebar-bg-color: var(--pastel-blue);
+  --menu-item-bg-color-hover: var(--pastel-active);
+  --menu-item-bg-color-active: var(--pastel-active);
+
+  --toc-bg-color: var(--pastel-blue);
+  --toc-border-color: var(--pastel-purple);
+
+  --text-color-secondary: var(--text-color-dark-green);
+  --link-color-primary: var(--pastel-green-secondary);
+  --link-color-visited: var(--pastel-purple);
+
+  --spacing-unit: 6px;
+}
+
+:root.dark {
+  --pastel-green-dark: #728576;
+  --pastel-green-secondary: #00a84e;
+  --pastel-blue-dark: #2f4858;
+  --pastel-purple: #b9c3fc;
+  --pastel-active-dark: #386c5f;
+  --text-color-light-grey: #ecfeef;
+
+  --navbar-bg-color: var(--pastel-green-dark);
+  --navbar-item-text-color-active: var(--pastel-green-dark);
+  --navbar-item-text-color-hover: var(--pastel-green-dark);
+  --navbar-item-bg-color-hover: var(--pastel-green);
+  --navbar-item-bg-color-active: var(--pastel-green);
+
+  --sidebar-bg-color: var(--pastel-blue-dark);
+  --menu-item-color-active: var(--pastel-green-dark);
+  --menu-item-color-hover: var(--pastel-green-dark);
+  --menu-item-bg-color-active: var(--pastel-green);
+  --menu-item-bg-color-hover: var(--pastel-green);
+  --toc-bg-color: var(--pastel-blue-dark);
+
+  --text-color-secondary: var(--text-color-light-grey);
+}

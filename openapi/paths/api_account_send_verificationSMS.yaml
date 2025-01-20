@@ -1,0 +1,51 @@
+post:
+  tags:
+    - AccountSend
+  summary: Account - Send - Verification SMS
+  description: >-
+    This endpoint is named `Account - Send - Verification SMS`. It uses the
+    `POST` method to send a verification SMS to a user's phone.
+
+
+    - `auth`: The endpoint uses `bearer` authentication, which means you need to
+    provide a bearer token in the request header. The key for this token is
+    `token` and its initial value is `BearerToken`. The token's data type is
+    `string`. You will likely replace `BearerToken` with an actual token value
+    when you run this endpoint.
+
+
+    - `method`: This is a `POST` endpoint. That means it is designed to accept
+    and process the submitted data.
+
+
+    - `url`: The endpoint's URL is
+    `http://localhost:3000/api/account/send/verificationSMS`. You can replace
+    `localhost:3000` with any server's address where this API is running.
+
+
+    - `headers`: By default, this API does not require any additional request
+    headers. The header object is set to `disabled` and both the `key` and
+    `value` properties are empty strings. You can add headers if required for
+    your application.
+
+
+    - `body`: The body of the request should be a 'raw' JSON object that
+    includes the phone number where the verification SMS will be sent. The
+    `phone` field should contain the phone number.
+
+
+    Remember to replace the `BearerToken` with an actual bearer token and the
+    `phone` field value with an actual phone number when you run this endpoint.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: '"{\"phone\":\"phone\"}"'
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

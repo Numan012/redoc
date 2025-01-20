@@ -1,0 +1,68 @@
+get:
+  tags:
+    - AccountSettings
+  summary: Account - Settings - Get All - With Deleted
+  description: >-
+    The endpoint "Account - Settings - Get All - With Deleted" is a GET request
+    that is used to fetch all account settings, even those attached to deleted
+    accounts.
+
+
+    1. "name": This is the name of the endpoint - Account - Settings - Get All -
+    With Deleted
+
+
+    2. "request": It contains everything about the request.
+
+
+    3. "auth": This is the authorization required for this endpoint. Here,
+    authentication needs to be a Bearer type which essentially means you need to
+    send a bearer token to access this endpoint.
+        - "type": The type of the authentication required which is 'bearer'
+        - "bearer": Contains the key-value pair which would be sent in the header for authentication.
+            - "key": The key which is 'token'.
+            - "value": It's 'BearerToken'. This will be the actual token required for accessing the endpoint.
+            - "type": The type of the value here, borne by the key which is 'string'. 
+
+    4. "method": It is the HTTP verb and here it is 'GET'. This type of request
+    is used to retrieve data from a server.
+
+
+    5. "url": This is the link to the specific endpoint where the request is
+    sent. The url here is
+    'http://localhost:3000/api/account/settings/all/?sessionId=sessionId&accountId=accountId&includeDeleted=true'.
+    It contains query parameters such as sessionId, accountId and includeDeleted
+    which might be required to get the appropriate response.
+
+
+    6. "headers": These are used to provide the server with additional
+    information. This endpoint does not require any additional headers, and the
+    default header is disabled.
+
+
+    7. "body": The body holds the data to be sent for a POST or PUT request.
+    This is not used in a GET request as in this case, so 'mode' is 'raw', and
+    'raw' is blank as data is not sent in the body.
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: sessionId
+      in: query
+      schema:
+        type: string
+      example: sessionId
+    - name: accountId
+      in: query
+      schema:
+        type: string
+      example: accountId
+    - name: includeDeleted
+      in: query
+      schema:
+        type: boolean
+      example: 'true'
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

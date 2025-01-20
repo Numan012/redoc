@@ -1,0 +1,245 @@
+{
+  "item": [
+    {
+      "name": "Account - Keys - Create",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"accountId\":\"accountId\",\"sessionId\":\"sessionId\",\"country\":\"United States\",\"region\":\"California\",\"city\":\"San Francisco\",\"postal\":\"94109\",\"latitude\":\"-123.423\",\"longitude\":\"123.123\",\"ipAddress\":\"12.45.67.89.0\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/keys/create",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "keys",
+            "create"
+          ]
+        },
+        "description": "Endpoint Name: \"Account - Keys - Create\"\n\nThis is an endpoint to create a key for a specified account. Below is the detailed information about every data used in the request for this endpoint:\n\n1. **auth**: This is used for authorization purpose. \n\n   a. **type:** The type field specifies the kind of authorization being used, which is 'bearer' in this case.\n   \n   b. **bearer:** It's an array that holds the bearer token information. \n\n   - **key:** Specifies the identifier for the bearer token which is denoted as 'token'. \n   \n   - **value:** Denotes the actual bearer token value. Replace 'BearerToken' with your actual bearer token.\n   \n   - **type:** The type of the data the token represents. It's a string in this case.\n\n\n2. **method**: This represents the HTTP method to be used for this request. Here it's 'POST', which means we are sending data to be processed to a specified resource.\n\n3. **url**: The URI where the request is being sent. In this case, it's http://localhost:3000/api/account/keys/create, where a new key will be created for the account.\n\n4. **headers**: It represents metadata sent with the HTTP request. \n\n    a. **key:** Specify your header key here. \n\n    b. **value:** The value of the corresponding header key goes here. \n\n    c. **type:** The type of data the header value represents, which is 'default' in this case. \n\n    d. **disabled:** If set to true, the header will not be sent with the request.\n\n5. **body**: Contains data to be sent to the server.\n\n   a. **mode:** Specifies how you want to send the data. Value 'raw' means you are sending the data as it is.\n\n   b. **raw:** This contains actual data being sent. \n\n      - **accountId:** This should be replaced with the actual account id. \n      - **sessionId:** Here goes the actual session id.\n      - **country, region, city, postal:** The geographical information about where the request is being sent from.\n      - **latitude, longitude:** The geographical coordinates from where the request is being sent.\n      - **ipAddress:** IP address of the client from where the request originated.\n"
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Keys - Update",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Client-UUID",
+            "value": "ClientUUID",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"keysId\":\"f7e29500-b1a9-4d5a-a68b-23ece984b2d4\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"country\":\"United States\",\"region\":\"California\",\"city\":\"San Jose\",\"postal\":\"94109\",\"latitude\":\"-123.423\",\"longitude\":\"123.123\",\"ipAddress\":\"12.45.67.89.0\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/keys/update",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "keys",
+            "update"
+          ]
+        },
+        "description": "This endpoint is titled \"Account - Keys - Update\" and it's used to update the specific keys related to an account in a system. It sends a PUT HTTP request to the given URL, \"http://localhost:3000/api/account/keys/update\". PUT is a method used to update resource available on the server. Here is a detailed explanation about each component in the request:\n\n1. `auth`: This object sets the authorization strategy for your request. Here, it's a bearer token authorization. It contains a bearer token string which needs to be passed in the 'token' key.\n\n2. `method`: This field is for specifying the HTTP method. In this case, it's a PUT method which is used for updating existing resources.\n\n3. `url`: This is the endpoint URL where the request will be sent. Here, it's running on localhost on port 3000.\n\n4. `headers`: This is a list where you define request headers. Here, we have a \"Client-UUID\" key with a default string value, which is likely used to uniquely identify the client.\n\n5. `body`: This is the request payload, it contains necessary information to update an account's keys. The 'mode' property is set as 'raw', implying that you have to provide a input JSON object in 'raw' format.\n\n    - `keysId`: Unique identifier for the keys associated with an account.\n    - `sessionId`: The session identifier.\n    - `accountId`: The account identifier.\n    - `country`: The country associated with the key's location (in this case, \"United States\").\n    - `region`: The region associated with the key's location (here, \"California\").\n    - `city`: The city associated with the key's location (here, \"San Jose\").\n    - `postal`: The postal code associated with the key's location.\n    - `latitude` and `longitude`: Geographical coordinates for the key's location.\n    - `ipAddress`: The IP address associated with the request to update the keys.\n    \nIt's important to provide valid data for all these fields for the request to be processed correctly."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Keys - Get",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/keys/get/?keysId=keysId&sessionId=sessionId&accountId=accountId",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "keys",
+            "get",
+            ""
+          ],
+          "query": [
+            {
+              "key": "keysId",
+              "value": "keysId"
+            },
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "accountId",
+              "value": "accountId"
+            }
+          ]
+        },
+        "description": "The provided endpoint contains detailed information about how to retrieve account keys using a GET request. Here's a detailed explanation for each data point:\n\n1. \"name\": This represents the name of the endpoint. In this case, the name is \"Account - Keys - Get\", signifying that this endpoint is utilized to retrieve keys associated with a specific account.\n\n2. \"request\": This field specifies the type of the request, the associated authorization details, the target URL of the request, headers, and the body. Each attribute under this field is as follows -\n\n   a. \"auth\": The \"auth\" field contains details about the authorization required to use this API. It includes type of the authorization, which is \"bearer\" and the object array \"bearer\" that includes the \"key\", which is the authorization token name, \"value\", which is the bearer token, and \"type\" which is the datatype of the token.\n\n   b. \"method\": This is the request method, which for the provided endpoint is GET. This means data is being retrieved or 'got' from the server.\n\n   c. \"url\": This is the URL where the API request would be sent. The URL parameters include keysId, sessionId, and accountId. These parameters are used to specify a unique set of keys, session, and account respectively that are targeted by this request.\n\n   d. \"headers\": Headers let the server and client pass additional information with an HTTP request. In this case, no key-value pairs are provided and it's set to default, meaning no custom headers are being used unless they are disabled.\n\n   e. \"body\": The \"body\" field provides the request's body. As per the provided data, \"mode\" suggests it's in \"raw\" form. However, since the request method is GET, the \"raw\" body is empty.\n\nIf you're using this API, make sure to replace the dummy \"token\", \"keysId\", \"sessionId\", and \"accountId\" with actual valid values."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Keys - Get All",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "BearerToken",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/keys/all/?sessionId=sessionId&accountId=accountId",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "keys",
+            "all",
+            ""
+          ],
+          "query": [
+            {
+              "key": "sessionId",
+              "value": "sessionId"
+            },
+            {
+              "key": "accountId",
+              "value": "accountId"
+            }
+          ]
+        },
+        "description": "This endpoint is called \"Account - Keys - Get All\". It's responsible for fetching all the keys related to a particular account.\n\nHere is a description of all the elements in the endpoint:\n\n1. **name:** This is the name of the endpoint. This is how you would refer to the endpoint in the documentation or when discussing it with other developers. In this case, the name indicates that this endpoint is used to get all keys for a given account.\n\n2. **request:** This object contains all information required to make the HTTP request.\n\n3. **auth:** This is the authorization method that is used when making the request. For this endpoint, the authorization is of the type \"bearer\" which means it uses a bearer token for authorization. A bearer token is a type of access token that is issued to the client.\n\n4. **bearer:** This is an array of objects that contains the bearer token for the request. Each object has a \"key\", \"value\", and \"type\". The \"key\" is the name given to the token, the \"value\" is the actual value of the token, and the \"type\" is the data type of the token.\n\n5. **method:** This is the HTTP method used for the request. In this case, it's a \"GET\" request, which means data is being retrieved from the server. \n\n6. **url:** This is the URL where the request will be sent. In our case, it's \"http://localhost:3000/api/account/keys/all/?sessionId=sessionId&accountId=accountId\". It includes query parameters for \"sessionId\" and \"accountId\", presumably used to identify the relevant session and account.\n\n7. **headers:** This is an array of objects, each representing a header that will be included in the request. Currently, the endpoint provides a default empty header which is disabled. Headers can include metadata about the request or other necessary information.\n\n8. **body:** This is the body of the request. For this endpoint, the \"body\" is set as \"raw\", but no data is needed or included as part of the request since it's a \"GET\" request.\n\nThis is a high-level overview of the endpoint data. For all specific data usage, please refer to the application's API documentation or any inline comments provided in the application code."
+      },
+      "response": []
+    },
+    {
+      "name": "Account - Keys - Delete",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "sessionId",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "",
+            "value": "",
+            "type": "default",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"keysId\":\"keysId\"}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/account/keys/delete",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "account",
+            "keys",
+            "delete"
+          ]
+        },
+        "description": "The data provided describes the details of an Endpoint (in an API) for Account - Keys - Delete operation. Here's a detailed description of each datapoint:\n\n1. **name**: This represents the name of the endpoint, which in this case is \"Account - Keys - Delete\". This endpoint is designed to delete keys from a specific account.\n   \n2. **request**: This encapsulates all the details needed to make the actual HTTP request.\n   \n3. **auth**: This field describes the authorization details used for the request. It uses a bearer token for authorization. \n\n    - **type**: The type of authentication applied, which is \"bearer\" in this case.\n   \n    - **bearer**: This is an array containing bearer token details. Each object inside the bearer array includes:\n\n        - **key**: The key is set as \"token\".\n       \n        - **value**: It holds the actual token value, denoted as \"sessionId\".\n       \n        - **type**: Defines the datatype of the value of the key, here it is \"string\".\n\n4. **method**: The HTTP method used for the request. In this case, the request method is POST which is typically used to send data to the server.\n\n5. **url**: The URL where the API request is to be sent. In this case, it's \"http://localhost:3000/api/account/keys/delete\".\n\n6. **headers**: An array containing the details of the headers to be sent along with the request. This example has a default header with no key-value pair.\n\n7. **body**: Contains the details of the body to be sent along with the request.\n    \n    - **mode**: This field tells what type of body is being sent with the request, here it's \"raw\".\n        \n    - **raw**: This contains the raw data in the form of a JSON object to be sent in the body of the request. It contains three fields\n \n        - **sessionId**: String representing the session identifier.\n       \n        - **accountId**: String representing the account identifier.\n       \n        - **keysId**: String representing the keys identifier to delete from the account."
+      },
+      "response": []
+    }
+  ]
+}

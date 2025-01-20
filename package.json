@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "dependencies": {
     "@redocly/cli": "1.25.7",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "js-yaml": "^4.1.0",
     "postman-to-openapi": "^3.0.1"
   },
   "private": true,
   "scripts": {
+    "redoc:run": "cd openapi && redocly bundle openapi.yaml --output bundled.yaml && redocly lint bundled.yaml && redocly split bundled.yaml --outDir . && redocly preview-docs bundled.yaml",
     "start": "redocly preview-docs",
     "build": "redocly bundle -o dist/bundle.yaml",
-    "test": "redocly lint"
+    "test": "redocly lint",
+    "update-collections": "rm -rf openapi/paths openapi/components",
+    "convert": "node refactorJson.js && node generateDescription.js && node collectionConverts.js",
+    "redoc": "npm run update-collections && npm run convert && npm run redoc:run"
   }
 }

@@ -1,0 +1,72 @@
+post:
+  tags:
+    - AccountKeys
+  summary: Account - Keys - Create
+  description: >
+    Endpoint Name: "Account - Keys - Create"
+
+
+    This is an endpoint to create a key for a specified account. Below is the
+    detailed information about every data used in the request for this endpoint:
+
+
+    1. **auth**: This is used for authorization purpose. 
+
+       a. **type:** The type field specifies the kind of authorization being used, which is 'bearer' in this case.
+       
+       b. **bearer:** It's an array that holds the bearer token information. 
+
+       - **key:** Specifies the identifier for the bearer token which is denoted as 'token'. 
+       
+       - **value:** Denotes the actual bearer token value. Replace 'BearerToken' with your actual bearer token.
+       
+       - **type:** The type of the data the token represents. It's a string in this case.
+
+
+    2. **method**: This represents the HTTP method to be used for this request.
+    Here it's 'POST', which means we are sending data to be processed to a
+    specified resource.
+
+
+    3. **url**: The URI where the request is being sent. In this case, it's
+    http://localhost:3000/api/account/keys/create, where a new key will be
+    created for the account.
+
+
+    4. **headers**: It represents metadata sent with the HTTP request. 
+
+        a. **key:** Specify your header key here. 
+
+        b. **value:** The value of the corresponding header key goes here. 
+
+        c. **type:** The type of data the header value represents, which is 'default' in this case. 
+
+        d. **disabled:** If set to true, the header will not be sent with the request.
+
+    5. **body**: Contains data to be sent to the server.
+
+       a. **mode:** Specifies how you want to send the data. Value 'raw' means you are sending the data as it is.
+
+       b. **raw:** This contains actual data being sent. 
+
+          - **accountId:** This should be replaced with the actual account id. 
+          - **sessionId:** Here goes the actual session id.
+          - **country, region, city, postal:** The geographical information about where the request is being sent from.
+          - **latitude, longitude:** The geographical coordinates from where the request is being sent.
+          - **ipAddress:** IP address of the client from where the request originated.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"accountId\":\"accountId\",\"sessionId\":\"sessionId\",\"country\":\"United
+            States\",\"region\":\"California\",\"city\":\"San
+            Francisco\",\"postal\":\"94109\",\"latitude\":\"-123.423\",\"longitude\":\"123.123\",\"ipAddress\":\"12.45.67.89.0\"}"
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

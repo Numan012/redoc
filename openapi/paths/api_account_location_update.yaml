@@ -1,0 +1,73 @@
+put:
+  tags:
+    - AccountLocation
+  summary: Account - Location - Update
+  description: >-
+    This endpoint is titled "Account - Location - Update". It gives you the
+    ability to update the location details of a specific account. The request
+    uses a 'PUT' method which indicates this action of modification.
+
+
+    The request is authenticated with a token, provided as a "bearer" type. The
+    key for this authentication method is simply called "token" and the value it
+    uses is named "BearerToken". The type of value it requires is a string.
+
+
+    The request URL is "http://localhost:3000/api/account/location/update".
+
+
+    The header of the request contains a "Client-UUID". This is a default type
+    of key that holds "ClientUUID" as a value. It aids in uniquely identifying
+    each client connection.
+
+
+    The request body uses the "raw" mode and contains all the information
+    related to the account location to be updated. The individual data
+    descriptions are as follows:
+
+
+    - "locationId": a unique identifier for a particular location
+
+    - "sessionId": a unique identifier for the current session
+
+    - "accountId": a unique identifier for the specific account
+
+    - "country": the name of the country of the location
+
+    - "region": the name of a specific region within the country
+
+    - "city": the name of the city 
+
+    - "postal": the postal or zip code 
+
+    - "latitude": the latitude coordinate for the location 
+
+    - "longitude": the longitude coordinate for the location 
+
+    - "ipAddress": the IP address of the user updating the location
+
+
+    All data values in the body are assumed to be strings, and as such they must
+    be enclosed in quotes.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"locationId\":\"f7e29500-b1a9-4d5a-a68b-23ece984b2d4\",\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"country\":\"United
+            States\",\"region\":\"California\",\"city\":\"San
+            Jose\",\"postal\":\"94109\",\"latitude\":\"-123.423\",\"longitude\":\"123.123\",\"ipAddress\":\"12.45.67.89.0\"}"
+  security:
+    - bearerAuth: []
+  parameters:
+    - name: Client-UUID
+      in: header
+      schema:
+        type: string
+      example: ClientUUID
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}

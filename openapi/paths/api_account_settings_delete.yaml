@@ -1,0 +1,75 @@
+post:
+  tags:
+    - AccountSettings
+  summary: Account - Settings - Delete - Payments
+  description: >-
+    The provided data is an endpoint for an API that acts as a back-end
+    functionality for your application.
+
+
+    Here's a detailed breakdown of each data instance:
+
+
+    1. "name": Account - Settings - Delete - Payments - This is the name
+    assigned to this API endpoint. It hints that it is used to delete payment
+    settings.
+
+
+    2. "request": Houses information about the HTTP request.
+
+
+    3. "auth": The authentication method used to validate the given request. A
+    bearer token authorization method is used.
+
+
+    4. "bearer": The bearer object that carries the necessary authentication
+    details.
+
+
+    5. "key": The key here is named 'token'. It is the placeholder for the
+    actual token.
+
+
+    6. "value": Value is the corresponding value for the key (here, 'token').
+    This field expects a unique 'sessionId' (value) corresponding to the bearer
+    token's name.
+
+
+    7. "type": It represents the data type. In this case, it is string.
+
+
+    8. "method": The HTTP request method to be used. It uses the POST method,
+    which is used to send data to a server to create a resource.
+
+
+    9. "url": This field contains the URL where the request should be made. The
+    server is currently running locally on port 3000.
+
+
+    10. "headers": Contains the information passed in header part of the HTTP
+    request. Currently, it's set to 'default' type and is disabled.
+
+
+    11. "body": Contains the data to be sent in the body of the HTTP request. It
+    is in raw format and must include a JSON object containing: 
+         - "sessionId": The session Id for the account.
+         - "accountId": The ID identifying the specific user account. 
+         - "settingKey": Identified as 'payments'. It usually represents the specific settings that need to be affected.
+
+    Please ensure all of the required information (sessionId, accountId,
+    settingKey) is provided when using this endpoint for it to function
+    correctly.
+  requestBody:
+    content:
+      '*/*':
+        schema:
+          type: string
+          example: >-
+            "{\"sessionId\":\"sessionId\",\"accountId\":\"accountId\",\"settingKey\":\"payments\"}"
+  security:
+    - bearerAuth: []
+  responses:
+    '200':
+      description: Successful response
+      content:
+        application/json: {}
