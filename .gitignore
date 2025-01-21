@@ -1,6 +1,4 @@
 # Dir for bundles
-dist
 node_modules
-collections_updated
 .env
 

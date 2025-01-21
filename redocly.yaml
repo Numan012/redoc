@@ -4,23 +4,48 @@ apis:
 extends:
   - recommended
 rules:
-  no-unused-components: error
-  no-server-example.com: off
-  parameter-description: off
-  operation-operationId: off
-  operation-4xx-response: off
-  info-license: off
+  no-unused-components: error # Enforce unused component detection
+  no-server-example.com: off # Disable server placeholder URL warnings
+  parameter-description: off # Disable warnings for missing parameter descriptions
+  operation-operationId: off # Disable warnings for missing operation IDs
+  operation-4xx-response: off # Disable warnings for missing 4xx responses
+  info-license: off # Disable warnings for missing license info
 theme:
   openapi:
     theme:
+      colors:
+        primary:
+          main: "#ff0088" # Main accent color
+        text:
+          primary: "#ffffff" # Primary text color for dark backgrounds
+          secondary: "#aaaaaa" # Secondary text color for muted content
+        http:
+          get: "#1d9d6f" # Custom GET method color
+          post: "#007acc" # Custom POST method color
+          put: "#ffcc00" # Custom PUT method color
+          delete: "#e63946" # Custom DELETE method color
       sidebar:
-        backgroundColor: "ivory"
+        backgroundColor: "#ff0088" # Sidebar background
+        textColor: "#ffffff" # Sidebar text color
+        activeTextColor: "#ffdf82" # Active item text color
+        activeBgColor: "#001036" # Active item background color
+        separatorLineColor: "#ffffff" # Separator line color
       rightPanel:
-        textColor: "ivory"
-        backgroundColor: "#001036"
+        backgroundColor: "#001036" # Right panel background
+        textColor: "ivory" # Right panel text color
+        panelBackgroundColor: "#001036" # Panel background inside right panel
       typography:
+        fontFamily: "Roboto, sans-serif" # General font family
+        headings:
+          fontFamily: "Roboto, sans-serif" # Heading font family
+          fontWeight: "800" # Bold headings
         links:
-          color: "#0090cc"
+          color: "#99ff00" # Hyperlink color
+        code:
+          fontFamily: "Ubuntu Mono, monospace" # Code block font
+          fontSize: "12px" # Code block font size
+      spacing:
+        unit: 8 # Base spacing unit for padding/margins
     generateCodeSamples:
       languages:
         - lang: curl
