@@ -14,13 +14,13 @@ theme:
   openapi:
     theme:
       sidebar:
-        backgroundColor: "ivory"
+        backgroundColor: "#ff0088"
       rightPanel:
         textColor: "ivory"
         backgroundColor: "#001036"
       typography:
         links:
-          color: "#00ff00"
+          color: "#99ff00"
         code:
           fontFamily: "Ubuntu Mono, monospace"
           fontSize: "10px"
