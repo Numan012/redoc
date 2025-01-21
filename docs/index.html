@@ -6,6 +6,69 @@
   </head>
 
   <body>
-    <!-- <redoc spec-url="openapi.yaml"></redoc> -->
+    <redoc spec-url="openapi.yaml"></redoc>
+    <script>
+      Redoc.init(
+        "openapi.yaml",
+        {
+          theme: {
+            colors: {
+              primary: {
+                main: "#00a84e !important", // pastel-green-secondary
+              },
+              success: {
+                main: "#d2e7d6 !important", // pastel-green
+              },
+              error: {
+                main: "#ffdf82 !important", // pastel-active
+              },
+              text: {
+                primary: "#3b4a3f !important", // text-color-dark-green
+                secondary: "#3b4a3f !important",
+              },
+              http: {
+                get: "#00a84e !important", // Customize HTTP GET method color
+                post: "#94b5e3 !important", // Customize HTTP POST method color
+                put: "#ffdf82 !important", // Customize HTTP PUT method color
+                delete: "#dc3545 !important", // Customize HTTP DELETE method color
+              },
+            },
+            sidebar: {
+              backgroundColor: "red !important", // pastel-blue
+              textColor: "#3b4a3f !important", // text-color-dark-green
+              activeTextColor: "#3b4a3f !important", // text-color-dark-green
+              activeBgColor: "#ffdf82 !important", // pastel-active
+              separatorLineColor: "#b9c3fc !important", // pastel-purple
+            },
+            typography: {
+              fontFamily: "Arial, sans-serif !important", // Custom font
+              headings: {
+                fontFamily: "Arial, sans-serif !important", // Heading font
+                fontWeight: "bold !important", // Bold headings
+              },
+              code: {
+                fontFamily: "Courier, monospace !important", // Code block font
+                fontSize: "14px !important", // Code font size
+              },
+            },
+            spacing: {
+              unit: 6, // Base spacing unit (6px)
+            },
+            menu: {
+              backgroundColor: "#94b5e3 !important", // Menu background (pastel-blue)
+              textColor: "#3b4a3f !important", // Menu text color (text-color-dark-green)
+              activeTextColor: "#00a84e !important", // Active menu text color
+              activeBgColor: "#ffdf82 !important", // Active menu background color
+              hoverBgColor: "#ffdf82 !important", // Hover menu background color
+            },
+            rightPanel: {
+              backgroundColor: "#d2e7d6 !important", // Right panel background (pastel-green)
+              textColor: "#3b4a3f !important", // Right panel text color
+            },
+          },
+        },
+        document.querySelector("redoc")
+      );
+    </script>
   </body>
 </html>
