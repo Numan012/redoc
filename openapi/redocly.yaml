@@ -27,14 +27,6 @@ theme:
         headings:
           fontFamily: "Roboto, sans-serif"
           fontWeight: "800"
-      styleOverrides:
-        h1, h2, h3, h4, h5, h6: |
-          font-size: 24px;
-          font-family: "Roboto, sans-serif";
-          font-weight: 800;
-        p: |
-          font-size: 30px;
-          line-height: 1.6;
     generateCodeSamples:
       languages:
         - lang: curl
